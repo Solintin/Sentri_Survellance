@@ -1,14 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
-import  { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import Scrolltotop from "./components/UI/ScrollToTop";
 // import { RequireAuth } from "./Utils/RequireAuth";
-import {
-  Camera,
-  DashBoard,
-  Landing,
-  Registration
-} from "./Pages";
+import { Camera, DashBoard, Landing, Registration, Admin } from "./Pages";
 
 const App = () => {
   return (
@@ -45,10 +40,8 @@ const App = () => {
           {/*    LANDING PAGE */}
           <Route exact path="/dashboard" element={<DashBoard />} />
           <Route exact path="/camera" element={<Camera />} />
+          <Route exact path="/admin/dashboard" element={<Admin />} />
           {/**Protected routes */}
-    
-         
-
         </Routes>
       </Router>
     </div>

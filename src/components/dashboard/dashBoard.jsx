@@ -6,13 +6,13 @@ import CameraWidget from "../camera/camerwidget/cameraWidget";
 import { useState } from "react";
 
 const DashBoard = () => {
-  const [issignal, ] = useState(true)
-  const [isalert, ] = useState(true)
-  
+  const [issignal] = useState(true);
+  const [isalert] = useState(true);
+
   return (
     <Container>
       <div className="w-full h-full space-y-5 bg-gray-100 py-14 sm:py-24">
-      <div className="hidden md:flex space-x-2 items-center ">
+        <div className="hidden md:flex space-x-2 items-center ">
           <div className="text-gray-500">View type:</div>
 
           {/**grid grid-cols-1 */}
@@ -46,19 +46,15 @@ const DashBoard = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 w-full items-center">
-       
-          <CameraWidget image={three} isalert={!isalert} issignal={issignal}/>
-          <CameraWidget image={two} isalert={!isalert} issignal={issignal}/>
-          <CameraWidget image={three} isalert={!isalert} issignal={issignal}/>
-          <CameraWidget image={''} isalert={!isalert} issignal={!issignal}/>
+          <CameraWidget image={three} isalert={!isalert} issignal={issignal} />
+          <CameraWidget image={two} isalert={!isalert} issignal={issignal} />
+          <CameraWidget image={three} isalert={!isalert} issignal={issignal} />
+          <CameraWidget image={""} isalert={!isalert} issignal={!issignal} />
           {/** */}
-          
 
           {/** */}
-         
 
           {/** */}
-       
         </div>
       </div>
     </Container>
