@@ -17,6 +17,7 @@ const PhaseA = ({ active, setActive }) => {
 
   const handleSubmit = () => {
     const validateData = {
+      name,
       email,
       password,
     };
