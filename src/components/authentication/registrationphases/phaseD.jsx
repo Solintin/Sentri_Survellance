@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Loader from "../../UI/Loader";
 const PhaseD = ({ active }) => {
   const [others, setOthers] = useState();
   const [loading] = useState(false);
   const [selectCategory, setSelectCategory] = useState();
-
+  const navigate = useNavigate();
   const categories = ["For Business", "For Home", "For School"];
-  const handleContinue = () => {};
+  const handleContinue = () => {
+    navigate("/dashboard");
+  };
   return (
     <div
       className={
