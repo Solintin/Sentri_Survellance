@@ -18,7 +18,7 @@
 
 input[type="checkbox"] {
   transform: scale(1.5);
-  margin: 0px 30px 10px;
+  /* margin: 0px 30px 10px; */
 }
 .tick {
   accent-color: #005555;

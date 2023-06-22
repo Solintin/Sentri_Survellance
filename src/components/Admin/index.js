@@ -34,7 +34,8 @@ function Index() {
               <h2 className="text-ms text-[#01C38D]  font-bold">View all</h2>
             </div>
             <div className="mt-1 grid grid-cols-5 bg-white p-3 rounded-t-md">
-              <div>
+              <div className="flex space-x-2 items-center">
+                <input type="checkbox" name="" id="" />
                 <h2 className="text-base text-[#132D46] font-black">Clients</h2>
               </div>
               <div>
@@ -58,12 +59,14 @@ function Index() {
             {[1, 2].map((item, i) => (
               <div
                 key={i}
-                className="mt-2 grid grid-cols-5 bg-red-500 text-white p-3 "
+                className="mt-2 grid grid-cols-5 gap-4 bg-red-500 text-white p-3 "
               >
-                <div>
+                <div className="flex space-x-2 items-center">
+                  <input type="checkbox" name="" id="" />
+
                   <h2 className="text-base  font-black">Kelvin Hunter</h2>
                 </div>
-                <div>
+                <div className="truncate">
                   <h2 className="text-base  font-black">
                     12 Maldives Riverside...
                   </h2>
@@ -82,12 +85,14 @@ function Index() {
             {[1, 2, 3, 4, 56].map((item, i) => (
               <div
                 key={i}
-                className="mt-2 grid grid-cols-5 bg-white text-[#132D46] p-3 "
+                className="mt-2 grid grid-cols-5 gap-4 bg-white p-3 "
               >
-                <div>
+                <div className="flex space-x-2 items-center">
+                  <input type="checkbox" name="" id="" />
+
                   <h2 className="text-base  font-black">Kelvin Hunter</h2>
                 </div>
-                <div>
+                <div className="truncate">
                   <h2 className="text-base  font-black">
                     12 Maldives Riverside...
                   </h2>
