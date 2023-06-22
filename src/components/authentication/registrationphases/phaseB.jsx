@@ -5,11 +5,14 @@ import google from "../../../assets/svg/google.svg";
 import Loader from "../../UI/Loader";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-const PhaseB = ({ active }) => {
+const PhaseB = ({ active, setActive }) => {
   const [phone, setPhone] = useState();
   const [loading] = useState(false);
 
-  const handleContinue = () => {};
+  const handleContinue = () => {
+    setActive(2);
+
+  };
   return (
     <div
       className={

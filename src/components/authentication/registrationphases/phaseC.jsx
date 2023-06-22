@@ -4,7 +4,7 @@ import apple from "../../../assets/svg/apple.svg"
 import google from "../../../assets/svg/google.svg"
 import Loader from "../../UI/Loader";
 import { ReactCountries } from "../../../Utils/countrydropdown/countries";
-const PhaseC = ({active}) => {
+const PhaseC = ({active, setActive}) => {
     const [country, setCountry] = useState('United State of America')
     const [loading] = useState(false)
     //const [countries, setCountries] = useState()
@@ -13,7 +13,10 @@ const PhaseC = ({active}) => {
     console.log(country)
 
 
-    const handleContinue = () => {}
+    const handleContinue = () => {
+      setActive(3);
+  
+    };
     return (
         <div className={active === 2 ? "w-full relative let swipeIn px-6 sm:px-8 py-6 flex h-[500px] flex-col justify-center items-center  sm:rounded-lg bg-white border shadow-xl": "hidden"}>
         
