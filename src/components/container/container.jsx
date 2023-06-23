@@ -10,7 +10,7 @@ const Container = ({ children }) => {
       <div className="right min-[1010px]:float-right bg-gray-100 sm:px-4">
         {children}
       </div>
-      <TopNav />
+      <TopNav isNav={isNav} setisNav={setisNav} />
     </div>
   );
 };
