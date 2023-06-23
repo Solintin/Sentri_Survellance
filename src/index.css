@@ -17,7 +17,7 @@
 }
 
 input[type="checkbox"] {
-  transform: scale(1.5);
+  transform: scale(1.2);
   /* margin: 0px 30px 10px; */
 }
 .tick {

@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import lightcam from "../../assets/svg/lightcam.svg";
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { AiOutlineGlobal, AiOutlineAudio } from "react-icons/ai";
 import { BsBellFill } from "react-icons/bs";
+import { useLocation } from "react-router-dom";
 
 const TopNav = () => {
+  const [header, setHeder] = useState("");
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (pathname.includes("camera")) {
+      setHeder("Camera");
+    }
+    if (pathname.includes("event")) {
+      setHeder("Events");
+    }
+    if (pathname.includes("admin")) {
+      setHeder("Admin");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div
       className={`right min-[1024px]:float-right fixed bg-white shadow-md  px-4 py-4 sm:px-8 top-0 right-0 flex justify-between items-center`}
@@ -16,7 +33,7 @@ const TopNav = () => {
             <div className="sm:w-[40px] sm:h-[40px] w-[30px] h-[30px]">
               <img className="w-full h-full" src={lightcam} alt="" />
             </div>
-            <div className="text-sm sm:text-lg font-semibold">Camera</div>
+            <div className="text-sm sm:text-lg font-semibold">{header}</div>
           </div>
 
           <div className="w-[80%] hidden h-11 relative">

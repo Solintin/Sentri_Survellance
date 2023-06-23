@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import logo from "../../assets/png/logo.png";
 import { BsCameraVideo } from "react-icons/bs";
 import camera from "../../assets/svg/camera.svg";
@@ -12,14 +12,14 @@ import logout from "../../assets/svg/logout.svg";
 import { Link, useLocation } from "react-router-dom";
 // import DashBoard from "../dashboard/dashBoard";
 const SideNav = ({ isNav, setisNav }) => {
-  const [isAdmin, setisAdmin] = useState(false);
+//   const [isAdmin, setisAdmin] = useState(false);
+  const { pathname } = useLocation();
   useEffect(() => {
     if (pathname === "/admin/dashboard") {
-      setisAdmin(true);
+    //   setisAdmin(true);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const { pathname } = useLocation();
 
   return (
     <div
@@ -50,7 +50,7 @@ const SideNav = ({ isNav, setisNav }) => {
         </div>
 
         <div className="w-full items-start flex-col justify-start text-[15px] text-white space-y-3 py-2 border-b border-[#01C38D]">
-          {isAdmin && (
+          {true && (
             <Link
               to="/admin/dashboard"
               className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
@@ -62,7 +62,7 @@ const SideNav = ({ isNav, setisNav }) => {
               <div className="w-[25px] h-[25px] ">
                 <img className="w-full h-full" src={grid} alt="" />
               </div>
-              <div>DashBoard</div>
+              <div>Dashboard</div>
             </Link>
           )}
           <Link
@@ -78,9 +78,10 @@ const SideNav = ({ isNav, setisNav }) => {
             </div>
             <div>Cameras</div>
           </Link>
-          <div
+          <Link
+            to="/events"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname === "/event"
+              pathname === "/events"
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
             }`}
@@ -89,7 +90,7 @@ const SideNav = ({ isNav, setisNav }) => {
               <img className="w-full h-full" src={event} alt="" />
             </div>
             <div>Events</div>
-          </div>
+          </Link>
           <div
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
               pathname === "/archive-setting"
