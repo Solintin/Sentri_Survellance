@@ -6,10 +6,10 @@ import Alert from "../alert/alert";
 import { useState } from "react";
 import MenusWidget from "../menuwidget/menuWidget";
 import nosignal from "../../../assets/png/nosignal.jpg";
-const CameraWidget = ({ image, isalert, issignal, record }) => {
+const CameraWidget = ({ image, isalert, issignal, record, resize }) => {
   const [ismore, setismore] = useState(false);
   return (
-    <div className="w-full  h-[220px] sm:h-[250px] relative rounded-lg">
+    <div className={`w-full  h-[220px] sm:h-[250px] relative rounded-lg ${resize === 1 ? 'md:h-[500px]':''}`}>
       {record && (
         <div className="absolute py-1 px-2 bg-[#01C38D] text-white rounded-md space-x-1 items-center flex w-fit left-4 top-6">
           <span className="w-2 h-2 rounded-full bg-red-500"></span>
@@ -19,7 +19,7 @@ const CameraWidget = ({ image, isalert, issignal, record }) => {
       {/**alert */}
       <div
         className={
-          isalert ? "mx-auto absolute bottom-[60px] w-full h-fit" : "hidden"
+          isalert ? "m-auto absolute inset-0  w-full  h-fit" : "hidden"
         }
       >
         <Alert />
