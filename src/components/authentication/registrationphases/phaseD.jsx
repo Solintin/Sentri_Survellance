@@ -37,10 +37,12 @@ const PhaseD = ({ active }) => {
                     setSelectCategory(index);
                   }}
                   key={index}
-                  class="container"
+                  className="container"
                 >
                   {type}
-                  <input type="checkbox" checked={index === selectCategory} />
+                  <input 
+                  onChange={(e) => e.target.value}
+                  type="checkbox" checked={index === selectCategory} />
                   <span className="checkmark"></span>
                 </label>
               );

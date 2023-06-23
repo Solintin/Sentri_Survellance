@@ -5,8 +5,10 @@ import event from "../../../assets/svg/event.svg";
 import deletes from "../../../assets/svg/delete.svg";
 
 const MenusWidget = ({ismore, setismore}) => {
+
     return (
-        <div className="relative min-w-max p-4 cursor-pointer z-[300] h-fit flex flex-col text-[11px] text-black font-semibold bg-white rounded-md shadow-md space-y-4">
+        <div className={ismore ? "absolute left-[-90px] min-w-max  top-9 ": 'hidden'}>
+        <div className={"relative min-w-max p-4 cursor-pointer z-[300] h-fit flex flex-col text-[11px] text-black font-semibold bg-white rounded-md shadow-md space-y-4"}>
         <div
              onClick={(e) => {
                e.stopPropagation();
@@ -43,6 +45,7 @@ const MenusWidget = ({ismore, setismore}) => {
            </div>
                <span>Delete</span>
            </div>
+        </div>
         </div>
     )
 }

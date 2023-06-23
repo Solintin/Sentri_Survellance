@@ -30,6 +30,7 @@ const PhaseA = ({ active, setActive }) => {
     }
 
     const payload = {
+      name,
       email,
       password,
     };
