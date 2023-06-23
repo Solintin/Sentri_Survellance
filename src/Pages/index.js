@@ -4,5 +4,6 @@ import Camera from "../components/camera/camera";
 import DashBoard from "../components/dashboard/dashBoard";
 import Admin from "../components/Admin";
 import CameraDetail from "../components/camera/cameradetail/cameraDetail";
+import Event from "../components/Event";
 
-export { Registration, Landing, DashBoard, Camera, Admin, CameraDetail };
+export { Registration, Landing, DashBoard, Camera, Admin, Event, CameraDetail };
