@@ -9,7 +9,9 @@ import {
   Landing,
   Registration,
   Admin,
+  Event,
   CameraDetail,
+  ClientProfile,
 } from "./Pages";
 
 const App = () => {
@@ -48,6 +50,8 @@ const App = () => {
           <Route exact path="/dashboard" element={<DashBoard />} />
           <Route exact path="/camera" element={<Camera />} />
           <Route exact path="/camera/:id" element={<CameraDetail />} />
+          <Route exact path="/client" element={<ClientProfile />} />
+          <Route exact path="/Events" element={<Event />} />
           <Route exact path="/admin/dashboard" element={<Admin />} />
           {/**Protected routes */}
         </Routes>
