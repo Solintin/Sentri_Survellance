@@ -48,7 +48,7 @@ const ClientProfile = () => {
 
               {/** user detail */}
               <div className="flex flex-col space-y-2">
-
+                    <div>Profile details</div>
               </div>
             </div>
           </div>
