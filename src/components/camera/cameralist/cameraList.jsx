@@ -1,5 +1,5 @@
 import React from "react";
-
+ 
 import CamerListWidget from "../cameralistwidget/cameraListWidget";
 const CameraList = () => {
     const cameras = [
@@ -16,7 +16,7 @@ const CameraList = () => {
             <div
             key={index}
             className="mb-[23px]">
-           <CamerListWidget cam={cam}/>
+           <CamerListWidget cam={cam} id={index}/>
           </div>
           )
          })}

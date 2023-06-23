@@ -8,7 +8,7 @@ const MenusWidget = ({ismore, setismore}) => {
 
     return (
         <div className={ismore ? "absolute left-[-90px] min-w-max  top-9 ": 'hidden'}>
-        <div className={"relative min-w-max p-4 cursor-pointer z-[300] h-fit flex flex-col text-[11px] text-black font-semibold bg-white rounded-md shadow-md space-y-4"}>
+        <div className={"relative min-w-max p-4 sm:p-6 cursor-pointer z-[300] h-fit flex flex-col text-[11px] text-black font-semibold bg-white rounded-md shadow-md space-y-4"}>
         <div
              onClick={(e) => {
                e.stopPropagation();

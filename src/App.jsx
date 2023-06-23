@@ -3,7 +3,14 @@ import "./index.css";
 import { Toaster } from "react-hot-toast";
 import Scrolltotop from "./components/UI/ScrollToTop";
 // import { RequireAuth } from "./Utils/RequireAuth";
-import { Camera, DashBoard, Landing, Registration, Admin } from "./Pages";
+import {
+  Camera,
+  DashBoard,
+  Landing,
+  Registration,
+  Admin,
+  CameraDetail,
+} from "./Pages";
 
 const App = () => {
   return (
@@ -40,6 +47,7 @@ const App = () => {
           {/*    LANDING PAGE */}
           <Route exact path="/dashboard" element={<DashBoard />} />
           <Route exact path="/camera" element={<Camera />} />
+          <Route exact path="/camera/:id" element={<CameraDetail />} />
           <Route exact path="/admin/dashboard" element={<Admin />} />
           {/**Protected routes */}
         </Routes>
