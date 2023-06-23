@@ -3,6 +3,6 @@ import Landing from "../components/landing/landing";
 import Camera from "../components/camera/camera";
 import DashBoard from "../components/dashboard/dashBoard";
 import Admin from "../components/Admin";
-import Event from "../components/Event";
+import CameraDetail from "../components/camera/cameradetail/cameraDetail";
 
-export { Registration, Landing, DashBoard, Camera, Admin, Event };
+export { Registration, Landing, DashBoard, Camera, Admin, CameraDetail };

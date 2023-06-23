@@ -2,15 +2,21 @@ import React from "react";
 import camera from "../../../assets/svg/camera.svg";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { useState } from "react";
-const CamerListWidget = ({cam}) => {
+import { useNavigate } from "react-router";
+const CamerListWidget = ({cam, id}) => {
     const [showmore, setshowmore] = useState(false)
+    const navigate = useNavigate()
     return (
         <div  className="w-full h-fit flex flex-col">
              <div className="w-full items-center flex space-x-2">
-              <div className="w-[30px] h-[30px] sm:w-[30px] sm:h-[30px] ">
+              <div className="w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] ">
                 <img className="w-full h-full" src={camera} alt="" />
               </div>
-              <div className="text-[#132D46] font-semibold text-lg">
+              <div
+              onClick={() => {
+                navigate(`/camera/${id}`)
+              }}
+              className="text-[#132D46] font-semibold text-lg">
                 {cam}
               </div>
               {!showmore && <div className="px-2 py-1 text-[#01C38D] bg-[#01C38D] bg-opacity-10 text-[12px] rounded-md">4</div>}

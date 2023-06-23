@@ -25,7 +25,7 @@ const TopNav = () => {
 
   return (
     <div
-      className={`right min-[1024px]:float-right fixed bg-white shadow-md  px-4 py-4 sm:px-8 top-0 right-0 flex justify-between items-center`}
+      className={`right min-[1024px]:float-right fixed bg-white shadow-md z-[22] px-4 py-4 sm:px-8 top-0 right-0 flex justify-between items-center`}
     >
       <div className="flex items-center justify-between w-full">
         <div className="flex space-x-3 items-center">
