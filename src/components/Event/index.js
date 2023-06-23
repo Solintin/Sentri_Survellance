@@ -26,7 +26,7 @@ function Index() {
           <div className="md:w-[470px] min-w-[300px] h-[380px] bg-[#fff] py-10 rounded-md flex flex-col justify-center items-center">
             <img src={empty} alt="" />
             <h1 className="text-[#696E79] font-bold text-xl">No Events yet</h1>
-            <div className="text-[8px] w-[200px] text-center mt-10">
+            <div className="text-sm w-[200px] text-center mt-10">
               Connect your camera or video recorder to view more events.
             </div>
             <button className="mt-14 px-8 rounded-md flex space-x-2 items-center p-2 bg-primary-100 text-white">

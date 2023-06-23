@@ -28,6 +28,25 @@ input[type="checkbox"] {
   display: none;
 }
 
+.scroll-style::-webkit-scrollbar {
+  width:8px;
+  height:5px;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+.scroll-style::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color:#132D46;
+}
+
+.scroll-style::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: gray;
+}
+
 #animate {
   @apply animate-spin;
 }
@@ -366,9 +385,22 @@ label.label input[type="file"] {
   @apply bg-gray-100 border border-gray-200
 }
 
-._1Lxpd {
-  width:100%;
-} 
+.react-date-picker {
+  
+  @apply bg-white w-[130px] md:w-[200px] 
+}
+.react-date-picker__wrapper {
+  @apply rounded-md bg-white px-2 md:px-3 py-1
+}
+
+.react-time-picker {
+  
+  @apply bg-white w-[130px] md:w-[200px] 
+}
+.react-time-picker__wrapper {
+  @apply rounded-md bg-white px-2 md:px-3 py-1
+}
+
 
 .filters {
   filter:blur(20px);

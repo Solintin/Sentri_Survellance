@@ -5,5 +5,6 @@ import DashBoard from "../components/dashboard/dashBoard";
 import Admin from "../components/Admin";
 import CameraDetail from "../components/camera/cameradetail/cameraDetail";
 import Event from "../components/Event";
+import ClientProfile from "../components/client/clientprofile/clientProfile";
 
-export { Registration, Landing, DashBoard, Camera, Admin, Event, CameraDetail };
+export { Registration, Landing, DashBoard, Camera, Admin, Event, CameraDetail, ClientProfile };
