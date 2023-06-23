@@ -37,7 +37,7 @@ const SideNav = ({ isNav, setisNav }) => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="py-4 flex flex-col items-center space-y-8  h-full w-[250px] cursor-pointer  bg-[#132D46] "
+        className="py-4 flex flex-col items-center space-y-4  h-full w-[250px] cursor-pointer  bg-[#132D46] "
       >
         <div className="  px-8 w-full flex flex-col items-center justify-center space-y-3">
           <div className=" left-[50px]  h-[60px] enter  w-fit">
@@ -130,7 +130,7 @@ const SideNav = ({ isNav, setisNav }) => {
             <div>Admin Settings</div>
           </div>
 
-          <div
+          <Link to="/client"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
               pathname === "/client"
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
@@ -141,7 +141,7 @@ const SideNav = ({ isNav, setisNav }) => {
               <img className="w-full h-full" src={client} alt="" />
             </div>
             <div>Clients</div>
-          </div>
+          </Link>
         </div>
 
         <div className="w-full items-start flex-col justify-start text-[15px] text-white space-y-3 py-2 ">
