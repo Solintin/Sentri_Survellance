@@ -14,6 +14,7 @@ const DashBoard = () => {
     <Container>
       <div className="w-full h-full space-y-5 bg-gray-100 py-14 sm:py-24">
         <div className="hidden md:flex space-x-2 items-center ">
+        <div className="hidden md:flex space-x-2 items-center ">
           <div className="text-gray-500">View type:</div>
 
           {/**grid grid-cols-1 */}
@@ -121,10 +122,13 @@ const DashBoard = () => {
           <CameraWidget image={three} isalert={!isalert} issignal={issignal}  resize={resize}/>
           <CameraWidget image={""} isalert={!isalert} issignal={!issignal}  resize={resize}/>
           {/** */}
+          
 
           {/** */}
 
           {/** */}
+       
+        </div>
         </div>
       </div>
     </Container>

@@ -9,7 +9,7 @@ const PhaseD = ({ active }) => {
   const navigate = useNavigate();
   const categories = ["For Business", "For Home", "For School"];
   const handleContinue = () => {
-    navigate("/dashboard");
+    navigate("/admin/dashboard");
   };
   return (
     <div
