@@ -77,7 +77,7 @@ const Camera = () => {
                 <CameraList/>
 
           <div
-            className={`pl-[230px] grid grid-cols-1 sm:grid-cols-2  gap-5 w-full items-center  ${
+            className={`pl-4 pr-4 sm:pr-0 sm:pl-[230px] grid grid-cols-1 sm:grid-cols-2  gap-5 w-full items-center  ${
               resize === 1 ? "md:grid-cols-1" : ""
             }  ${resize === 3 ? "md:grid-cols-3" : ""}  ${
               resize === 2 ? "md:grid-cols-2" : ""

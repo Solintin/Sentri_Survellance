@@ -7,7 +7,7 @@ const CamerListWidget = ({cam, id}) => {
     const [showmore, setshowmore] = useState(false)
     const navigate = useNavigate()
     return (
-        <div  className="w-full h-fit flex flex-col">
+        <div  className="w-full h-fit flex flex-col cursor-pointer">
              <div className="w-full items-center flex space-x-2">
               <div className="w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] ">
                 <img className="w-full h-full" src={camera} alt="" />

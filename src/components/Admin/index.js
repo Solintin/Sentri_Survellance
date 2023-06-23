@@ -67,7 +67,7 @@ function Index() {
                   <h2 className="text-base  font-black">Kelvin Hunter</h2>
                 </div>
                 <div className="truncate">
-                  <h2 className="text-base  font-black">
+                  <h2 className="text-base text-ellipsis overflow-hidden w-full whitespace-nowrap  font-black">
                     12 Maldives Riverside...
                   </h2>
                 </div>
@@ -93,7 +93,7 @@ function Index() {
                   <h2 className="text-base  font-black">Kelvin Hunter</h2>
                 </div>
                 <div className="truncate">
-                  <h2 className="text-base  font-black">
+                  <h2 className="text-base text-ellipsis overflow-hidden w-full whitespace-nowrap  font-black">
                     12 Maldives Riverside...
                   </h2>
                 </div>

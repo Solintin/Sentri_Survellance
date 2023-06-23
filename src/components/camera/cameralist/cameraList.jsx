@@ -1,5 +1,4 @@
 import React from "react";
- 
 import CamerListWidget from "../cameralistwidget/cameraListWidget";
 const CameraList = () => {
     const cameras = [
@@ -8,7 +7,7 @@ const CameraList = () => {
         { cam: "Camera#1" },
       ];
     return (
-        <div className="overflow-hidden let swipeInLeft fixed z-[10] left-2 lg:left-[260px] w-[220px] h-full">
+        <div className="overflow-hidden hidden sm:block let swipeInLeft fixed z-[10] left-2 lg:left-[260px] w-[220px] h-full">
         <div className="overflow-y-auto overflow-x-hidden w-full h-[70vh]">
         <div className="w-full h-full flex flex-col">
          {cameras.map(({cam}, index) => {

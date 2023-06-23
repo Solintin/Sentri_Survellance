@@ -77,9 +77,10 @@ function FilterModal({ header, onClose }) {
         </div>
 
         {tab === "cameras" && <Camera />}
-        {tab === "servers" && <Camera />}
-        {tab === "events" && <EventType />}
-        {tab === "period" && <Period />}
+        {tab === "servers" && <EventType/>}
+        {tab === "events" && <EventType/>}
+        {tab === "period" && <Period/>}
+
       </div>
     </div>
   );
