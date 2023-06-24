@@ -47,7 +47,7 @@ const TopNav = ({isNav, setisNav}) => {
             </div>
             <div className="text-sm sm:text-lg font-semibold">{header}</div>
           </div>
-          <div className=" sm:hidden h-[40px] enter   w-fit">
+          <div className=" sm:hidden h-[35px] enter   w-fit">
             <img className="w-full h-full" src={logo} alt="" />
         </div>
 

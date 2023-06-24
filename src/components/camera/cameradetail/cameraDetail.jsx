@@ -10,7 +10,10 @@ import {BiTimeFive} from 'react-icons/bi'
 import Alert from "../alert/alert";
 import MenusWidget from "../menuwidget/menuWidget";
 import {BsCameraVideo} from 'react-icons/bs'
+import { useLocation } from "react-router-dom";
 const CameraDetail = () => {
+  const {state} = useLocation()
+  const {item} = state
     const isalert = true
   const [ismore, setismore] = useState(false);
   return (
@@ -22,8 +25,8 @@ const CameraDetail = () => {
             <img className="w-full h-full" src={camera} alt="" />
           </div>
           <div >
-          <div className="text-lg text-[#132D46] font-semibold">Camera # 1</div>
-          <div className="text-gray-500 font-semibold text-[12px]">Jane Apartment</div>
+          <div className="text-lg text-[#132D46] font-semibold">{item?.cam}</div>
+          <div className="text-gray-500 font-semibold text-[12px]">{item?.name}</div>
           </div>
          
          <div className="flex space-x-1 w-fit px-1 rounded-md bg-[#132D46] items-center">
@@ -89,19 +92,25 @@ const CameraDetail = () => {
                 <div className="font-medium text-[#132D46] text-[13px]">John Doe</div>
             </div>
 
-            <div className="w-full h-[120px] bg-white rounded-md p-2">
-                <div className="grid grid-cols-4 gap-2">
-                    <div className="col-span-2 rounded-md h-[90px]">
-                        <img className="w-full rounded-md  h-full" src={two} alt="" />
+           {item?.sub.map(({subcam, loc}, idx) => {
+            return (
+              <div
+              key={idx}
+              className="w-full h-[120px] bg-white rounded-md p-2">
+              <div className="grid grid-cols-4 gap-2">
+                  <div className="col-span-2 rounded-md h-[90px]">
+                      <img className="w-full rounded-md  h-full" src={two} alt="" />
 
-                    </div>
-                    <div>
-                        <div className="font-medium text-[#132D46] text-[15px] whitespace-nowrap">Camera#2</div>
-                        <div className="text-gray-400 text-[10px] whitespace-nowrap">Living room</div>
-                    </div>
-                </div>
+                  </div>
+                  <div>
+                      <div className="font-medium text-[#132D46] text-[15px] whitespace-nowrap">{subcam}</div>
+                      <div className="text-gray-400 text-[10px] whitespace-nowrap">{loc}</div>
+                  </div>
+              </div>
 
-            </div>
+          </div>
+            )
+           }) }
 
             <div className="w-full items-center justify-center">
             <button className="bg-[#01C38D] flex justify-center space-x-2 items-center p-2 text-white rounded-lg w-fit">

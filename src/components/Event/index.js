@@ -13,7 +13,7 @@ function Index() {
   }
   return (
     <Container>
-      <div className="w-full h-full space-y-5 bg-gray-100 min-h-screen pt-16 sm:py-24">
+      <div className="w-full h-full space-y-5 bg-gray-100 min-h-screen pt-[5rem] px-4 sm:px-0 sm:py-24">
         <button
           onClick={() => setIsFilter(!isFilter)}
           className="rounded-md flex space-x-8 items-center p-2 bg-secondary-100 text-white"
