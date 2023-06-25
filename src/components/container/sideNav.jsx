@@ -37,13 +37,13 @@ const SideNav = ({ isNav, setisNav }) => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="py-4 flex flex-col items-center space-y-4  h-full w-[250px] cursor-pointer  bg-[#132D46] "
+        className="py-4 flex flex-col items-center space-y-4  h-full w-[200px] sm:w-[250px] cursor-pointer  bg-[#132D46] "
       >
         <div className="  px-8 w-full flex flex-col items-center justify-center space-y-3">
-          <div className=" left-[50px]  h-[60px] enter  w-fit">
+          <div className=" left-[50px] h-[35px] sm:h-[60px] enter  w-fit">
             <img className="w-full h-full" src={logo} alt="" />
           </div>
-          <button className="bg-[#01C38D] flex justify-center space-x-2 items-center p-2 text-white rounded-lg w-full">
+          <button className="bg-[#01C38D] flex justify-center whitespace-nowrap space-x-1 w-fit sm:space-x-2 items-center p-2 text-white rounded-lg ">
             <BsCameraVideo className="text-[22px]" />
             <span>Add Camera or DVR</span>
           </button>
