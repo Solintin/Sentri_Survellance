@@ -62,31 +62,31 @@ function Index() {
             <div className="dashboard-scroll-style w-full h-fit overflow-x-auto">
               <div className="min-w-[800px]">
               <div className="flex justify-between">
-                <h2 className="text-lg text-[#132D46]  font-bold">Alerts</h2>
-                <h2 className="text-ms text-[#01C38D]  font-bold">View all</h2>
+                <h2 className="text-base sm:text-lg text-[#132D46] font-semibold sm:font-bold">Alerts</h2>
+                <h2 className="text-[13px] sm:text-sm text-[#01C38D] font-semibold sm:font-bold">View all</h2>
               </div>
-              <div className="mt-1 grid grid-cols-5 bg-white p-3 rounded-t-md">
+              <div className="mt-1 grid grid-cols-5 bg-white p-3 rounded-t-md text-sm sm:text-base text-[#132D46] font-semibold sm:font-bold">
                 <div className="flex space-x-2 items-center">
                   <input type="checkbox" name="" id="" />
-                  <h2 className="text-base text-[#132D46] font-bold">
+                  <h2 className="">
                     Clients
                   </h2>
                 </div>
                 <div>
-                  <h2 className="text-base text-[#132D46] font-bold">
+                  <h2 className="">
                     Address
                   </h2>
                 </div>
                 <div>
-                  <h2 className="text-base text-[#132D46] font-bold">View</h2>
+                  <h2 className="">View</h2>
                 </div>
                 <div>
-                  <h2 className="text-base text-[#132D46] font-bold">
+                  <h2 className="">
                     Officer Assigned
                   </h2>
                 </div>
                 <div>
-                  <h2 className="text-base text-[#132D46] font-bold">
+                  <h2 className="">
                     Information
                   </h2>
                 </div>
@@ -95,52 +95,52 @@ function Index() {
               {[1, 2].map((item, i) => (
                 <div
                   key={i}
-                  className="mt-2 grid grid-cols-5 gap-4 bg-red-500 text-white p-3 "
+                  className="mt-2 grid grid-cols-5 gap-4 bg-red-500 text-white p-3 text-sm sm:text-base font-semibold sm:font-bold"
                 >
                   <div className="flex space-x-2 items-center">
                     <input type="checkbox" name="" id="" />
 
-                    <h2 className="text-base  font-bold">Kelvin Hunter</h2>
+                    <h2 className="">Kelvin Hunter</h2>
                   </div>
                   <div className="truncate">
-                    <h2 className="text-base text-ellipsis overflow-hidden w-full whitespace-nowrap  font-bold">
+                    <h2 className=" text-ellipsis overflow-hidden w-full whitespace-nowrap ">
                       12 Maldives Riverside...
                     </h2>
                   </div>
                   <div>
-                    <h2 className="text-base  font-bold">Entrance</h2>
+                    <h2 className="">Entrance</h2>
                   </div>
                   <div>
-                    <h2 className="text-base  font-bold">Officer Banks</h2>
+                    <h2 className="">Officer Banks</h2>
                   </div>
                   <div>
-                    <h2 className="text-base  font-bold">Assistant</h2>
+                    <h2 className="">Assistant</h2>
                   </div>
                 </div>
               ))}
               {[1, 2, 3, 4, 5, 6].map((item, i) => (
                 <div
                   key={i}
-                  className="mt-2 grid grid-cols-5 gap-4 bg-white p-3 "
+                  className="mt-2 grid grid-cols-5 gap-4 bg-white p-3 text-sm sm:text-base  font-semibold sm:font-bold"
                 >
                   <div className="flex space-x-2 items-center">
                     <input type="checkbox" name="" id="" />
 
-                    <h2 className="text-base  font-bold">Kelvin Hunter</h2>
+                    <h2 className="">Kelvin Hunter</h2>
                   </div>
                   <div className="truncate">
-                    <h2 className="text-base text-ellipsis overflow-hidden w-full whitespace-nowrap  font-bold">
+                    <h2 className=" text-ellipsis overflow-hidden w-full whitespace-nowrap ">
                       12 Maldives Riverside...
                     </h2>
                   </div>
                   <div>
-                    <h2 className="text-base  font-bold">Entrance</h2>
+                    <h2 className="">Entrance</h2>
                   </div>
                   <div>
-                    <h2 className="text-base  font-bold">Officer Banks</h2>
+                    <h2 className="">Officer Banks</h2>
                   </div>
                   <div>
-                    <h2 className="text-base  font-bold">Assistant</h2>
+                    <h2 className="">Assistant</h2>
                   </div>
                 </div>
               ))}

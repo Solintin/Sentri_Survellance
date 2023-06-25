@@ -37,7 +37,7 @@ const TopNav = ({isNav, setisNav}) => {
         onClick={() => {
             setisNav(!isNav)
         }}
-        className="cursor-pointer min-[1024px]:hidden p-1 bg-opacity-20 rounded-md border-[#01C38D] border sm:border-0 bg-[#01C38D] sm:bg-none sm:p-0 ">
+        className="cursor-pointer max-[624px]:hidden min-[1024px]:hidden p-1 bg-opacity-20 rounded-md border-[#01C38D] border sm:border-0 bg-[#01C38D] sm:bg-none sm:p-0 ">
             <FiMenu className="text-[25px] text-[#01C38D] sm:text-gray-400"/>
         </div>
        
@@ -66,15 +66,15 @@ const TopNav = ({isNav, setisNav}) => {
           <BsBellFill className="text-[25px] hidden sm:block text-white sm:text-gray-300" />
 
           <div className="flex items-center space-x-2">
-            <div className="flex flex-col">
+            <div className="hidden sm:flex flex-col">
               <div className="font-medium text-white sm:text-[#132D46] w-full text-ellipsis whitespace-nowrap overflow-hidden">
                 Officer Jim Iyke
               </div>
-              <div className="hidden sm:flex justify-end text-white sm:text-gray-500 w-full text-ellipsis whitespace-nowrap overflow-hidden">
+              <div className=" justify-end text-white sm:text-gray-500 w-full text-ellipsis whitespace-nowrap overflow-hidden">
                 Brian johnson
               </div>
             </div>
-            <div className="rounded-full sm:h-[40px] sm:w-[40px]  h-[25px] w-[25px] bg-gray-200 sm:bg-[#132D46] "></div>
+            <div className="sm:block hidden rounded-full sm:h-[40px] sm:w-[40px]  h-[25px] w-[25px] bg-[#132D46] "></div>
             <MdOutlineNavigateNext className="hidden sm:block text-[25px] text-[#01C38D] rotate-90" />
           </div>
 
@@ -82,7 +82,16 @@ const TopNav = ({isNav, setisNav}) => {
             <AiOutlineGlobal className="text-[22px] text-[#01C38D]" />
             <div className="text-white">English</div>
             <MdOutlineNavigateNext className="text-[20px] text-[#01C38D] rotate-90" />
+
+      
           </div>
+          <div
+        onClick={() => {
+            setisNav(!isNav)
+        }}
+        className="cursor-pointer block sm:hidden p-1 bg-opacity-20 rounded-md border-[#01C38D] border sm:border-0 bg-[#01C38D] sm:bg-none sm:p-0 ">
+            <FiMenu className="text-[25px] text-[#01C38D] sm:text-gray-400"/>
+        </div>
         </div>
       </div>
     </div>
