@@ -47,6 +47,22 @@ input[type="checkbox"] {
   background-color: gray;
 }
 
+.dashboard-scroll-style::-webkit-scrollbar {
+  width:10px;
+  height:8px;
+}
+
+
+.dashboard-scroll-style::-webkit-scrollbar-thumb {
+ 
+  background-color:#132D46;
+}
+
+.dashboard-scroll-style::-webkit-scrollbar-track {
+ 
+  @apply bg-gray-200;
+}
+
 #animate {
   @apply animate-spin;
 }
