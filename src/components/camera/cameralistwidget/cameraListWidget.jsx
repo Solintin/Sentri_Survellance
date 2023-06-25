@@ -3,7 +3,7 @@ import camera from "../../../assets/svg/camera.svg";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-const CamerListWidget = ({cam, id}) => {
+const CamerListWidget = ({item, id}) => {
     const [showmore, setshowmore] = useState(false)
     const navigate = useNavigate()
     return (
@@ -14,12 +14,16 @@ const CamerListWidget = ({cam, id}) => {
               </div>
               <div
               onClick={() => {
-                navigate(`/camera/${id}`)
+                navigate(`/camera/${id}`, {
+                  state: {
+                    item,
+                  }
+                })
               }}
               className="text-[#132D46] font-semibold text-lg">
-                {cam}
+                {item?.cam}
               </div>
-              {!showmore && <div className="px-2 py-1 text-[#01C38D] bg-[#01C38D] bg-opacity-10 text-[12px] rounded-md">4</div>}
+              {!showmore && <div className="px-2 py-1 text-[#01C38D] bg-[#01C38D] bg-opacity-10 text-[12px] rounded-md">{item?.sub?.length}</div>}
               <div 
               onClick={() => {
                 setshowmore(!showmore)
@@ -31,30 +35,27 @@ const CamerListWidget = ({cam, id}) => {
             </div>
             <div className={showmore ? "w-full mt-[-10px]  pl-[50px]" : "hidden"}>
               <div className="font-semibold text-sm whitespace-nowrap">
-                Lucy apartment
+                {item?.name}
               </div>
-              <div className="w-full  flex justify-start border-l  border-gray-500 gap-[2px] flex-col">
+              {item?.sub.map (({subcam, loc},idx) => {
+                return (
+                  <div
+                  key={idx}
+                  className="w-full  flex justify-start border-l  border-gray-500 gap-[2px] flex-col">
                 <div className="flex relative  top-[23px] pl-[10px] w-fit flex-col  ">
                   <div className="left-[-1px] top-[14px] absolute h-2 w-3 border-b border-l  rounded-bl-md border-gray-500"></div>
                   <div className="font-semibold text-[13px] text-[#132D46]">
-                    Camera#1
+                    {subcam}
                   </div>
                   <div className="text-gray-500 text-[12px] whitespace-nowrap">
                     {" "}
-                    Building Entrance
+                   {loc}
                   </div>
                 </div>
-                <div className="flex relative  top-[23px] pl-[10px] w-fit flex-col  ">
-                  <div className="left-[-1px] top-[14px] absolute h-2 w-3 border-b border-l  rounded-bl-md border-gray-500"></div>
-                  <div className="font-semibold text-[13px] text-[#132D46]">
-                    Camera#1
-                  </div>
-                  <div className="text-gray-500 text-[12px] whitespace-nowrap">
-                    {" "}
-                    Building Entrance
-                  </div>
-                </div>
+                
               </div>
+                )
+              })}
             </div>
         </div>
 

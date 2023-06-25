@@ -8,7 +8,7 @@ const EmergencyContact = ({ iscontact, setiscontact }) => {
     >
       <div
         className={
-          "relative w-[280px] p-4 sm:p-6 z-[300] h-fit flex flex-col text-[11px] text-black font-semibold bg-white rounded-md shadow-md space-y-4"
+          "relative w-[280px] py-2 px-4 sm:px-6 sm:py-6 z-[300] h-fit flex flex-col text-[11px] text-black font-semibold bg-white rounded-md shadow-md space-y-4"
         }
       >
         <div
@@ -21,7 +21,7 @@ const EmergencyContact = ({ iscontact, setiscontact }) => {
         ></div>
 
         <div className="flex full flex-col space-y-3 cursor-pointer">
-          <div className="text-sm font-semibold text-[#132D46] border-b pb-2 ">
+          <div className="text-[13px] sm:text-sm font-semibold text-[#132D46] border-b pb-2 ">
             Emergency Contacts
           </div>
           <div className="flex justify-between items-center w-full">
