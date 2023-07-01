@@ -63,6 +63,23 @@ input[type="checkbox"] {
   @apply bg-gray-200;
 }
 
+.home-scroll-style::-webkit-scrollbar {
+  width:2px;
+  
+}
+
+
+.home-scroll-style::-webkit-scrollbar-thumb {
+  border-radius:6px;
+  background-color:#132D46;
+}
+
+.home-scroll-style::-webkit-scrollbar-track {
+  border-radius:6px;
+  @apply bg-gray-300;
+}
+
+
 #animate {
   @apply animate-spin;
 }
@@ -333,8 +350,8 @@ height:100%;};
 }
 
 .lets {
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
