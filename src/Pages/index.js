@@ -6,5 +6,18 @@ import Admin from "../components/Admin";
 import CameraDetail from "../components/camera/cameradetail/cameraDetail";
 import Event from "../components/Event";
 import ClientProfile from "../components/client/clientprofile/clientProfile";
+import Auth from "../components/authentication/auth/auth";
+import Login from "../components/authentication/login";
 
-export { Registration, Landing, DashBoard, Camera, Admin, Event, CameraDetail, ClientProfile };
+export {
+  Login,
+  Auth,
+  Registration,
+  Landing,
+  DashBoard,
+  Camera,
+  Admin,
+  Event,
+  CameraDetail,
+  ClientProfile,
+};

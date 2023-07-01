@@ -12,6 +12,8 @@ import {
   Event,
   CameraDetail,
   ClientProfile,
+  Auth,
+  Login,
 } from "./Pages";
 
 const App = () => {
@@ -44,7 +46,11 @@ const App = () => {
         <Scrolltotop />
         <Routes>
           {/*    AUTH PAGE */}
-          <Route exact path="/signup" element={<Registration />} />
+          <Route exact path="/auth" element={<Auth />}>
+          <Route exact path="signup" element={<Registration />} />
+          <Route exact path="signin" element={<Login />} />
+            </Route>
+         
           <Route exact path="/" element={<Landing />} />
           {/*    LANDING PAGE */}
           <Route exact path="/dashboard" element={<DashBoard />} />

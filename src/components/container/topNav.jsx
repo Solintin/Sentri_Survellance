@@ -37,7 +37,7 @@ const TopNav = ({isNav, setisNav}) => {
         onClick={() => {
             setisNav(!isNav)
         }}
-        className="cursor-pointer max-[624px]:hidden min-[1024px]:hidden p-1 bg-opacity-20 rounded-md border-[#01C38D] border sm:border-0 bg-[#01C38D] sm:bg-none sm:p-0 ">
+        className="cursor-pointer hidden sm:block min-[1024px]:hidden p-1 bg-opacity-20 rounded-md border-[#01C38D] border sm:border-0 bg-[#01C38D] sm:bg-none sm:p-0 ">
             <FiMenu className="text-[25px] text-[#01C38D] sm:text-gray-400"/>
         </div>
        

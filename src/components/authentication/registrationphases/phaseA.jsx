@@ -6,12 +6,16 @@ import fb from "../../../assets/svg/fb.svg";
 import apple from "../../../assets/svg/apple.svg";
 import google from "../../../assets/svg/google.svg";
 import Loader from "../../UI/Loader";
+import { RiErrorWarningLine } from "react-icons/ri";
+import PasswordWarning from "../warning/passwordWarning";
 // import { LoginAction } from "../../../Redux/Actions/ActionCreators";
 const PhaseA = ({ active, setActive }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmpassword, setConfirmPassword] = useState("");
   const [loading] = useState(false);
+  const [iswarn, setwarn] = useState(false)
   // const navigate = useNavigate();
   // const dispatch = useDispatch();
 
@@ -42,7 +46,7 @@ const PhaseA = ({ active, setActive }) => {
     <div
       className={
         active === 0
-          ? "w-full  relative h-[500px] px-6 sm:px-8 py-6 flex  flex-col justify-center items-center  sm:rounded-lg bg-white border shadow-xl"
+          ? "w-full  relative h-[580px] px-6 sm:px-8 py-6 flex  flex-col justify-center items-center  sm:rounded-lg bg-white border shadow-xl"
           : "hidden"
       }
     >
@@ -99,7 +103,17 @@ const PhaseA = ({ active, setActive }) => {
         </div>
         <div className="form-group space-y-3 mb-3 w-full">
           <label className="block font-medium " htmlFor="password">
-            Password
+            <span className="flex items-center space-x-1">
+              {" "}
+              <span>Password </span>
+              <span
+               onClick={() => {
+                setwarn(!iswarn)
+            }}
+              className="cursor-pointer">
+                <RiErrorWarningLine className="text-[20px] text-[#01C38D]" />
+              </span>
+            </span>
           </label>
           <input
             className="block form__input input-field border  border-gray-200 bg-gray-100 rounded-md focus:outline-none w-full h-11 px-4"
@@ -109,6 +123,21 @@ const PhaseA = ({ active, setActive }) => {
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);
+            }}
+          />
+        </div>
+        <div className="form-group space-y-3 mb-3 w-full">
+          <label className="block font-medium " htmlFor="password">
+            Confirm Password
+          </label>
+          <input
+            className="block form__input input-field border  border-gray-200 bg-gray-100 rounded-md focus:outline-none w-full h-11 px-4"
+            type="password"
+            placeholder=""
+            name="password"
+            value={confirmpassword}
+            onChange={(e) => {
+              setConfirmPassword(e.target.value);
             }}
           />
         </div>
@@ -122,6 +151,7 @@ const PhaseA = ({ active, setActive }) => {
           {loading ? <Loader /> : "Create Account"}
         </button>
       </div>
+      {iswarn && <PasswordWarning iswarn={iswarn} setwarn={setwarn}/>}
     </div>
   );
 };
