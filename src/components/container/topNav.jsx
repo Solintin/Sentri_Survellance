@@ -24,6 +24,9 @@ const TopNav = ({isNav, setisNav}) => {
     if (pathname.includes("admin")) {
       setHeder("Admin");
     }
+    if (pathname.includes("report")) {
+      setHeder("Reports");
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

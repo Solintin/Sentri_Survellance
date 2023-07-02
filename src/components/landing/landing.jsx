@@ -9,20 +9,12 @@ const Landing = () => {
 
   useEffect(() => {
     const handleSize = () => {
-      setTimeOutId(
-        window.setTimeout(() => {
-          // iconref.current.style.transformOrigin = "top left";
-          //  iconref.current.style.animation = "glide .4s"
-        }, 4000)
-      );
+      setTimeOutId(window.setTimeout(() => {}, 4000));
       setTimeOutId1(
         window.setTimeout(() => {
-         // navigate("/signup");
+          // navigate("/signup");
         }, 4000)
       );
-      // iconref.current.style.transformOrigin = "center";
-     // iconref.current.style.animation = "bounce .4s 8 alternate";
-      //iconref.current.style.transform = "translateX(-50vh) translateY(-40vh)";
     };
     handleSize();
     return () => {
@@ -33,35 +25,36 @@ const Landing = () => {
   }, []);
   return (
     <div className="w-full h-full fixed inset-0  text-white bg-[#132D46]">
-      <div  className="w-[600px] sm:w-[900px] inset-0 m-auto h-fit absolute "
-      >
+      <div className="w-[600px] sm:w-[900px] inset-0 m-auto h-fit absolute ">
         <img src={map} alt="" className="w-full h-full object-contain" />
       </div>
-      <div
-    
-        className="w-full h-fit space-y-[30vh] flex flex-col items-center bottom-[10vh] inset-x-0 mx-auto lets swipeDown  absolute "
-      >
+      <div className="w-full h-fit space-y-[30vh] flex flex-col items-center bottom-[10vh] inset-x-0 mx-auto lets swipeDown  absolute ">
         <div className="w-[190px] justify-center h-20 flex items-center space-x-3">
-        <img className="h-full w-full" src={logo} alt="" />
-        <div className="text-2xl inline-block">
-          <div className="whitespace-nowrap w-full animation overflow-hidden tracking-[6px]">
-            SENTRI
+          <img className="h-full w-full" src={logo} alt="" />
+          <div className="text-2xl inline-block">
+            <div className="whitespace-nowrap w-full animation overflow-hidden tracking-[6px]">
+              SENTRI
+            </div>
           </div>
-        </div>
         </div>
         <div className="space-y-3 w-full sm:w-[400px] px-3 ">
           <button
-           onClick={() => {
-            navigate("/auth/signin")
-          }}
-          className="w-full py-3 bg-white text-zinc-700 font-medium rounded-md">Log In</button>
+            onClick={() => {
+              navigate("/auth/signin");
+            }}
+            className="w-full py-3 bg-white text-zinc-700 font-medium rounded-md"
+          >
+            Log In
+          </button>
           <button
-          onClick={() => {
-            navigate("/auth/signup")
-          }}
-          className="w-full py-3 bg-[#01C38D] font-medium rounded-md">Create Account</button>
+            onClick={() => {
+              navigate("/auth/signup");
+            }}
+            className="w-full py-3 bg-[#01C38D] font-medium rounded-md"
+          >
+            Create Account
+          </button>
         </div>
-        
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, {  useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/png/logo.png";
 import { BsCameraVideo } from "react-icons/bs";
 import camera from "../../assets/svg/camera.svg";
@@ -11,12 +11,14 @@ import setting from "../../assets/svg/setting.svg";
 import logout from "../../assets/svg/logout.svg";
 import { Link, useLocation } from "react-router-dom";
 // import DashBoard from "../dashboard/dashBoard";
+import EventSettings from "../Composable/AddCamera";
+
 const SideNav = ({ isNav, setisNav }) => {
-//   const [isAdmin, setisAdmin] = useState(false);
+  const [addCamera, setAddCamera] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
     if (pathname === "/admin/dashboard") {
-    //   setisAdmin(true);
+      //   setisAdmin(true);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -43,11 +45,21 @@ const SideNav = ({ isNav, setisNav }) => {
           <div className=" left-[50px] h-[35px] sm:h-[60px] enter  w-fit">
             <img className="w-full h-full" src={logo} alt="" />
           </div>
-          <button className="bg-[#01C38D] flex justify-center whitespace-nowrap space-x-1 w-fit sm:space-x-2 items-center p-2 text-white rounded-lg ">
+          <button
+            onClick={() => setAddCamera(true)}
+            className="bg-[#01C38D] flex justify-center whitespace-nowrap space-x-1 w-fit sm:space-x-2 items-center p-2 text-white rounded-lg "
+          >
             <BsCameraVideo className="text-[22px]" />
             <span>Add Camera or DVR</span>
           </button>
         </div>
+
+        {addCamera && (
+          <EventSettings
+            header={"Connect a DVR"}
+            onClose={() => setAddCamera(false)}
+          />
+        )}
 
         <div className="w-full items-start flex-col justify-start text-[15px] text-white space-y-3 py-2 border-b border-[#01C38D]">
           {true && (
@@ -104,9 +116,10 @@ const SideNav = ({ isNav, setisNav }) => {
             <div>Archive Events</div>
           </div>
 
-          <div
+          <Link
+            to="/report"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname === "/report"
+              pathname.includes("report")
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
             }`}
@@ -115,7 +128,7 @@ const SideNav = ({ isNav, setisNav }) => {
               <img className="w-full h-full" src={report} alt="" />
             </div>
             <div>Reports</div>
-          </div>
+          </Link>
 
           <div
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
@@ -130,7 +143,8 @@ const SideNav = ({ isNav, setisNav }) => {
             <div>Admin Settings</div>
           </div>
 
-          <Link to="/client"
+          <Link
+            to="/client"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
               pathname === "/client"
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"

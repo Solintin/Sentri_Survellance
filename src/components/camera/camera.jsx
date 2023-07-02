@@ -11,8 +11,6 @@ const Camera = () => {
   const [isalert] = useState(true);
   const [resize, setresize] = useState(2);
 
- 
-
   const record = true;
   return (
     <Container>
@@ -71,55 +69,53 @@ const Camera = () => {
             </div>
           </div>
           {/**grid grid-cols-3 */}
-        
         </div>
-      
-                <CameraList/>
 
-          <div
-            className={`pl-4 pr-4 sm:pr-0 sm:pl-[230px] grid grid-cols-1 sm:grid-cols-2  gap-5 w-full items-center  ${
-              resize === 1 ? "md:grid-cols-1" : ""
-            }  ${resize === 3 ? "md:grid-cols-3" : ""}  ${
-              resize === 2 ? "md:grid-cols-2" : ""
-            }`}
-          >
-            <CameraWidget
-              image={three}
-              isalert={isalert}
-              issignal={issignal}
-              record={record}
-              resize={resize}
-            />
-            <CameraWidget
-              image={two}
-              isalert={!isalert}
-              issignal={issignal}
-              record={record}
-              resize={resize}
-            />
-            <CameraWidget
-              image={three}
-              isalert={!isalert}
-              issignal={issignal}
-              record={record}
-              resize={resize}
-            />
-            <CameraWidget
-              image={""}
-              isalert={!isalert}
-              issignal={!issignal}
-              record={record}
-              resize={resize}
-            />
-            <CameraWidget
-              image={""}
-              isalert={!isalert}
-              issignal={!issignal}
-              record={record}
-              resize={resize}
-            />
-          </div>
-        
+        <CameraList />
+
+        <div
+          className={`pl-4 pr-4 sm:pr-0 sm:pl-[230px] grid grid-cols-1 sm:grid-cols-2  gap-5 w-full items-center  ${
+            resize === 1 ? "md:grid-cols-1" : ""
+          }  ${resize === 3 ? "md:grid-cols-3" : ""}  ${
+            resize === 2 ? "md:grid-cols-2" : ""
+          }`}
+        >
+          <CameraWidget
+            image={three}
+            isalert={isalert}
+            issignal={issignal}
+            record={record}
+            resize={resize}
+          />
+          <CameraWidget
+            image={two}
+            isalert={!isalert}
+            issignal={issignal}
+            record={record}
+            resize={resize}
+          />
+          <CameraWidget
+            image={three}
+            isalert={!isalert}
+            issignal={issignal}
+            record={record}
+            resize={resize}
+          />
+          <CameraWidget
+            image={""}
+            isalert={!isalert}
+            issignal={!issignal}
+            record={record}
+            resize={resize}
+          />
+          <CameraWidget
+            image={""}
+            isalert={!isalert}
+            issignal={!issignal}
+            record={record}
+            resize={resize}
+          />
+        </div>
       </div>
     </Container>
   );

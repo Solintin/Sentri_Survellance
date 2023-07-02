@@ -5,6 +5,8 @@ import DashBoard from "../components/dashboard/dashBoard";
 import Admin from "../components/Admin";
 import CameraDetail from "../components/camera/cameradetail/cameraDetail";
 import Event from "../components/Event";
+import Report from "../components/Report";
+import CreateReport from "../components/Report/create";
 import ClientProfile from "../components/client/clientprofile/clientProfile";
 import Auth from "../components/authentication/auth/auth";
 import Login from "../components/authentication/login";
@@ -20,4 +22,6 @@ export {
   Event,
   CameraDetail,
   ClientProfile,
+  Report,
+  CreateReport
 };
