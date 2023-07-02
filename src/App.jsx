@@ -17,6 +17,8 @@ import {
   Report,
   CreateReport,
   AdminSettings,
+  Onboarding,
+  ArchiveEvent,
 } from "./Pages";
 
 const App = () => {
@@ -62,6 +64,8 @@ const App = () => {
           <Route exact path="/client" element={<ClientProfile />} />
           <Route exact path="/events" element={<Event />} />
           <Route exact path="/report" element={<Report />} />
+          <Route exact path="/onboarding" element={<Onboarding />} />
+          <Route exact path="/archive" element={<ArchiveEvent />} />
           <Route exact path="/report/create" element={<CreateReport />} />
           <Route exact path="/admin/dashboard" element={<Admin />} />
           <Route exact path="/admin/settings" element={<AdminSettings />} />

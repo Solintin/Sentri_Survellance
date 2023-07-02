@@ -7,7 +7,7 @@ import deletes from "../../../assets/svg/delete.svg";
 import Eventsettings from "../../Composable/Eventsettings.js";
 import EditCamera from "../../Composable/EditCamera.js";
 
-const EventSettings = () => {
+const EventController = () => {
   const [settings, setSettings] = useState(false);
   const [edit, setedit] = useState(false);
   function onClose() {
@@ -63,4 +63,4 @@ const EventSettings = () => {
   );
 };
 
-export default EventSettings;
+export default EventController;

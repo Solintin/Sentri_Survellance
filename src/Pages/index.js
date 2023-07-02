@@ -11,6 +11,8 @@ import CreateReport from "../components/Report/create";
 import ClientProfile from "../components/client/clientprofile/clientProfile";
 import Auth from "../components/authentication/auth/auth";
 import Login from "../components/authentication/login";
+import Onboarding from "../components/onboarding/onboarding";
+import ArchiveEvent from "../components/archiveEvent/archiveEvent";
 
 export {
   Login,
@@ -25,5 +27,7 @@ export {
   CameraDetail,
   ClientProfile,
   Report,
-  CreateReport
+  CreateReport,
+  Onboarding,
+  ArchiveEvent,
 };

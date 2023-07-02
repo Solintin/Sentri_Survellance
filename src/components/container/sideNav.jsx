@@ -80,7 +80,7 @@ const SideNav = ({ isNav, setisNav }) => {
           <Link
             to="/camera"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname === "/camera"
+              pathname.includes("camera")
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
             }`}
@@ -93,7 +93,7 @@ const SideNav = ({ isNav, setisNav }) => {
           <Link
             to="/events"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname === "/events"
+              pathname.includes("events")
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
             }`}
@@ -103,9 +103,10 @@ const SideNav = ({ isNav, setisNav }) => {
             </div>
             <div>Events</div>
           </Link>
-          <div
+          <Link
+          to="/archive"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname === "/archive-setting"
+              pathname.includes("archive")
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
             }`}
@@ -114,7 +115,7 @@ const SideNav = ({ isNav, setisNav }) => {
               <img className="w-full h-full" src={archive} alt="" />
             </div>
             <div>Archive Events</div>
-          </div>
+          </Link>
 
           <Link
             to="/report"

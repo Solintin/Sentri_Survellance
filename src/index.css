@@ -103,6 +103,20 @@ input[type="checkbox"] {
   @apply bg-gray-100;
 }
 
+.timing-scroll-style::-webkit-scrollbar {
+  width:5px;
+  
+}
+.timing-scroll-style::-webkit-scrollbar-thumb {
+ 
+  @apply bg-gray-400
+}
+
+.timing-scroll-style::-webkit-scrollbar-track {
+ 
+  @apply bg-gray-100;
+}
+
 #animate {
   @apply animate-spin;
 }
@@ -461,6 +475,111 @@ label.label input[type="file"] {
 .filters {
   filter:blur(20px);
 }
+
+
+/* The container */
+.phase3-container {
+  position: relative;
+  padding-left: 35px;
+  
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox rounded-full w-3 h-3 bg-black*/
+.phase3-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.phase3-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 20px;
+  width: 20px;
+  border-radius: 6px;
+  border: 1px solid gray;
+  @apply bg-gray-300
+}
+.phase3-checkmark::before {
+  position:absolute;
+  content: "";
+  width: 5px;
+  height: 10px;
+  left:6px;
+  top:2px;
+  transform: rotate(50deg);
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  
+
+}
+
+/* On mouse-over, add a grey background color */
+.phase3-container:hover input ~ .checkmark {
+  background-color: white;
+}
+
+/* When the checkbox is checked, add a blue background */
+.phase3-container input:checked ~ .phase3-checkmark {
+  @apply bg-green-300;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.phase3-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.phase3-container input:checked ~ .phase3-checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.phase3-container .phase3-checkmark:after {
+  position:absolute;
+  content:"";
+  width: 5px;
+  height: 10px;
+  left:6px;
+  top:2px;
+  transform: rotate(50deg);
+ @apply border-r-2 border-b-2 border-[#01C38D];
+  border-radius: 6px;
+ 
+ 
+}
+
+.top-modal-fixed {
+  width:100%;
+}
+@media screen and (min-width:1024px) {
+  .top-modal-fixed {
+    width:calc(100% - 500px);
+  }
+}
+@media screen and (max-width:1024px) {
+  .top-modal-fixed {
+    width:calc(100% - 250px);
+  }
+}
+@media screen and (max-width:640px) {
+  .top-modal-fixed {
+    width:100%;
+  }
+}
+
 
 @import "tailwindcss/base";
 

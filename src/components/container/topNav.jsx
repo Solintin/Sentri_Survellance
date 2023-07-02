@@ -21,6 +21,9 @@ const TopNav = ({isNav, setisNav}) => {
     if (pathname.includes("client")) {
       setHeder("Clients");
     }
+    if (pathname.includes("archive")) {
+      setHeder("Archive Events");
+    }
     if (pathname.includes("admin")) {
       setHeder("Admin");
     }

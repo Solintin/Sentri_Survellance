@@ -45,7 +45,7 @@ function Index() {
         )}
 
         {!isEmpty && (
-          <div className="hidden sm:block px-4 sm:px-4 py-4 border-r space-y-3 bg-white border-gray-400 shadow-sm w-[240px] sm:w-[310px] ">
+          <div className="hidden sm:block h-full fixed px-4 sm:px-4 py-4 border-r space-y-3 bg-white border-gray-400 shadow-sm w-[240px] sm:w-[250px] ">
             <button
               onClick={() => setIsFilter(!isFilter)}
               className="rounded-md flex space-x-8 items-center p-2 bg-secondary-100 text-white"
@@ -58,8 +58,8 @@ function Index() {
         )}
 
         {!isEmpty && (
-          <div className=" w-full h-full">
-            <div className="bg-white border-b  py-[16px] font-semibold shadow-sm text-center">
+          <div className="sm:pl-[250px] w-full h-full">
+            <div className="bg-white z-[20] border-b top-modal-fixed fixed  right-0  py-[16px] font-semibold shadow-sm text-center">
               Thursday, june 29th
             </div>
 

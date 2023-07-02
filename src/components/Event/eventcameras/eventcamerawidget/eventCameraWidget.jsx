@@ -1,6 +1,6 @@
 import React from "react";
 import two from "../../../../assets/png/two.jpg";
-import EventSettings from '../../eventsettings/eventSettings';
+import EventController from '../../eventsettings/eventControl';
 import { useState } from 'react';
 import {AiTwotoneSetting} from 'react-icons/ai';
 const EventCameraWidget = () => {
@@ -20,7 +20,7 @@ const EventCameraWidget = () => {
         className="absolute top-2 right-3 text-white w-fit h-fit bg-white p-1 rounded-lg bg-opacity-40 cursor-pointer">
             <AiTwotoneSetting className="text-[25px]"/>
         </div>
-        {isSettings && <EventSettings/>}
+        {isSettings && <EventController/>}
     </div>
     )
 }
