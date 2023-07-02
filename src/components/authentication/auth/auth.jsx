@@ -3,11 +3,12 @@ import logo from "../../../assets/png/logo.png";
 import { BiArrowBack } from "react-icons/bi";
 import map from "../../../assets/svg/authmap.svg";
 import cctv from "../../../assets/png/cctv.png";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Registration from "../registration";
 import Login from "../login";
 const Auth = () => {
     const {pathname} = useLocation()
+    const navigate = useNavigate()
   return (
     <div className="w-full h-full fixed inset-0 p-2 sm:py-4   sm:px-10  text-zinc-800 bg-[#132D46]">
          <div  className="w-[600px] sm:w-[900px] inset-0 m-auto h-fit absolute "
@@ -16,7 +17,11 @@ const Auth = () => {
       </div>
       
       
-      <div className="flex space-x-2 mb-5 sm:mb-7 text-white items-center z-[2]">
+      <div
+      onClick={() => {
+        navigate(-1)
+      }}
+      className="flex space-x-2 mb-5 sm:mb-7 text-white items-center z-[2]">
         <BiArrowBack className="text-[25px] text-[#01C38D]" />
         Back
       </div>
