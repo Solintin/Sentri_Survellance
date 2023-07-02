@@ -15,7 +15,8 @@ import {
   Auth,
   Login,
   Report,
-  CreateReport
+  CreateReport,
+  AdminSettings,
 } from "./Pages";
 
 const App = () => {
@@ -49,10 +50,10 @@ const App = () => {
         <Routes>
           {/*    AUTH PAGE */}
           <Route exact path="/auth" element={<Auth />}>
-          <Route exact path="signup" element={<Registration />} />
-          <Route exact path="signin" element={<Login />} />
-            </Route>
-         
+            <Route exact path="signup" element={<Registration />} />
+            <Route exact path="signin" element={<Login />} />
+          </Route>
+
           <Route exact path="/" element={<Landing />} />
           {/*    LANDING PAGE */}
           <Route exact path="/dashboard" element={<DashBoard />} />
@@ -63,6 +64,7 @@ const App = () => {
           <Route exact path="/report" element={<Report />} />
           <Route exact path="/report/create" element={<CreateReport />} />
           <Route exact path="/admin/dashboard" element={<Admin />} />
+          <Route exact path="/admin/settings" element={<AdminSettings />} />
           {/**Protected routes */}
         </Routes>
       </Router>

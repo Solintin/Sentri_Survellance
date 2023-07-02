@@ -24,6 +24,9 @@ const TopNav = ({isNav, setisNav}) => {
     if (pathname.includes("admin")) {
       setHeder("Admin");
     }
+    if (pathname.includes("admin/settings")) {
+      setHeder("Admin Settings");
+    }
     if (pathname.includes("report")) {
       setHeder("Reports");
     }

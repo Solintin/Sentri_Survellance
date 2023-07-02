@@ -3,6 +3,7 @@ import Landing from "../components/landing/landing";
 import Camera from "../components/camera/camera";
 import DashBoard from "../components/dashboard/dashBoard";
 import Admin from "../components/Admin";
+import AdminSettings from "../components/Admin/settings";
 import CameraDetail from "../components/camera/cameradetail/cameraDetail";
 import Event from "../components/Event";
 import Report from "../components/Report";
@@ -19,6 +20,7 @@ export {
   DashBoard,
   Camera,
   Admin,
+  AdminSettings,
   Event,
   CameraDetail,
   ClientProfile,
