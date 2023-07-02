@@ -29,6 +29,7 @@ const Login = () => {
       }
     }
 
+    navigate("/admin/dashboard")
     const payload = {
       email,
       password,

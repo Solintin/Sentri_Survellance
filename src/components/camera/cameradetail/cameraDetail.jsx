@@ -18,15 +18,16 @@ const CameraDetail = () => {
   const [ismore, setismore] = useState(false);
   return (
     <Container>
-      <div className=" w-full h-full grid grid-cols-1 md:grid-cols-11 pb-[100px] pt-[83px] gap-y-10  md:gap-10">
+      <div className=" w-full h-full grid grid-cols-1 sm:px-4 md:grid-cols-11 pb-[100px] pt-[83px] gap-y-10  md:gap-10">
         <div className="w-full md:col-span-7 space-y-3">
-            <div className="flex items-center space-x-2">
+          <div className="flex flex-col w-[175px] overflow-hidden items-center">
+          <div className="flex items-center space-x-2">
             <div className="w-[22px] h-[22px] sm:w-[35px] sm:h-[35px] ">
             <img className="w-full h-full" src={camera} alt="" />
           </div>
           <div >
           <div className="text-lg text-[#132D46] font-semibold">{item?.cam}</div>
-          <div className="text-gray-500 font-semibold text-[12px]">{item?.name}</div>
+         
           </div>
          
          <div className="flex space-x-1 w-fit px-1 rounded-md bg-[#132D46] items-center">
@@ -34,6 +35,9 @@ const CameraDetail = () => {
             <div className="text-white text-[10px]">Live</div>
          </div>
             </div>
+          <div className="text-gray-500 font-semibold text-[12px] align-middle">{item?.name}</div>
+          </div>
+          
          
          <div className="w-full bg-white rounded-md p-3">
          <div className="w-full h-[80%] rounded-md relative mb-3">
@@ -73,12 +77,12 @@ const CameraDetail = () => {
          </div>
 
          <div className="flex items-center space-x-3">
-            <div  className="w-[24px] cursor-pointer flex items-center justify-center h-[24px] p-[6px] rounded-full bg-gray-200  ">
-                <img className="w-[24px] h-[24px]" src={voice} alt="" />
+            <div  className="w-[24px] cursor-pointer flex items-center justify-center  sm:w-[30px] sm:h-[30px] h-[24px] p-[6px] rounded-full bg-gray-200  ">
+                <img className="w-[24px] h-[24px]  sm:w-[30px] sm:h-[30px]" src={voice} alt="" />
             </div>
 
-            <div className="w-[24px] cursor-pointer flex items-center justify-center h-[24px] p-[6px] rounded-full bg-gray-200  ">
-                <img className="w-[24px] h-[24px]" src={speaker} alt="" />
+            <div className="w-[24px]  sm:w-[30px] sm:h-[30px] cursor-pointer flex items-center justify-center h-[24px] p-[6px] rounded-full bg-gray-200  ">
+                <img className="w-[24px] h-[24px]  sm:w-[30px] sm:h-[30px]" src={speaker} alt="" />
             </div>
          </div>
          </div>

@@ -33,10 +33,6 @@ input[type="checkbox"] {
   height:5px;
 }
 
-*{
-  margin:0;
-  padding:0;
-}
 .scroll-style::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color:#132D46;
@@ -46,6 +42,21 @@ input[type="checkbox"] {
   border-radius: 8px;
   background-color: gray;
 }
+
+
+*{
+  margin:0;
+  padding:0;
+}
+
+@media screen and (max-width:450px) {
+  .scroll-style::-webkit-scrollbar {
+    width:3px;
+  
+  }
+}
+
+
 
 .dashboard-scroll-style::-webkit-scrollbar {
   width:10px;
@@ -67,8 +78,6 @@ input[type="checkbox"] {
   width:2px;
   
 }
-
-
 .home-scroll-style::-webkit-scrollbar-thumb {
   border-radius:6px;
   background-color:#132D46;
@@ -79,6 +88,20 @@ input[type="checkbox"] {
   @apply bg-gray-300;
 }
 
+/*camera-scroll-style*/
+.camera-scroll-style::-webkit-scrollbar {
+  width:8px;
+  
+}
+.camera-scroll-style::-webkit-scrollbar-thumb {
+  border-radius:6px;
+  @apply bg-[#01C38D];
+}
+
+.camera-scroll-style::-webkit-scrollbar-track {
+  border-radius:6px;
+  @apply bg-gray-100;
+}
 
 #animate {
   @apply animate-spin;

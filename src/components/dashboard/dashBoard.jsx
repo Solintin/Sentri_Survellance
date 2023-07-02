@@ -12,7 +12,7 @@ const DashBoard = () => {
 
   return (
     <Container>
-      <div className="w-full h-full space-y-5 bg-gray-100 py-14 sm:py-24">
+      <div className="w-full h-full sm:px-4 space-y-5 bg-gray-100 py-14 sm:py-24">
         <div className="hidden md:flex space-x-2 items-center ">
         <div className="hidden md:flex space-x-2 items-center ">
           <div className="text-gray-500">View type:</div>

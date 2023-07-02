@@ -7,7 +7,7 @@ import clients from "../../assets/svg/clients.svg";
 function Index() {
   return (
     <Container>
-      <div className="w-full h-full space-y-5 bg-gray-100 px-4 sm:px-0 py-[5rem] sm:py-24">
+      <div className="w-full h-full space-y-5 bg-gray-100 px-4 sm:px-4 py-[5rem] sm:py-24">
         <h2 className="text-lg font-bold">Overview</h2>
         <div className="grid xl:grid-cols-12 grid-cols-1 gap-y-6 xl:gap-6 items-start mt-3">
           <div className="col-span-9 space-y-4 w-full h-full ">

@@ -19,7 +19,8 @@ function Period() {
   const [timevalue, onChangeValue] = useState("10:00");
 
   return (
-    <div className="w-full py-6 px-6 sm:py-10 flex flex-col justify-center items-center bg-[#F0F0F2]">
+    <div className=" w-full h-[290px] sm:h-[230px]  flex flex-col justify-center items-center bg-[#F0F0F2] overflow-hidden">
+    <div className="scroll-style overflow-y-auto w-full h-full py-3 px-6 sm:py-6">
       <div className="font-semibold text-lg w-full border-b border-zinc-400 py-2 text-[#132D46]">
         By time range
       </div>
@@ -74,6 +75,7 @@ function Period() {
         <span className="text-sm font-semibold text-[#132D46]">Audio</span>
 
         <Switch isToggled={isToggled} setToggle={setToggle} />
+      </div>
       </div>
     </div>
   );
