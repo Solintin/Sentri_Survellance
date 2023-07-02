@@ -102,7 +102,7 @@ const Login = () => {
             onClick={handleSubmit}
             className="w-full py-3 bg-[#132D46] mt-8 rounded-lg text-white flex justify-center items-center space-x-2"
           >
-            {loading ? <Loader /> : "Create Account"}
+            {loading ? <Loader /> : "Log in"}
           </button>
         </div>
       </div>
