@@ -1,27 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import logo from "../../assets/png/logo.png";
-import { BsCameraVideo } from "react-icons/bs";
+//import { BsCameraVideo } from "react-icons/bs";
 import camera from "../../assets/svg/camera.svg";
-import grid from "../../assets/svg/grid.svg";
-import archive from "../../assets/svg/archive.svg";
-import event from "../../assets/svg/event.svg";
-import report from "../../assets/svg/report.svg";
+
+import invites from "../../assets/svg/invites.svg";
+import privacy from "../../assets/svg/privacy.svg";
 import client from "../../assets/svg/client.svg";
 import setting from "../../assets/svg/setting.svg";
 import logout from "../../assets/svg/logout.svg";
 import { Link, useLocation } from "react-router-dom";
 // import DashBoard from "../dashboard/dashBoard";
-import EventSettings from "../Composable/AddCamera";
+//import EventSettings from "../Composable/AddCamera";
 
-const SideNav = ({ isNav, setisNav }) => {
-  const [addCamera, setAddCamera] = useState(false);
+const ClientSideNav = ({ isNav, setisNav }) => {
+  // const [addCamera, setAddCamera] = useState(false);
   const { pathname } = useLocation();
-  useEffect(() => {
-    if (pathname === "/admin/dashboard") {
-      //   setisAdmin(true);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <div
@@ -45,40 +38,26 @@ const SideNav = ({ isNav, setisNav }) => {
           <div className=" left-[50px] h-[35px] sm:h-[60px] enter  w-fit">
             <img className="w-full h-full" src={logo} alt="" />
           </div>
-          <button
+          {/** <button
             onClick={() => setAddCamera(true)}
             className="bg-[#01C38D] flex justify-center whitespace-nowrap space-x-1 w-fit sm:space-x-2 items-center p-2 text-white rounded-lg "
           >
             <BsCameraVideo className="text-[22px]" />
             <span>Add Camera or DVR</span>
-          </button>
-        </div>
-
-        {addCamera && (
+          </button> 
+              {addCamera && (
           <EventSettings
             header={"Connect a DVR"}
             onClose={() => setAddCamera(false)}
           />
         )}
+          
+          */}
+        </div>
 
         <div className="w-full items-start flex-col justify-start text-[15px] text-white space-y-3 py-2 border-b border-[#01C38D]">
-          {true && (
-            <Link
-              to="/admin/dashboard"
-              className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-                pathname === "/admin/dashboard"
-                  ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
-                  : ""
-              }`}
-            >
-              <div className="w-[25px] h-[25px] ">
-                <img className="w-full h-full" src={grid} alt="" />
-              </div>
-              <div>Dashboard</div>
-            </Link>
-          )}
           <Link
-            to="/camera"
+            to="/client/camera"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
               pathname.includes("camera")
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
@@ -91,63 +70,37 @@ const SideNav = ({ isNav, setisNav }) => {
             <div>Cameras</div>
           </Link>
           <Link
-            to="/events"
+            to="/client/invites"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname.includes("events")
+              pathname.includes("invites")
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
             }`}
           >
             <div className="w-[25px] h-[25px] ">
-              <img className="w-full h-full" src={event} alt="" />
+              <img className="w-full h-full" src={invites} alt="" />
             </div>
-            <div>Events</div>
-          </Link>
-          <Link
-          to="/archive"
-            className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname.includes("archive")
-                ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
-                : ""
-            }`}
-          >
-            <div className="w-[25px] h-[25px] ">
-              <img className="w-full h-full" src={archive} alt="" />
-            </div>
-            <div>Archive Events</div>
+            <div>Invites</div>
           </Link>
 
           <Link
-            to="/report"
+            to="/client/privacy"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname.includes("report")
+              pathname.includes("privacy")
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
             }`}
           >
             <div className="w-[25px] h-[25px] ">
-              <img className="w-full h-full" src={report} alt="" />
+              <img className="w-full h-full" src={privacy} alt="" />
             </div>
-            <div>Reports</div>
-          </Link>
-
-          <Link to="/admin/settings"
-            className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname === "/admin/settings"
-                ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
-                : ""
-            }`}
-          >
-            <div className="w-[25px] h-[25px] ">
-              <img className="w-full h-full" src={setting} alt="" />
-            </div>
-            <div>Admin Settings</div>
+            <div>Privacy</div>
           </Link>
 
           <Link
-            to="/admin/client"
+            to="/client/users"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname === "/admin/client"
+              pathname.includes("users")
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
             }`}
@@ -155,7 +108,7 @@ const SideNav = ({ isNav, setisNav }) => {
             <div className="w-[25px] h-[25px] ">
               <img className="w-full h-full" src={client} alt="" />
             </div>
-            <div>Clients</div>
+            <div>Users</div>
           </Link>
         </div>
 
@@ -192,4 +145,4 @@ const SideNav = ({ isNav, setisNav }) => {
   );
 };
 
-export default SideNav;
+export default ClientSideNav;

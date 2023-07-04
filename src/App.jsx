@@ -19,6 +19,11 @@ import {
   AdminSettings,
   Onboarding,
   ArchiveEvent,
+  PersonalCamera, 
+  Invites,
+  AccountSetting,
+  AlertSetting,
+  ClientUsers,
 } from "./Pages";
 
 const App = () => {
@@ -58,11 +63,16 @@ const App = () => {
 
           <Route exact path="/" element={<Landing />} />
           {/*    LANDING PAGE */}
+          <Route exact path="/client/camera" element={< PersonalCamera  />} />
+          <Route exact path="/client/account" element={< AccountSetting  />} />
+          <Route exact path="/client/users" element={< ClientUsers  />} />
+          <Route exact path="/client/account/alert" element={< AlertSetting  />} />
           <Route exact path="/dashboard" element={<DashBoard />} />
           <Route exact path="/camera" element={<Camera />} />
           <Route exact path="/camera/:id" element={<CameraDetail />} />
-          <Route exact path="/client" element={<ClientProfile />} />
+          <Route exact path="/admin/client" element={<ClientProfile />} />
           <Route exact path="/events" element={<Event />} />
+          <Route exact path="/client/invites" element={<Invites />} />
           <Route exact path="/report" element={<Report />} />
           <Route exact path="/onboarding" element={<Onboarding />} />
           <Route exact path="/archive" element={<ArchiveEvent />} />

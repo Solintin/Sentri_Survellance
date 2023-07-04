@@ -60,7 +60,7 @@ input[type="checkbox"] {
 
 .dashboard-scroll-style::-webkit-scrollbar {
   width:10px;
-  height:8px;
+  height:5px;
 }
 
 
@@ -86,6 +86,14 @@ input[type="checkbox"] {
 .home-scroll-style::-webkit-scrollbar-track {
   border-radius:6px;
   @apply bg-gray-300;
+}
+
+@media screen and (max-width:450px) {
+  /*camera-scroll-style*/
+.camera-scroll-style::-webkit-scrollbar {
+  display: none;
+  
+}
 }
 
 /*camera-scroll-style*/

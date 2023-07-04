@@ -8,12 +8,16 @@ import CameraDetail from "../components/camera/cameradetail/cameraDetail";
 import Event from "../components/Event";
 import Report from "../components/Report";
 import CreateReport from "../components/Report/create";
-import ClientProfile from "../components/client/clientprofile/clientProfile";
+import ClientProfile from "../components/adminClient/clientprofile/clientProfile";
 import Auth from "../components/authentication/auth/auth";
 import Login from "../components/authentication/login";
 import Onboarding from "../components/onboarding/onboarding";
 import ArchiveEvent from "../components/archiveEvent/archiveEvent";
-
+import  PersonalCamera  from "../components/client/personalCameras/personalCamera";
+import Invites from "../components/client/invites/invites";
+import AccountSetting from "../components/client/accountsetting/accountSetting";
+import AlertSetting from "../components/client/alertSetting/alertSetting";
+import ClientUsers from "../components/client/clientusers/clientUsers";
 export {
   Login,
   Auth,
@@ -30,4 +34,9 @@ export {
   CreateReport,
   Onboarding,
   ArchiveEvent,
+  PersonalCamera,
+  Invites, 
+  AccountSetting,
+  AlertSetting,
+  ClientUsers,
 };
