@@ -161,7 +161,7 @@ const SideNav = ({ isNav, setisNav }) => {
 
         <div className="w-full items-start flex-col justify-start text-[15px] text-white space-y-3 py-2 ">
           <div
-            className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
+            className={`hidden space-x-2 justify-start items-center pl-10 py-2 w-full ${
               pathname === "/setting"
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
