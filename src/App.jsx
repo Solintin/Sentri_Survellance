@@ -24,6 +24,8 @@ import {
   AccountSetting,
   AlertSetting,
   ClientUsers,
+  PasswordSetting,
+  PhoneAuth,
 } from "./Pages";
 
 const App = () => {
@@ -79,6 +81,8 @@ const App = () => {
           <Route exact path="/report/create" element={<CreateReport />} />
           <Route exact path="/admin/dashboard" element={<Admin />} />
           <Route exact path="/admin/settings" element={<AdminSettings />} />
+          <Route exact path="/admin/settings/auth/password" element={<PhoneAuth />} />
+          <Route exact path="/admin/settings/password" element={<PasswordSetting />} />
           {/**Protected routes */}
         </Routes>
       </Router>

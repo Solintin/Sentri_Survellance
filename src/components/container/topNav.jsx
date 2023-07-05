@@ -5,33 +5,47 @@ import { MdOutlineNavigateNext } from "react-icons/md";
 import { AiOutlineGlobal, AiOutlineAudio } from "react-icons/ai";
 import { BsBellFill } from "react-icons/bs";
 import logo from "../../assets/png/logo.png";
+import events from "../../assets/svg/event.svg"
+import archive from "../../assets/svg/archive.svg"
+import client from "../../assets/svg/client.svg"
+import report from "../../assets/svg/report.svg"
+import grid from "../../assets/svg/grid.svg"
+import setting from "../../assets/svg/setting.svg"
 import { useLocation } from "react-router-dom";
 import {FiMenu} from 'react-icons/fi'
 const TopNav = ({isNav, setisNav}) => {
   const [header, setHeder] = useState("");
   const { pathname } = useLocation();
+  const [headerImage, setheaderImage] = useState()
 
   useEffect(() => {
     if (pathname.includes("camera")) {
       setHeder("Camera");
+      setheaderImage(lightcam)
     }
     if (pathname.includes("event")) {
       setHeder("Events");
+      setheaderImage(events)
     }
     if (pathname.includes("client")) {
       setHeder("Clients");
+      setheaderImage(client)
     }
     if (pathname.includes("archive")) {
       setHeder("Archive Events");
+      setheaderImage(archive)
     }
-    if (pathname.includes("admin")) {
-      setHeder("Admin");
+    if (pathname.includes("dashboard")) {
+      setHeder("Dashboard");
+      setheaderImage(grid)
     }
     if (pathname.includes("admin/settings")) {
       setHeder("Admin Settings");
+      setheaderImage(setting)
     }
     if (pathname.includes("report")) {
       setHeder("Reports");
+      setheaderImage(report)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -52,7 +66,7 @@ const TopNav = ({isNav, setisNav}) => {
        
           <div className="hidden items-center sm:flex space-x-2 text-[#132D46]">
             <div className="sm:w-[40px] sm:h-[40px] w-[30px] h-[30px]">
-              <img className="w-full h-full" src={lightcam} alt="" />
+              <img className="w-full h-full" src={headerImage} alt="" />
             </div>
             <div className="text-sm sm:text-lg font-semibold">{header}</div>
           </div>

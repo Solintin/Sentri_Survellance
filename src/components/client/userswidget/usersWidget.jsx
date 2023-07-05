@@ -8,7 +8,7 @@ const UsersWidget = () => {
   }
   return (
     <>
-      <div className="grid text-[#132D46] bg-gray-300 font-medium text-sm sm:text-[15px] grid-cols-8 p-2 items-center gap-4 rounded-sm">
+      <div className="grid text-[#132D46] bg-gray-200 font-medium text-sm sm:text-[15px] grid-cols-8 p-2 items-center gap-4 rounded-sm">
         <div className=" grid items-center gap-2 grid-cols-4 col-span-2">
           <div className="rounded-full w-[50px] h-[50px] bg-[#132D46]"></div>
           <div className="col-span-3 text-ellipsis overflow-hidden whitespace-nowrap">

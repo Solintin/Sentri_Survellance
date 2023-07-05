@@ -21,7 +21,7 @@ const ClientUsers = () => {
 
           <div className="dashboard-scroll-style w-full h-fit overflow-x-auto">
             <div className="w-full min-w-[1200px] space-y-2">
-              <div className="grid text-[#132D46] bg-gray-300 font-semibold text-sm sm:text-[15px] grid-cols-8 px-3 py-4 items-center gap-4 rounded-t-md">
+              <div className="grid text-[#132D46] bg-gray-200 font-semibold text-sm sm:text-[15px] grid-cols-8 px-3 py-4 items-center gap-4 rounded-t-md">
                 <div className="col-span-2">Name</div>
                 <div className="col-span-2">Email</div>
                 <div>Date</div>

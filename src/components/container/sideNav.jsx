@@ -133,7 +133,7 @@ const SideNav = ({ isNav, setisNav }) => {
 
           <Link to="/admin/settings"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
-              pathname === "/admin/settings"
+              pathname.includes("settings")
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
             }`}

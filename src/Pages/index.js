@@ -3,7 +3,7 @@ import Landing from "../components/landing/landing";
 import Camera from "../components/camera/camera";
 import DashBoard from "../components/dashboard/dashBoard";
 import Admin from "../components/Admin";
-import AdminSettings from "../components/Admin/settings";
+import AdminSettings from "../components/adminSetting/settings";
 import CameraDetail from "../components/camera/cameradetail/cameraDetail";
 import Event from "../components/Event";
 import Report from "../components/Report";
@@ -18,6 +18,8 @@ import Invites from "../components/client/invites/invites";
 import AccountSetting from "../components/client/accountsetting/accountSetting";
 import AlertSetting from "../components/client/alertSetting/alertSetting";
 import ClientUsers from "../components/client/clientusers/clientUsers";
+import PasswordSetting from "../components/adminSetting/passwordsetting/passwordSetting";
+import PhoneAuth from "../components/adminSetting/passwordsetting/phoneAuth";
 export {
   Login,
   Auth,
@@ -39,4 +41,6 @@ export {
   AccountSetting,
   AlertSetting,
   ClientUsers,
+  PasswordSetting,
+  PhoneAuth,
 };
