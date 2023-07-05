@@ -1,6 +1,6 @@
 import React from "react";
 import clients from "../../../assets/svg/clients.svg";
-import edit from "../../../assets/svg/edit.svg";
+import {AiTwotoneEdit} from 'react-icons/ai'
 import { MdNavigateNext } from "react-icons/md";
 import satelite from "../../../assets/png/satelite.png";
 const ClientDetail = () => {
@@ -19,9 +19,9 @@ const ClientDetail = () => {
             <div className="font-semibold ">Jane Doe</div>
           </div>
           <button className="w-fit flex item-center bg-[#01C38D] mb-2  justify-center space-x-2 px-1 py-2 rounded-md text-sm">
-            <div className="w-[22px] h-[22px] ">
-              <img className="w-[22px] h-[22px]" src={edit} alt="" />
-            </div>
+        
+              <AiTwotoneEdit className="text-white text-[22px] "/>
+          
             <span className="text-white">Edit Profile</span>
           </button>
 
