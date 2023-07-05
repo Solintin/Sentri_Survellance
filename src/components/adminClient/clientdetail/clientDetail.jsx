@@ -1,7 +1,7 @@
 import React from "react";
 import clients from "../../../assets/svg/clients.svg";
 import {AiTwotoneEdit} from 'react-icons/ai'
-import { MdNavigateNext } from "react-icons/md";
+import { MdNavigateNext,MdOutlineNavigateNext } from "react-icons/md";
 import satelite from "../../../assets/png/satelite.png";
 const ClientDetail = () => {
     const days = ["S", "M", "T", "W", "T", "F", "S"];
@@ -105,6 +105,17 @@ const ClientDetail = () => {
                 </div>
               );
             })}
+          </div>
+          <div className="flex justify-start items-center space-x-2">
+            <div className="flex font-medium uppercase w-fit px-2 py-2 space-x-1 items-center rounded-md bg-gray-100 border border-gray-200">
+                    <span>7:00pm mdt</span>
+                    <MdOutlineNavigateNext className="text-[20px] text-[#01C38D] rotate-90"/>
+            </div>
+            <div className="flex font-medium uppercase w-fit px-2 py-2 space-x-1 items-center rounded-md bg-gray-100 border border-gray-200">
+                    <span>8:00pm mdt</span>
+                    <MdOutlineNavigateNext className="text-[20px] text-[#01C38D] rotate-90"/>
+            </div>
+
           </div>
         </div>
       </div>

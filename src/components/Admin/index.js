@@ -10,7 +10,7 @@ function Index() {
       <div className="w-full h-full space-y-5 bg-gray-100 px-4 sm:px-4 py-[5rem] sm:py-24">
         <h2 className="text-lg font-bold">Overview</h2>
         <div className="grid xl:grid-cols-12 grid-cols-1 gap-y-6 xl:gap-6 items-start mt-3">
-          <div className="col-span-9 space-y-4 w-full h-full ">
+          <div className="col-span-7 space-y-4 w-full h-full ">
             <div className="dashboard-scroll-style w-full h-fit overflow-x-auto">
             <div className="min-w-[800px]">
             <div className=" w-full grid grid-cols-4 items-center mb-1  gap-6 bg-white p-4 rounded-md">
@@ -149,49 +149,136 @@ function Index() {
             </div>
           </div>
 
-          <div className="xl:col-span-3 grid grid-cols-1 sm:grid-cols-2 xl:gap-0 gap-y-6 sm:gap-x-6 w-full xl:block ">
+          <div className="xl:col-span-5 grid grid-cols-1 sm:grid-cols-2 xl:gap-0 gap-y-6 sm:gap-x-6 w-full xl:block ">
             <div className="bg-[#fff] rounded-md p-4">
               <h2 className="text-lg text-[#132D46] font-bold">
                 Officer on duty
               </h2>
-              <div className="flex items-center  space-x-3 mt-3">
+             <div className="flex justify-between items-center mt-3 w-full">
+             <div className="flex items-center  space-x-3 ">
                 <img src={officer} alt="" />
-                <p className="text-xs font-bold">officer Jim foxx</p>
+                <p className="text-xs sm:text-sm font-bold">officer Jim foxx</p>
               </div>
-              <div className="flex items-center  space-x-3 mt-3">
+                <button className="w-fit px-2 py-1 text-[12px] sm:text-sm rounded-md text-white bg-[#01C38D]">Open</button>
+             </div>
+             <div className="flex justify-between items-center mt-3 w-full">
+             <div className="flex items-center  space-x-3 ">
                 <img src={officer} alt="" />
-                <p className="text-xs font-bold">officer Jim foxx</p>
+                <p className="text-xs sm:text-sm font-bold">officer Jim foxx</p>
               </div>
-              <div className="flex items-center  space-x-3 mt-3">
+                <button className="w-fit px-2 py-1 text-[12px] sm:text-sm rounded-md text-white bg-[#01C38D]">Open</button>
+             </div>
+             <div className="flex justify-between items-center mt-3 w-full">
+             <div className="flex items-center  space-x-3 ">
                 <img src={officer} alt="" />
-                <p className="text-xs font-bold">officer Jim foxx</p>
+                <p className="text-xs sm:text-sm font-bold">officer Jim foxx</p>
               </div>
-              <div className="flex items-center  space-x-3 mt-3">
+                <button className="w-fit px-2 py-1 text-[12px] sm:text-sm rounded-md text-white bg-[#01C38D]">Open</button>
+             </div>
+             <div className="flex justify-between items-center mt-3 w-full">
+             <div className="flex items-center  space-x-3 ">
                 <img src={officer} alt="" />
-                <p className="text-xs font-bold">officer Jim foxx</p>
+                <p className="text-xs sm:text-sm font-bold">officer Jim foxx</p>
               </div>
+                <button className="w-fit px-2 py-1 text-[12px] sm:text-sm rounded-md text-white bg-[#01C38D]">Open</button>
+             </div>
             </div>
 
             <div className="bg-[#fff] rounded-md p-4 xl:mt-6">
+             <div className="flex justify-between items-center w-full">
+             <div className="space-x-1 flex items-center">
               <h2 className="text-lg text-[#132D46] font-bold">
                 Clients online
               </h2>
-              <div className="flex items-center  space-x-3 mt-3">
-                <img src={clients} alt="" />
-                <p className="text-xs font-bold">Kelly Sikkkema</p>
+              <span className="text-[10px] sm:text-[12px] text-[#01C38D] font-semibold pt-2">1387</span>
               </div>
-              <div className="flex items-center  space-x-3 mt-3">
-                <img src={clients} alt="" />
-                <p className="text-xs font-bold">Paul Tamara</p>
+                  <button className="text-[11px] sm:text-[13px] font-semibold text-[#01C38D]">View all</button>
+             </div>
+             
+                <div className="flex justify-between items-center mt-3 w-full">
+                <div className="flex items-center  space-x-3">
+                <img src={clients} className="w-[30px] h-[30px]" alt="" />
+                <div>
+                <p className="text-[12px] overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
+                <p className="text-[10px] font-bold text-[#01C38D]">4 cameras</p>
+                </div>
+                <div>
+                <p className="text-[12px] font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
+                <p className="text-[10px] font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
+                </div>
+                
               </div>
-              <div className="flex items-center  space-x-3 mt-3">
-                <img src={clients} alt="" />
-                <p className="text-xs font-bold">Jane Doe</p>
+              <button className="w-fit px-2 py-1 text-[12px] sm:text-sm rounded-md text-white bg-[#01C38D]">Open</button>
+
+                </div>
+                
+                <div className="flex justify-between items-center mt-3 w-full">
+                <div className="flex items-center  space-x-3">
+                <img src={clients} className="w-[30px] h-[30px]" alt="" />
+                <div>
+                <p className="text-[12px] overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
+                <p className="text-[10px] font-bold text-[#01C38D]">4 cameras</p>
+                </div>
+                <div>
+                <p className="text-[12px] font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
+                <p className="text-[10px] font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
+                </div>
+                
               </div>
-              <div className="flex items-center  space-x-3 mt-3">
-                <img src={clients} alt="" />
-                <p className="text-xs font-bold">Kelly Sikkkema</p>
+              <button className="w-fit px-2 py-1 text-[12px] sm:text-sm rounded-md text-white bg-[#01C38D]">Open</button>
+
+                </div>
+
+                <div className="flex justify-between items-center mt-3 w-full">
+                <div className="flex items-center  space-x-3">
+                <img src={clients} className="w-[30px] h-[30px]" alt="" />
+                <div>
+                <p className="text-[12px] overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
+                <p className="text-[10px] font-bold text-[#01C38D]">4 cameras</p>
+                </div>
+                <div>
+                <p className="text-[12px] font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
+                <p className="text-[10px] font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
+                </div>
+                
               </div>
+              <button className="w-fit px-2 py-1 text-[12px] sm:text-sm rounded-md text-white bg-[#01C38D]">Open</button>
+
+                </div>
+
+                <div className="flex justify-between items-center mt-3 w-full">
+                <div className="flex items-center  space-x-3">
+                <img src={clients} className="w-[30px] h-[30px]" alt="" />
+                <div>
+                <p className="text-[12px] overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
+                <p className="text-[10px] font-bold text-[#01C38D]">4 cameras</p>
+                </div>
+                <div>
+                <p className="text-[12px] font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
+                <p className="text-[10px] font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
+                </div>
+                
+              </div>
+              <button className="w-fit px-2 py-1 text-[12px] sm:text-sm rounded-md text-white bg-[#01C38D]">Open</button>
+
+                </div>
+
+                <div className="flex justify-between items-center mt-3 w-full">
+                <div className="flex items-center  space-x-3">
+                <img src={clients} className="w-[30px] h-[30px]" alt="" />
+                <div>
+                <p className="text-[12px] overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
+                <p className="text-[10px] font-bold text-[#01C38D]">4 cameras</p>
+                </div>
+                <div>
+                <p className="text-[12px] font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
+                <p className="text-[10px] font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
+                </div>
+                
+              </div>
+              <button className="w-fit px-2 py-1 text-[12px] sm:text-sm rounded-md text-white bg-[#01C38D]">Open</button>
+
+                </div>
             </div>
           </div>
         </div>

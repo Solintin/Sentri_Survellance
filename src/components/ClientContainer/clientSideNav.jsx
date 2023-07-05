@@ -84,7 +84,7 @@ const ClientSideNav = ({ isNav, setisNav }) => {
           </Link>
 
           <Link
-            to="/client/privacy"
+            to="/client/camera"
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
               pathname.includes("privacy")
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
