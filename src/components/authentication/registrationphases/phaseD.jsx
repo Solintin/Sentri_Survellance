@@ -15,19 +15,19 @@ const PhaseD = ({ active }) => {
     <div
       className={
         active === 3
-          ? "w-full relative let swipeIn h-[500px] px-6 sm:px-8 py-6 flex  flex-col justify-center items-center  sm:rounded-lg bg-white border shadow-xl"
+          ? "w-full relative let swipeIn 2xl:h-[600px] h-[500px] px-6 sm:px-8 py-6 flex  flex-col justify-center items-center  sm:rounded-lg bg-white border shadow-xl"
           : "hidden"
       }
     >
       <div className="absolute top-8 px-6 sm:px-8 inset-x-0 mx-auto w-full">
         <div className="w-full flex items-start mb-6 justify-start">
-          <div className="text-2xl font-medium text-black ">
+          <div className="text-2xl2xl:text-4xl font-medium text-black ">
             Get started with{" "}
             <span className="uppercase text-[#01C38D]">sentri</span>
           </div>
         </div>
       </div>
-      <div className="absolute top-[9rem] px-6 sm:px-8 inset-x-0 mx-auto w-full">
+      <div className="absolute 2xl:top-[10rem] top-[9rem] px-6 sm:px-8 inset-x-0 mx-auto w-full">
         <div className="flex flex-col justify-between h-[250px]">
           <div className="flex flex-col space-y-5 text-black font-semibold justify-start items-start">
             {categories.map((type, index) => {
@@ -49,12 +49,12 @@ const PhaseD = ({ active }) => {
             })}
           </div>
 
-          <div className="form-group space-y-3 mb-3 w-full">
+          <div className="form-group space-y-3 2xl:space-y-6 mb-3 w-full">
             <label className="block font-medium " htmlFor="name">
               Others
             </label>
             <input
-              className="block form__input input-field border  border-gray-200 bg-gray-100 rounded-md focus:outline-none w-full h-11 px-4"
+              className="block 2xl:h-16 form__input input-field border  border-gray-200 bg-gray-100 rounded-md focus:outline-none w-full h-11 px-4"
               type="name"
               placeholder="E.g Farm"
               name="name"
@@ -69,7 +69,7 @@ const PhaseD = ({ active }) => {
       <div className="absolute bottom-8 px-6 sm:px-8 inset-x-0 mx-auto w-full">
         <button
           onClick={handleContinue}
-          className="w-full py-3 bg-[#132D46] mt-8 rounded-lg text-white flex justify-center items-center space-x-2"
+          className="w-full 2xl:py-6 py-3 bg-[#132D46] mt-8 rounded-lg text-white flex justify-center items-center space-x-2"
         >
           {loading ? <Loader /> : "Continue"}
         </button>

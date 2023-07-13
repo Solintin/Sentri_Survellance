@@ -86,7 +86,7 @@ function Index() {
               />
             </div>
 
-            <label htmlFor="input" className="font-bold text-gray-700">
+            <label htmlFor="input" className="font-bold  text-gray-700">
               Narrative of Incident
             </label>
 
@@ -95,19 +95,19 @@ function Index() {
               id=""
               rows="5"
               placeholder="Enter narrative"
-              className="resize-none outline-none border-[#D0D0D0] w-full p-4 rounded-md border bg-[#F6F5F5]"
+              className="resize-none outline-none 2xl:mt-4 mt-1 border-[#D0D0D0] w-full p-4 rounded-md border bg-[#F6F5F5]"
             ></textarea>
           </div>
 
           <p className="text-[#132D46]  mb-4 mt-10">
             Officer Supplemental Report
           </p>
-          <button className="px-12 rounded-md flex space-x-2 items-center p-2 bg-primary-100 text-white">
+          <button className="px-12 rounded-md flex 2xl:p-4 space-x-2 items-center p-2 bg-primary-100 text-white">
             <span>add/edit to this report</span>
           </button>
 
           <div className="mt-14 md:w-3/4 w-full">
-            <button className="w-full py-2 sm:py-3 bg-[#132D46] text-white rounded-md">
+            <button className="w-full 2xl:py-4 py-2 sm:py-3 bg-[#132D46] text-white rounded-md">
               Save
             </button>
           </div>

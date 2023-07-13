@@ -19,34 +19,34 @@ function Settings() {
           <SettingNav />
 
           <div className="bg-white text-[#132D46] rounded-lg h-full min-[850px]:col-span-7 py- sm:py-8">
-            <div className="w-[600px] space-y-5 sm:space-y-10  h-full px-2 sm:px-4">
+            <div className="w-[65vh] space-y-5 sm:space-y-10  h-full px-2 sm:px-4">
               <div className="">
-                <div className="text-sm sm:text-lg font-semibold text-[#132D46]">
+                <div className="text-sm sm:text-lg 2xl:text-2xl font-semibold text-[#132D46]">
                   Profile Settings
                 </div>
-                <div className="text-gray-400 text-[11px] sm:text-[13px]">
+                <div className="text-gray-400 text-[11px] 2xl:text-lg sm:text-[13px]">
                   Update your profle and personal detail here
                 </div>
               </div>
 
               <div className="space-x-2 flex items-center">
-                <div className="w-[90px] h-[90px] rounded-full bg-[#132D46]">
+                <div className="w-[90px] h-[90px] 2xl:w-[100px] 2xl:h-[100px] rounded-full bg-[#132D46]">
                   <img src={officer} alt="" className="w-full h-full rounded-full" />
                 </div>
-                <button className="py-2 px-3 sm:px-4 font-medium rounded-lg border border-[#01C38D] flex space-x-2 items-center">
-                  <div className="w-[20px] h-[20px]">
+                <button className="py-2 px-3 2xl:py-4  sm:px-4 font-medium rounded-lg border border-[#01C38D] flex space-x-2 items-center">
+                  <div className="w-[20px] h-[20px]  2xl:w-[30px] 2xl:h-[30px]">
                     <img src={deletes} alt="" className="w-full h-full" />
                   </div>
-                  <span>Delete Photo</span>
+                  <span className="text-ellipsis whitespace-nowrap w-full overflow-hidden">Delete Photo</span>
                 </button>
-                <button className="py-2 px-3 sm:px-4 font-medium rounded-lg text-white bg-[#01C38D] flex space-x-2 items-center">
-                  <AiTwotoneEdit className="text-[20px] text-white" />
-                  <span>Edit Photo</span>
+                <button className="py-2 2xl:py-4  px-3 sm:px-4 font-medium rounded-lg text-white bg-[#01C38D] flex space-x-2 items-center">
+                  <AiTwotoneEdit className="text-[20px] 2xl:text-[30px] text-white" />
+                  <span className="text-ellipsis whitespace-nowrap w-full overflow-hidden">Edit Photo</span>
                 </button>
               </div>
 
-              <div className="account_form w-full space-y-4">
-                <div className="text-sm sm:text-lg font-semibold text-[#132D46]">
+              <div className="account_form w-full 2xl:space-y-6 space-y-4">
+                <div className="text-sm sm:text-lg 2xl:text-lg font-semibold text-[#132D46]">
                   General
                 </div>
                 <InputText
@@ -75,7 +75,7 @@ function Settings() {
                   {category.map((type, index) => {
                     return (
                       <div
-                        className="p-3 rounded-md bg-gray-100 border border-gray-200 "
+                        className="p-3 2xl:p-6 rounded-md bg-gray-100 border border-gray-200 "
                         key={index}
                       >
                         <label
@@ -106,7 +106,7 @@ function Settings() {
               </div>
 
               <div className="flex justify-center sm:justify-start  sm:mt-10 mt-3 w-full">
-                <button className="w-[70%] sm:w-[40%] py-2 sm:py-3 bg-[#132D46] text-white rounded-md">
+                <button className="w-[70%] sm:w-[40%] 2xl:py-6 py-2 sm:py-3 bg-[#132D46] text-white rounded-md">
                   Save Changes
                 </button>
               </div>

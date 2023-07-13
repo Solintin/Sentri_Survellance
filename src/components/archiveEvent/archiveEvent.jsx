@@ -34,8 +34,8 @@ const ArchiveEvent = () => {
         )}
         {!isEmpty && (
           <div className="sm:pl-[250px] w-full h-full">
-            <div className="bg-white z-[20] border-b top-modal-fixed fixed  right-0  py-[16px] font-semibold shadow-sm text-center">
-              <div className="flex justify-between text-[#132D46] items-center w-full px-2">
+            <div className="bg-white z-[20] border-b top-modal-fixed fixed  right-0 2xl:py-8 py-[16px] font-semibold shadow-sm text-center">
+              <div className="flex justify-between text-[#132D46] items-center w-full 2xl:px-12 px-2">
                 <div className="flex space-x-4">
                   
                   <span>
@@ -44,7 +44,7 @@ const ArchiveEvent = () => {
                   </span>
                 </div>
 
-                <button className="text-white rounded-md bg-[#01C38D] items-center flex space-x-1 justify-center p-1">
+                <button className="text-white rounded-md bg-[#01C38D] items-center  2xl:p-3 flex space-x-1 justify-center p-1">
                   <img src={storage} alt="" />
                   <span className="font-medium">Need more storage</span>
                 </button>

@@ -12,27 +12,27 @@ const ForgotPassword = ({header, onClose}) => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="  bg-white rounded-md px-2 py-4 w-[95vw] md:w-[600px] h-[300px]  shadow-ml "
+        className="  bg-white rounded-md px-2 py-4 w-[95vw] md:w-[600px] 2xl:w-[700px] h-[300px]  shadow-ml "
       >
         <div className="flex justify-between">
-          <h1 className="text-xl font-bold text-[#132D46]">{header}</h1>
+          <h1 className="text-xl 2xl:text-2xl font-bold text-[#132D46]">{header}</h1>
           <button className="" onClick={onClose}>
             <img src={close} alt="" />
           </button>
         </div>
-        <div className="mb-8 text-gray-400 text-[12px] sm:text-sm">
+        <div className="mb-8 text-gray-400 text-[12px] 2xl:text-lg sm:text-sm">
           Pls choose how you want to reset your password
         </div>
 
-        <div className="flex flex-col space-y-2 justify-center items-center w-full">
+        <div className="flex flex-col 2xl:space-y-4 space-y-2 justify-center items-center w-full">
           <button 
           onClick={() => {
             navigate("/admin/settings/auth/password")
           }}
-          className="w-[70%] py-2 sm:py-3 bg-[#132D46] text-white rounded-md">
+          className="w-[70%] py-2 sm:py-3 2xl:py-4 bg-[#132D46] text-white rounded-md">
             Via Phone
           </button>
-          <button className="w-[70%] py-2 sm:py-3 bg-[#132D46] text-white rounded-md">
+          <button className="w-[70%] py-2 2xl:py-4 sm:py-3 bg-[#132D46] text-white rounded-md">
             Via Email
           </button>
         </div>

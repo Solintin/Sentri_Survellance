@@ -15,12 +15,12 @@ const Phase3 = ({setactive}) => {
 
     }
     return (
-        <div className="px-6 flex flex-col w-full justify-start space-y-3">
+        <div className="px-6 flex flex-col w-full 2xl:text-xl justify-start space-y-3">
         <div className="text-start">
-          <div className="font-semibold text-lg text-[#132D46]">
+          <div className="font-semibold text-lg 2xl:text-2xl text-[#132D46]">
             Which camera brand do you have?
           </div>
-          <div className="text-gray-500 text-[12px] sm:text-sm">
+          <div className="text-gray-500 text-[12px] 2xl:text-lg sm:text-sm">
             Choose your brand
           </div>
         </div>
@@ -50,7 +50,7 @@ const Phase3 = ({setactive}) => {
               Others
             </label>
             <input
-              className="block form__input input-field border  border-gray-200 bg-gray-100 rounded-md focus:outline-none w-full h-11 px-4"
+              className="block form__input input-field border 2xl:h-16  border-gray-200 bg-gray-100 rounded-md focus:outline-none w-full h-11 px-4"
               type="name"
               placeholder="Enter name or brand"
               name="name"
@@ -63,7 +63,7 @@ const Phase3 = ({setactive}) => {
           <div className="h-fit items-center flex justify-center w-full">
         <button
           onClick={handleSubmit}
-          className="w-[70%] py-3 bg-[#132D46] mt-8 rounded-lg text-white flex justify-center items-center space-x-2"
+          className="w-[70%] 2xl:py-4 py-3 bg-[#132D46] mt-8 rounded-lg text-white flex justify-center items-center space-x-2"
         >
           {loading ? <Loader /> : "Submit"}
         </button>

@@ -30,7 +30,7 @@ import {
 
 const App = () => {
   return (
-    <div className="w-full h-full text-sm text-[16px] font">
+    <div className="w-full h-full text-sm  sm:text-[16px] font">
       <div>
         <Toaster
           toastOptions={{

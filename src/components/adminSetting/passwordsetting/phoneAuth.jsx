@@ -18,24 +18,24 @@ const PhoneAuth = () => {
           <SettingNav />
 
           <div className="bg-white text-[#132D46] rounded-lg h-full min-[850px]:col-span-7 py- sm:py-8">
-            <div className="w-[600px] space-y-5 sm:space-y-10  h-full px-2 sm:px-4">
+            <div className="w-[65vh] space-y-5 sm:space-y-10  h-full px-2 sm:px-4">
               <div
                 onClick={() => {
                   navigate(-1);
                 }}
                 className="cursor-pointer space-x-2 flex items-center"
               >
-                <BiArrowBack className="text-[#01C38D] text-[22px] sm:text-[24px]" />
-                <span className="text-sm font-semibold sm:text-[15px]">
+                <BiArrowBack className="text-[#01C38D] text-[22px] 2xl:text-[30px] sm:text-[24px]" />
+                <span className="text-sm font-semibold 2xl:text-2xl sm:text-[15px]">
                   Back
                 </span>
               </div>
 
               <div className="">
-                <div className="text-sm sm:text-lg font-semibold text-[#132D46]">
+                <div className="text-sm sm:text-lg 2xl:text-2xl font-semibold text-[#132D46]">
                   What's your Mobile Number
                 </div>
-                <div className="text-gray-400 text-[11px] sm:text-[13px]">
+                <div className="text-gray-400 2xl:text-lg text-[11px] sm:text-[13px]">
                   Please enter your Mobile Number
                 </div>
               </div>
@@ -44,11 +44,11 @@ const PhoneAuth = () => {
                   Mobile Number
                 </label>
                 <div className="relative w-full">
-                <div className="cursor-pointer w-[28px] h-[28px] absolute top-3 left-2">
-                  <img src={uslogo} alt="" />
+                <div className="cursor-pointer w-[28px] h-[28px] 2xl:w-[33px] 2xl:h-[33px] absolute top-4 left-2">
+                  <img src={uslogo} alt="" className="w-full h-full"/>
                 </div>
                 <input
-                  className="block  form__input input-field border border-gray-200 bg-gray-100 rounded-md focus:outline-none w-full h-11 pl-10 pr-8"
+                  className="block  form__input input-field border border-gray-200 bg-gray-100 2xl:h-16 rounded-md focus:outline-none w-full h-11 pl-10 2xl:pl-14 2xl:pr-14 pr-8"
                   type="tel"
                   placeholder="(852) 567 332"
                   name="tel"
@@ -57,8 +57,8 @@ const PhoneAuth = () => {
                     setPhone(e.target.value);
                   }}
                 />
-                <div className="cursor-pointer w-[26px] h-[26px] absolute top-4 right-2">
-                  <img src={edit} alt="" />
+                <div className="cursor-pointer 2xl:w-[30px] 2xl:h-[30px] w-[26px] h-[26px] absolute top-4 right-2">
+                  <img src={edit} alt="" className="w-full h-full" />
                 </div>
                 </div>
               

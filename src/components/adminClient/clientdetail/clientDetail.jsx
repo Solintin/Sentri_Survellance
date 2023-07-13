@@ -6,10 +6,10 @@ import satelite from "../../../assets/png/satelite.png";
 const ClientDetail = () => {
     const days = ["S", "M", "T", "W", "T", "F", "S"];
     return (
-        <div className="md:col-span-4 w-full flex space-y-4 px-4 flex-col">
+        <div className="md:col-span-4 w-full flex space-y-4 px-4 flex-col 2xl:text-2xl">
         <div className="flex flex-col w-full">
           <div className="flex space-x-2 mb-2 items-center">
-            <div className="w-[48px] rounded-full h-[48px] ">
+            <div className="w-[48px] 2xl:w-[60px] rounded-full h-[48px] ">
               <img
                 src={clients}
                 alt=""
@@ -18,16 +18,16 @@ const ClientDetail = () => {
             </div>
             <div className="font-semibold ">Jane Doe</div>
           </div>
-          <button className="w-fit flex item-center bg-[#01C38D] mb-2  justify-center space-x-2 px-1 py-2 rounded-md text-sm">
+          <button className="w-fit flex item-center bg-[#01C38D] mb-2  justify-center space-x-2 px-1 2xl:py-4 2xl:px-2 py-2 rounded-md 2xl:text-2xl text-sm">
         
-              <AiTwotoneEdit className="text-white text-[22px] "/>
+              <AiTwotoneEdit className="text-white text-[22px] 2xl:text-[28px] "/>
           
             <span className="text-white">Edit Profile</span>
           </button>
 
           <div className="w-full space-y-2">
           <div className="w-full flex flex-col ">
-            <div className="w-full justify-between text-sm text-[#132D46] items-center flex">
+            <div className="w-full justify-between text-sm 2xl:text-2xl text-[#132D46] items-center flex">
               <span className="font-semibold">Style</span>
               <button className="flex items-center  space-x-2 justify-center w-fit p-1 border rounded-md">
                 <span>Satelite</span>
@@ -35,7 +35,7 @@ const ClientDetail = () => {
               </button>
             </div>
           </div>
-          <div className="w-full rounded-md h-[350px] md:h-[250px] xl:h-[300px]">
+          <div className="w-full rounded-md h-[350px] md:h-[250px] xl:h-[35vh]">
             <img
               src={satelite}
               alt=""
@@ -47,11 +47,11 @@ const ClientDetail = () => {
         </div>
 
         {/** user detail */}
-        <div className="text-[13px] flex flex-col space-y-2">
+        <div className="text-sm 2xl:text-2xl flex flex-col 2xl:space-y-4 space-y-2">
           <div className="w-full font-semibold border-b py-1">
             Person Info
           </div>
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full 2xl:space-y-3">
             <div className="w-full flex justify-between items-center">
               <span className="font-semibold">Camera System</span>
               <span className="text-gray-600">Ring Network</span>
@@ -106,7 +106,7 @@ const ClientDetail = () => {
               );
             })}
           </div>
-          <div className="flex justify-start items-center space-x-2">
+          <div className="flex justify-center items-center space-x-2">
             <div className="flex font-medium uppercase w-fit px-2 py-2 space-x-1 items-center rounded-md bg-gray-100 border border-gray-200">
                     <span>7:00pm mdt</span>
                     <MdOutlineNavigateNext className="text-[20px] text-[#01C38D] rotate-90"/>

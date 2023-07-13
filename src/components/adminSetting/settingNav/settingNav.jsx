@@ -5,7 +5,7 @@ import password from "../../../assets/svg/password.svg"
 const SettingNav = () => {
     const {pathname} = useLocation()
     return (
-        <div className="col-span-2 max-[850px]:hidden py-6 h-[300px] bg-white rounded-lg">
+        <div className=" col-span-2 max-[850px]:hidden py-6 h-[300px] bg-white rounded-lg">
         <Link
         to="/admin/settings"
         className={`flex space-x-2 justify-start items-center pl-4 py-2 w-full ${
@@ -14,10 +14,10 @@ const SettingNav = () => {
             : ""
         }`}
       >
-        <div className="w-[25px] h-[25px] ">
+        <div className="w-[25px] h-[25px] 2xl:w-[30px] 2xl:h-[30px] ">
           <img className="w-full h-full" src={account} alt="" />
         </div>
-        <div>Profile Settings</div>
+        <div >Profile Settings</div>
       </Link>
       <Link
         to="/admin/settings/password"
@@ -27,7 +27,7 @@ const SettingNav = () => {
             : ""
         }`}
       >
-        <div className="w-[25px] h-[25px] ">
+        <div className="w-[25px] h-[25px] 2xl:w-[30px] 2xl:h-[30px]">
           <img className="w-full h-full" src={password} alt="" />
         </div>
         <div>Password</div>

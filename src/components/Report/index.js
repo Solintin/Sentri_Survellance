@@ -16,12 +16,12 @@ function Index() {
                 <h1 className="text-[#696E79] font-bold text-xl">
                   No Report yet
                 </h1>
-                <div className="text-sm w-[400px] text-center mt-10">
+                <div className="text-sm 2xl:text-xl w-[400px] text-center mt-10">
                   Connect your camera or video recorder to view more events.{" "}
                 </div>
                 <Link
                   to="/report/create"
-                  className="mt-14 px-12 rounded-md flex space-x-2 items-center p-2 bg-primary-100 text-white"
+                  className="mt-14 px-12 rounded-md flex space-x-2 items-center 2xl:p-4 p-2 bg-primary-100 text-white"
                 >
                   <span>Create report</span>
                 </Link>

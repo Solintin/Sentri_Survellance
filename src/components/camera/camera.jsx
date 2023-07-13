@@ -14,7 +14,7 @@ const Camera = () => {
   const record = true;
   return (
     <Container>
-      <div className="w-full h-full space-y-5 bg-gray-100 py-14 sm:px-4 sm:py-24">
+      <div className="w-full h-fit space-y-5 bg-gray-100 py-14 sm:px-4 sm:py-24">
         <div className="hidden md:flex space-x-2 items-center w-full justify-end ">
           <div className="text-gray-500">View type:</div>
 

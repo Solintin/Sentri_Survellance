@@ -59,7 +59,7 @@ function Index() {
 
         {!isEmpty && (
           <div className="sm:pl-[250px] w-full h-full">
-            <div className="bg-white z-[20] border-b top-modal-fixed fixed  right-0  py-[16px] font-semibold shadow-sm text-center">
+            <div className="bg-white z-[20] border-b top-modal-fixed fixed  right-0 2xl:py-8  py-[16px] font-semibold shadow-sm text-center">
               Thursday, june 29th
             </div>
 

@@ -9,12 +9,12 @@ const Phase2 = ({setactive}) => {
             //setactive(2)
     }
     return (
-        <div className="px-6 flex flex-col w-full justify-start space-y-3">
+        <div className="px-6 flex flex-col w-full justify-start 2xl:text-xl space-y-3">
         <div className="text-start">
-          <div className="font-semibold text-lg text-[#132D46]">
+          <div className="font-semibold 2xl:text-2xl text-lg text-[#132D46]">
             Do you have a camera?
           </div>
-          <div className="text-gray-500 text-[12px] sm:text-sm">
+          <div className="text-gray-500 2xl:text-lg text-[12px] sm:text-sm">
             Let's work on the camera
           </div>
         </div>

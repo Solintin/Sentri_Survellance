@@ -31,7 +31,7 @@ const SideNav = ({ isNav, setisNav }) => {
       }}
       className={`fixed z-[37] inset-y-0 left-0 h-full  ${
         isNav
-          ? "w-full bg-black bg-opacity-50 min-[1024px]:w-[250px]"
+          ? "w-full bg-black bg-opacity-50 min-[1024px]:w-[250px] 2xl:w-[300px]"
           : "max-[1024px]:hidden w-[250px] "
       }`}
     >
@@ -39,17 +39,17 @@ const SideNav = ({ isNav, setisNav }) => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="py-4 flex flex-col items-center space-y-4  h-full w-[200px] sm:w-[250px] cursor-pointer  bg-[#132D46] "
+        className="py-4  flex flex-col items-center space-y-4 2xl:w-[300px]  h-full w-[200px] sm:w-[250px] cursor-pointer  bg-[#132D46] "
       >
-        <div className="  px-8 w-full flex flex-col items-center justify-center space-y-3">
+        <div className="  px-8 w-full flex flex-col items-center justify-center 2xl:space-y-5 space-y-3">
           <div className=" left-[50px] h-[35px] sm:h-[60px] enter  w-fit">
             <img className="w-full h-full" src={logo} alt="" />
           </div>
           <button
             onClick={() => setAddCamera(true)}
-            className="bg-[#01C38D] flex justify-center whitespace-nowrap space-x-1 w-fit sm:space-x-2 items-center p-2 text-white rounded-lg "
+            className="bg-[#01C38D] flex justify-center whitespace-nowrap space-x-1 w-fit sm:space-x-2 items-center 2xl:p-3 p-2 text-white rounded-lg "
           >
-            <BsCameraVideo className="text-[22px]" />
+            <BsCameraVideo className="text-[22px] 2xl:text-[28px]" />
             <span>Add Camera or DVR</span>
           </button>
         </div>
@@ -61,7 +61,7 @@ const SideNav = ({ isNav, setisNav }) => {
           />
         )}
 
-        <div className="w-full items-start flex-col justify-start text-[15px] text-white space-y-3 py-2 border-b border-[#01C38D]">
+        <div className="w-full items-start flex-col justify-start 2xl:text-[25px] text-[15px] text-white 2xl:space-y-6 space-y-3 2xl:py-4 py-2 border-b border-[#01C38D]">
           {true && (
             <Link
               to="/admin/dashboard"
@@ -159,7 +159,7 @@ const SideNav = ({ isNav, setisNav }) => {
           </Link>
         </div>
 
-        <div className="w-full items-start flex-col justify-start text-[15px] text-white space-y-3 py-2 ">
+        <div className="w-full items-start flex-col justify-start 2xl:text-[25px] text-[15px] text-white space-y-3 py-2 ">
           <div
             className={`hidden space-x-2 justify-start items-center pl-10 py-2 w-full ${
               pathname === "/setting"

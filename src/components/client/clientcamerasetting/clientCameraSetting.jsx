@@ -15,7 +15,7 @@ const ClientCameraSetting = ({ header, onClose }) => {
         className=" space-y-5 bg-white h-[300px] rounded-md px-2 py-4 w-[95vw] md:w-[650px] lg:w-[800px] xl:w-[900px] shadow-ml "
       >
         <div className="flex justify-between">
-          <h1 className="text-xl font-bold text-[#132D46]">{header}</h1>
+          <h1 className="text-xl 2xl:text-3xl font-bold text-[#132D46]">{header}</h1>
           <button className="" onClick={onClose}>
             <img src={close} alt="" />
           </button>

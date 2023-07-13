@@ -14,7 +14,7 @@ const ClientCamera = () => {
         </div>
 
         <div className="w-full items-center mt-4 justify-center">
-        <button className="bg-[#01C38D] flex justify-center space-x-2 items-center p-2 text-white rounded-lg w-fit">
+        <button className="bg-[#01C38D] flex justify-center space-x-2 items-center 2xl:p-4 p-2 text-white rounded-lg w-fit">
         <BsCameraVideo className="text-[22px]" />
         <span>Add Camera or DVR</span>
       </button>

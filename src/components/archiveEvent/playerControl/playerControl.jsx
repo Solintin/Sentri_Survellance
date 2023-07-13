@@ -18,24 +18,25 @@ const PlayerController = () => {
         </div>
         <div className="flex space-x-2 sm:space-x-4 items-center">
           <div className="space-x-1 flex items-center">
-            <div className="w-[15px] h-[15px]">
-              <img src={archive} alt="" />
+          <div className="w-[15px] h-[15px] 2xl:w-[20px] 2xl:h-[20px]">
+              <img src={archive} alt="" className="w-full h-full "/>
             </div>
-            <button className="text-[10px] text-zinc-600">Download</button>
+            <button className="text-[10px] 2xl:text-lg text-zinc-600">Download</button>
           </div>
           <div
           onClick={onClose}
           className="space-x-1 flex items-center">
-          
-            <img src={share} alt="" />
+           <div className="w-[15px] h-[15px] 2xl:w-[20px] 2xl:h-[20px]">
+              <img src={share} alt="" className="w-full h-full "/>
+            </div>
 
-            <button className="text-[10px] text-zinc-600">Share Clip</button>
+            <button className="text-[10px] 2xl:text-lg text-zinc-600">Share Clip</button>
           </div>
           <div className="space-x-1 flex items-center">
-            <div className="w-[15px] h-[15px]">
-              <img src={deletes} alt="" />
+            <div className="w-[15px] h-[15px] 2xl:w-[20px] 2xl:h-[20px]">
+              <img src={deletes} alt="" className="w-full h-full "/>
             </div>
-            <button className="text-[10px] text-zinc-600">Delete</button>
+            <button className="text-[10px] 2xl:text-lg text-zinc-600">Delete</button>
           </div>
         </div>
       </div>

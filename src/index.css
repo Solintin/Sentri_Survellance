@@ -287,6 +287,12 @@ body {
   display: flex;
 }
 
+@media screen and (min-width:890px) {
+  .hides {
+    display:none;
+  }
+}
+
 
 .let {
   -webkit-animation-duration: 0.7s;
@@ -451,6 +457,11 @@ label.label input[type="file"] {
 .right {
   width:100%;
 }
+@media screen and (min-width:1536px) {
+  .right {
+    width:calc(100% - 300px);
+  }
+}
 @media screen and (min-width:1024px) {
   .right {
     width:calc(100% - 250px);
@@ -572,9 +583,15 @@ label.label input[type="file"] {
 .top-modal-fixed {
   width:100%;
 }
+
 @media screen and (min-width:1024px) {
   .top-modal-fixed {
     width:calc(100% - 500px);
+  }
+}
+@media screen and (min-width:1536px) {
+  .top-modal-fixed {
+    width:calc(100% - 540px);
   }
 }
 @media screen and (max-width:1024px) {

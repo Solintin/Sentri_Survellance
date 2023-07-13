@@ -8,7 +8,7 @@ const Onboarding = () => {
   const [active, setActive] = useState(2);
     return (
         <div className="w-full h-full bg-white fixed flex flex-col items-center justify-center inset-0 ">
-            <div className="mx-auto w-full px-2 h-full absolute flex flex-col inset-x-0 top-[6rem] items-center   sm:w-[450px] ">
+            <div className="m-auto inset-0 w-full px-2 h-fit absolute flex flex-col items-center 2xl:w-[600px]  sm:w-[450px] ">
             <div className="h-[50px] sm:h-[70px] w-fit mb-[3rem] ">
             <img className="w-full h-full" src={logo} alt="" />
           </div>
