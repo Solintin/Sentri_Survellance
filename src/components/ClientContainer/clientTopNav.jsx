@@ -39,7 +39,7 @@ const ClientTopNav = ({ isNav, setisNav }) => {
 
   return (
     <div
-      className={`right min-[1024px]:float-right fixed bg-[#132D46] sm:bg-white shadow-md z-[22] px-4 py-4 sm:px-8 top-0 right-0 flex justify-between items-center`}
+      className={`right min-[1024px]:float-right fixed bg-[#132D46] sm:bg-white shadow-md z-[22] px-4 py-4 sm:px-8 2xl:px-12 2xl:py-8 top-0 right-0 flex justify-between items-center`}
     >
       <div className="flex items-center justify-between w-full">
         <div className="flex space-x-3 items-center">
@@ -56,7 +56,7 @@ const ClientTopNav = ({ isNav, setisNav }) => {
             <div className="sm:w-[40px] sm:h-[40px] w-[30px] h-[30px]">
               <img className="w-full h-full" src={headerImage} alt="" />
             </div>
-            <div className="text-sm sm:text-lg font-semibold">{header}</div>
+            <div className="text-sm sm:text-lg 2xl:text-[25px] font-semibold">{header}</div>
           </div>
           <div className=" sm:hidden h-[35px] enter   w-fit">
             <img className="w-full h-full" src={logo} alt="" />

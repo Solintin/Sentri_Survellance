@@ -20,6 +20,7 @@ import AlertSetting from "../components/client/alertSetting/alertSetting";
 import ClientUsers from "../components/client/clientusers/clientUsers";
 import PasswordSetting from "../components/adminSetting/passwordsetting/passwordSetting";
 import PhoneAuth from "../components/adminSetting/passwordsetting/phoneAuth";
+import ClientList from "../components/adminClient/clientList/clientList";
 export {
   Login,
   Auth,
@@ -43,4 +44,5 @@ export {
   ClientUsers,
   PasswordSetting,
   PhoneAuth,
+  ClientList
 };

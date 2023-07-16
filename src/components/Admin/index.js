@@ -2,9 +2,11 @@ import React from "react";
 import Container from "../container/container";
 import officer from "../../assets/svg/officer.svg";
 import clients from "../../assets/svg/clients.svg";
+import { Link, useNavigate } from "react-router-dom";
 // import Card from "../Composable/card";
 
 function Index() {
+  const navigate = useNavigate()
   return (
     <Container>
       <div className="w-full h-fit space-y-5 bg-gray-100 px-4 mb sm:px-4 py-[5rem] sm:pt-24">
@@ -154,34 +156,18 @@ function Index() {
               <h2 className="text-lg 2xl:text-[25px] text-[#132D46] font-bold">
                 Officer on duty
               </h2>
-             <div className="flex justify-between items-center mt-3 w-full">
-             <div className="flex items-center  space-x-3 ">
-                <img src={officer} alt="" />
-                <p className="text-xs 2xl:text-lg n font-bold">officer Jim foxx</p>
+           {[1,2,3,4,5].map((val, index) => {
+            return (
+              <div className="flex justify-between items-center mt-3 w-full">
+              <div className="flex items-center  space-x-3 ">
+                 <img src={officer} alt="" />
+                 <p className="text-xs 2xl:text-xl n font-bold">officer Jim foxx</p>
+               </div>
+                 <button className="w-fit px-2 py-1 text-[12px] 2xl:text-xl n rounded-md text-white bg-[#01C38D]">Open</button>
               </div>
-                <button className="w-fit px-2 py-1 text-[12px] 2xl:text-lg n rounded-md text-white bg-[#01C38D]">Open</button>
-             </div>
-             <div className="flex justify-between items-center mt-3 w-full">
-             <div className="flex items-center  space-x-3 ">
-                <img src={officer} alt="" />
-                <p className="text-xs 2xl:text-lg n font-bold">officer Jim foxx</p>
-              </div>
-                <button className="w-fit px-2 py-1 text-[12px] 2xl:text-lg n rounded-md text-white bg-[#01C38D]">Open</button>
-             </div>
-             <div className="flex justify-between items-center mt-3 w-full">
-             <div className="flex items-center  space-x-3 ">
-                <img src={officer} alt="" />
-                <p className="text-xs 2xl:text-lg n font-bold">officer Jim foxx</p>
-              </div>
-                <button className="w-fit px-2 py-1 text-[12px] 2xl:text-lg n rounded-md text-white bg-[#01C38D]">Open</button>
-             </div>
-             <div className="flex justify-between items-center mt-3 w-full">
-             <div className="flex items-center  space-x-3 ">
-                <img src={officer} alt="" />
-                <p className="text-xs 2xl:text-lg n font-bold">officer Jim foxx</p>
-              </div>
-                <button className="w-fit px-2 py-1 text-[12px] 2xl:text-lg n rounded-md text-white bg-[#01C38D]">Open</button>
-             </div>
+            )
+           })}
+        
             </div>
 
             <div className="bg-[#fff] rounded-md p-4 xl:mt-6">
@@ -192,93 +178,37 @@ function Index() {
               </h2>
               <span className="text-[10px] sm:text-[12px] 2xl:text-base text-[#01C38D] font-semibold pt-2">1387</span>
               </div>
-                  <button className="text-[11px] 2xl:text-base font-semibold text-[#01C38D]">View all</button>
+                  <button 
+                  onClick={() => {
+                    navigate("/admin/client")
+                  }}
+                  className="text-[11px] 2xl:text-base font-semibold text-[#01C38D]">View all</button>
              </div>
              
-                <div className="flex justify-between items-center mt-3 w-full">
-                <div className="flex items-center  space-x-3">
-                <img src={clients} className="w-[30px] h-[30px] 2xl:w-[40px] 2xl:h-[40px]" alt="" />
-                <div>
-                <p className="text-[12px] 2xl:text-base overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
-                <p className="text-[10px] 2xl:text-base font-bold text-[#01C38D]">4 cameras</p>
-                </div>
-                <div>
-                <p className="text-[12px] 2xl:text-base font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
-                <p className="text-[10px] 2xl:text-base font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
-                </div>
-                
+           {[1,2,3,4,5].map((val, index) => {
+            return (
+              <Link to="/admin/client/detail"
+              key={index}
+              className="flex justify-between items-center mt-3 w-full">
+              <div className="flex items-center  space-x-3">
+              <img src={clients} className="w-[30px] h-[30px] 2xl:w-[50px] 2xl:h-[50px]" alt="" />
+              <div>
+              <p className="text-[12px] 2xl:text-xl overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
+              <p className="text-[10px] 2xl:text-lg font-bold text-[#01C38D]">4 cameras</p>
               </div>
-              <button className="w-fit px-2 py-1 text-[12px] 2xl:text-lg n rounded-md text-white bg-[#01C38D]">Open</button>
-
-                </div>
-                
-                <div className="flex justify-between items-center mt-3 w-full">
-                <div className="flex items-center  space-x-3">
-                <img src={clients} className="w-[30px] h-[30px] 2xl:w-[40px] 2xl:h-[40px]" alt="" />
-                <div>
-                <p className="text-[12px] 2xl:text-base overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
-                <p className="text-[10px] 2xl:text-base font-bold text-[#01C38D]">4 cameras</p>
-                </div>
-                <div>
-                <p className="text-[12px] 2xl:text-base font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
-                <p className="text-[10px] 2xl:text-base font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
-                </div>
-                
+              <div>
+              <p className="text-[12px] 2xl:text-xl font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
+              <p className="text-[10px] 2xl:text-lg font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
               </div>
-              <button className="w-fit px-2 py-1 text-[12px] 2xl:text-lg n rounded-md text-white bg-[#01C38D]">Open</button>
+              
+            </div>
+            <button className="w-fit px-2 py-1 text-[12px] 2xl:text-xl n rounded-md text-white bg-[#01C38D]">Open</button>
 
-                </div>
-
-                <div className="flex justify-between items-center mt-3 w-full">
-                <div className="flex items-center  space-x-3">
-                <img src={clients} className="w-[30px] h-[30px] 2xl:w-[40px] 2xl:h-[40px]" alt="" />
-                <div>
-                <p className="text-[12px] 2xl:text-base overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
-                <p className="text-[10px] 2xl:text-base font-bold text-[#01C38D]">4 cameras</p>
-                </div>
-                <div>
-                <p className="text-[12px] 2xl:text-base font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
-                <p className="text-[10px] 2xl:text-base font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
-                </div>
+              </Link>
+            )
+           })}
                 
-              </div>
-              <button className="w-fit px-2 py-1 text-[12px] 2xl:text-lg n rounded-md text-white bg-[#01C38D]">Open</button>
-
-                </div>
-
-                <div className="flex justify-between items-center mt-3 w-full">
-                <div className="flex items-center  space-x-3">
-                <img src={clients} className="w-[30px] h-[30px] 2xl:w-[40px] 2xl:h-[40px]" alt="" />
-                <div>
-                <p className="text-[12px] 2xl:text-base overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
-                <p className="text-[10px] 2xl:text-base font-bold text-[#01C38D]">4 cameras</p>
-                </div>
-                <div>
-                <p className="text-[12px] 2xl:text-base font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
-                <p className="text-[10px] 2xl:text-base font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
-                </div>
-                
-              </div>
-              <button className="w-fit px-2 py-1 text-[12px] 2xl:text-lg n rounded-md text-white bg-[#01C38D]">Open</button>
-
-                </div>
-
-                <div className="flex justify-between items-center mt-3 w-full">
-                <div className="flex items-center  space-x-3">
-                <img src={clients} className="w-[30px] h-[30px] 2xl:w-[40px] 2xl:h-[40px]" alt="" />
-                <div>
-                <p className="text-[12px] 2xl:text-base overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
-                <p className="text-[10px] 2xl:text-base font-bold text-[#01C38D]">4 cameras</p>
-                </div>
-                <div>
-                <p className="text-[12px] 2xl:text-base font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
-                <p className="text-[10px] 2xl:text-base font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
-                </div>
-                
-              </div>
-              <button className="w-fit px-2 py-1 text-[12px] 2xl:text-lg n rounded-md text-white bg-[#01C38D]">Open</button>
-
-                </div>
+             
             </div>
           </div>
         </div>

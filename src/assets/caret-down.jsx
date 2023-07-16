@@ -6,6 +6,7 @@ export const CaretDownIcon = (props) => {
     switch (props.point) {
       case "up":
         style = {
+          
           position: "absolute",
           color: "#696969",
           right: "20px",

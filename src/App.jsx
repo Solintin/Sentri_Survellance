@@ -26,6 +26,7 @@ import {
   ClientUsers,
   PasswordSetting,
   PhoneAuth,
+  ClientList,
 } from "./Pages";
 
 const App = () => {
@@ -72,7 +73,8 @@ const App = () => {
           <Route exact path="/dashboard" element={<DashBoard />} />
           <Route exact path="/camera" element={<Camera />} />
           <Route exact path="/camera/:id" element={<CameraDetail />} />
-          <Route exact path="/admin/client" element={<ClientProfile />} />
+          <Route exact path="/admin/client" element={<ClientList />} />
+          <Route exact path="/admin/client/detail" element={<ClientProfile />} />
           <Route exact path="/events" element={<Event />} />
           <Route exact path="/client/invites" element={<Invites />} />
           <Route exact path="/report" element={<Report />} />

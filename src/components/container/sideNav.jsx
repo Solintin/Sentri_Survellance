@@ -61,7 +61,7 @@ const SideNav = ({ isNav, setisNav }) => {
           />
         )}
 
-        <div className="w-full items-start flex-col justify-start 2xl:text-[25px] text-[15px] text-white 2xl:space-y-6 space-y-3 2xl:py-4 py-2 border-b border-[#01C38D]">
+        <div className="w-full items-start flex-col justify-start 2xl:text-[25px] text-[15px] text-white 2xl:space-y-8 space-y-3 2xl:py-4 py-2 border-b border-[#01C38D]">
           {true && (
             <Link
               to="/admin/dashboard"
@@ -159,7 +159,7 @@ const SideNav = ({ isNav, setisNav }) => {
           </Link>
         </div>
 
-        <div className="w-full items-start flex-col justify-start 2xl:text-[25px] text-[15px] text-white space-y-3 py-2 ">
+        <div className="2xl:space-y-8 w-full items-start flex-col justify-start 2xl:text-[25px] text-[15px] text-white space-y-3 py-2 ">
           <div
             className={`hidden space-x-2 justify-start items-center pl-10 py-2 w-full ${
               pathname === "/setting"
