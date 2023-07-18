@@ -11,7 +11,7 @@ const Registration = () => {
 
   console.log(active);
   return (
-    <div className="w-full  transform  ease-in-out h-fit inset-0  space-y-5">
+    <div className="w-full  transform  2xl:space-y-10 ease-in-out h-fit inset-0  space-y-5">
       <div className="w-full items-center justify-center flex space-x-4">
         <div
           onClick={() => {

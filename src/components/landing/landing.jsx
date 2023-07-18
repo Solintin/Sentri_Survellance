@@ -29,20 +29,20 @@ const Landing = () => {
         <img src={map} alt="" className="w-full h-full object-contain" />
       </div>
       <div className="w-full h-fit space-y-[30vh] flex flex-col items-center bottom-[10vh] inset-x-0 mx-auto lets swipeDown  absolute ">
-        <div className="w-[190px] justify-center h-20 flex items-center space-x-3">
+        <div className="w-[190px] 2xl:w-[250px] 2xl:h-[120px] justify-center h-20 flex items-center space-x-3">
           <img className="h-full w-full" src={logo} alt="" />
-          <div className="text-2xl inline-block">
+          <div className="text-2xl 2xl:text-4xl inline-block">
             <div className="whitespace-nowrap w-full animation overflow-hidden tracking-[6px]">
               SENTRI
             </div>
           </div>
         </div>
-        <div className="space-y-3 w-full sm:w-[400px] px-3 ">
+        <div className="space-y-3 w-full 2xl:w-[500px] sm:w-[400px] px-3 ">
           <button
             onClick={() => {
               navigate("/auth/signin");
             }}
-            className="w-full py-3 bg-white text-zinc-700 font-medium rounded-md"
+            className="w-full py-3 bg-white 2xl:text-xl  2xl:py-4 text-zinc-700 font-medium rounded-md"
           >
             Log In
           </button>
@@ -50,7 +50,7 @@ const Landing = () => {
             onClick={() => {
               navigate("/auth/signup");
             }}
-            className="w-full py-3 bg-[#01C38D] font-medium rounded-md"
+            className="w-full py-3 2xl:text-xl  2xl:py-4 bg-[#01C38D] font-medium rounded-md"
           >
             Create Account
           </button>

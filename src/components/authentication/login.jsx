@@ -38,7 +38,7 @@ const Login = () => {
     // dispatch(LoginAction(payload, navigate, setLoading));
   };
   return (
-    <div className="w-full space-y-4 pb-16">
+    <div className="w-full 2xl:space-y-10 space-y-4 pb-16">
       <div
         className={
           "w-full  relative 2xl:h-[750px] h-[450px] px-6 sm:px-8 py-6 flex  flex-col justify-center items-center  sm:rounded-lg bg-white border shadow-xl"
