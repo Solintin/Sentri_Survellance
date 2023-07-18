@@ -47,6 +47,10 @@ const TopNav = ({isNav, setisNav}) => {
       setHeder("Reports");
       setheaderImage(report)
     }
+    if (pathname.includes("setting")) {
+      setHeder("Genral Settings");
+      setheaderImage(setting)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

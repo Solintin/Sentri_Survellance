@@ -160,8 +160,9 @@ const SideNav = ({ isNav, setisNav }) => {
         </div>
 
         <div className="2xl:space-y-8 w-full items-start flex-col justify-start 2xl:text-[25px] text-[15px] text-white space-y-3 py-2 ">
-          <div
-            className={`hidden space-x-2 justify-start items-center pl-10 py-2 w-full ${
+          <Link to="/setting"
+         
+            className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
               pathname === "/setting"
                 ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
                 : ""
@@ -171,7 +172,7 @@ const SideNav = ({ isNav, setisNav }) => {
               <img className="w-full h-full" src={setting} alt="" />
             </div>
             <div>Settings</div>
-          </div>
+          </Link>
 
           <Link
             to={"/"}

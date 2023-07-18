@@ -19,7 +19,7 @@ function Settings() {
           <SettingNav />
 
           <div className="bg-white text-[#132D46] rounded-lg h-full min-[850px]:col-span-7 py- sm:py-8">
-            <div className="w-[65vh] space-y-5 sm:space-y-10  h-full px-2 sm:px-4">
+            <div className="w-[65vw] space-y-5 sm:space-y-10  h-full px-2 sm:px-4">
               <div className="">
                 <div className="text-sm sm:text-lg 2xl:text-2xl font-semibold text-[#132D46]">
                   Profile Settings

@@ -15,12 +15,14 @@ import Onboarding from "../components/onboarding/onboarding";
 import ArchiveEvent from "../components/archiveEvent/archiveEvent";
 import  PersonalCamera  from "../components/client/personalCameras/personalCamera";
 import Invites from "../components/client/invites/invites";
+import GenralSetting from "../components/generalsetting/generalSetting";
 import AccountSetting from "../components/client/accountsetting/accountSetting";
 import AlertSetting from "../components/client/alertSetting/alertSetting";
 import ClientUsers from "../components/client/clientusers/clientUsers";
 import PasswordSetting from "../components/adminSetting/passwordsetting/passwordSetting";
 import PhoneAuth from "../components/adminSetting/passwordsetting/phoneAuth";
 import ClientList from "../components/adminClient/clientList/clientList";
+import NotificationEmail from "../components/generalsetting/notification";
 export {
   Login,
   Auth,
@@ -44,5 +46,7 @@ export {
   ClientUsers,
   PasswordSetting,
   PhoneAuth,
-  ClientList
+  ClientList,
+  GenralSetting,
+  NotificationEmail
 };

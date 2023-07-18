@@ -5,7 +5,7 @@ import alert from "../../../../assets/svg/alert.svg"
 const SettingNav = () => {
     const {pathname} = useLocation()
     return (
-        <div className="col-span-2 max-[850px]:hidden py-6 h-[400px] bg-white rounded-lg">
+        <div className="col-span-2 max-[850px]:hidden py-6 2xl:space-y-4  h-[400px] bg-white rounded-lg">
         <Link
         to="/client/account"
         className={`flex space-x-2 justify-start items-center pl-4 py-2 w-full ${
