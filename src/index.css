@@ -99,6 +99,7 @@ input[type="checkbox"] {
 /*camera-scroll-style*/
 .camera-scroll-style::-webkit-scrollbar {
   width:8px;
+  height:5px;
   
 }
 .camera-scroll-style::-webkit-scrollbar-thumb {

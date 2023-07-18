@@ -25,7 +25,7 @@ const AccountSetting = () => {
           <SettingNav />
 
           <div className="bg-white text-[#132D46] rounded-lg h-full min-[850px]:col-span-7 py- sm:py-8">
-            <div className="w-[600px] space-y-5 sm:space-y-10  h-full px-2 sm:px-4">
+            <div className="w-full sm:w-[600px]  2xl:w-[900px] space-y-5 sm:space-y-10  h-full px-2 sm:px-4">
               <div className="">
                 <div className="text-sm sm:text-lg font-semibold text-[#132D46]">
                   Profile Settings
