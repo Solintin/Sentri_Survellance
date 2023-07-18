@@ -90,10 +90,10 @@ function FilterModal({ header, onClose }) {
       </div>
 
       <div className="flex w-full flex-col space-y-2 sm:space-y-0 sm:flex-row justify-center items-center mt-10 sm:space-x-4">
-        <button className="w-[70%] sm:w-[30%] py-2 sm:py-3 border border-[#696E79] rounded-md">
+        <button className="w-[70%] sm:w-[30%] py-2 2xl:py-4  sm:py-3 border border-[#696E79] rounded-md">
           Cancel
         </button>
-        <button className="w-[70%] sm:w-[30%] py-2 sm:py-3 bg-[#132D46] text-white rounded-md">
+        <button className="w-[70%] sm:w-[30%] 2xl:py-4 py-2 sm:py-3 bg-[#132D46] text-white rounded-md">
           Apply filter
         </button>
       </div>

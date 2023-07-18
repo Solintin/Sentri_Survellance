@@ -21,7 +21,7 @@ function Index() {
           <div className="w-full h-full px-4 py-4 space-y-8">
             <button
               onClick={() => setIsFilter(!isFilter)}
-              className="rounded-md flex space-x-8 items-center p-2 bg-secondary-100 text-white"
+              className="rounded-md flex space-x-8 items-center 2xl:p-3 p-2 bg-secondary-100 text-white"
             >
               <span>Add Filters</span>
               <img src={arrowright} alt="" />
@@ -48,7 +48,7 @@ function Index() {
           <div className="hidden sm:block h-full fixed px-4 sm:px-4 py-4 border-r space-y-3 bg-white border-gray-400 shadow-sm w-[240px] sm:w-[250px] ">
             <button
               onClick={() => setIsFilter(!isFilter)}
-              className="rounded-md flex space-x-8 items-center p-2 bg-secondary-100 text-white"
+              className="rounded-md flex space-x-8 items-center 2xl:px-3 2xl:py-4 p-2 bg-secondary-100 text-white"
             >
               <span>Add Filters</span>
               <img src={arrowright} alt="" />
