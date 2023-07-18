@@ -14,7 +14,7 @@ const Phase2 = ({setactive}) => {
           <div className="font-semibold 2xl:text-2xl text-lg text-[#132D46]">
             Do you have a camera?
           </div>
-          <div className="text-gray-500 2xl:text-lg text-[12px] sm:text-sm">
+          <div className="text-gray-500 2xl:text-xl text-[12px] sm:text-sm">
             Let's work on the camera
           </div>
         </div>

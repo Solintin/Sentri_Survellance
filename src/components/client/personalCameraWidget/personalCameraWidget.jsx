@@ -15,7 +15,7 @@ const PersonalCameraWidget = ({ resize }) => {
       <img src={two} alt="" className="w-full h-full rounded-lg" />
       <div className="text-white flex flex-col justify-start absolute top-2 left-3">
         <div className="text-[13px] 2xl:text-xl sm:text-[15px]">Camera 1</div>
-        <div className="text-[12px] 2xl:text-lg sm:text-sm">
+        <div className="text-[12px] 2xl:text-xl sm:text-sm">
           Building Entrance
         </div>
       </div>

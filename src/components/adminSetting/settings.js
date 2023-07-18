@@ -24,7 +24,7 @@ function Settings() {
                 <div className="text-sm sm:text-lg 2xl:text-2xl font-semibold text-[#132D46]">
                   Profile Settings
                 </div>
-                <div className="text-gray-400 text-[11px] 2xl:text-lg sm:text-[13px]">
+                <div className="text-gray-400 text-[11px] 2xl:text-xl sm:text-[13px]">
                   Update your profle and personal detail here
                 </div>
               </div>
@@ -46,7 +46,7 @@ function Settings() {
               </div>
 
               <div className="account_form w-full 2xl:space-y-6 space-y-4">
-                <div className="text-sm sm:text-lg 2xl:text-lg font-semibold text-[#132D46]">
+                <div className="text-sm sm:text-lg 2xl:text-xl font-semibold text-[#132D46]">
                   General
                 </div>
                 <InputText

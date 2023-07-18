@@ -21,7 +21,7 @@ const PlayerController = () => {
           <div className="w-[15px] h-[15px] 2xl:w-[20px] 2xl:h-[20px]">
               <img src={archive} alt="" className="w-full h-full "/>
             </div>
-            <button className="text-[10px] 2xl:text-lg text-zinc-600">Download</button>
+            <button className="text-[10px] 2xl:text-xl text-zinc-600">Download</button>
           </div>
           <div
           onClick={onClose}
@@ -30,13 +30,13 @@ const PlayerController = () => {
               <img src={share} alt="" className="w-full h-full "/>
             </div>
 
-            <button className="text-[10px] 2xl:text-lg text-zinc-600">Share Clip</button>
+            <button className="text-[10px] 2xl:text-xl text-zinc-600">Share Clip</button>
           </div>
           <div className="space-x-1 flex items-center">
             <div className="w-[15px] h-[15px] 2xl:w-[20px] 2xl:h-[20px]">
               <img src={deletes} alt="" className="w-full h-full "/>
             </div>
-            <button className="text-[10px] 2xl:text-lg text-zinc-600">Delete</button>
+            <button className="text-[10px] 2xl:text-xl text-zinc-600">Delete</button>
           </div>
         </div>
       </div>

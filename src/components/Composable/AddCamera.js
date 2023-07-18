@@ -26,7 +26,7 @@ function FilterModal({ header, onClose }) {
             placeholder={"E.g Farm"}
           />
 
-          <p className="text-[#ABABAB] 2xl:text-lg text-[10px]">
+          <p className="text-[#ABABAB] 2xl:text-xl text-[10px]">
             The serial number is located on the bod of the device and on the
             Box.
           </p>

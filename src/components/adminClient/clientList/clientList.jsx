@@ -53,7 +53,7 @@ const ClientList = () => {
           onClick={() => {
             onClose()
           }}
-          className="text-white py-3 bg-[#01C38D] w-[70%] rounded-md sm:w-[40%] font-medium text-sm sm:text-base 2xl:text-lg">
+          className="text-white py-3 bg-[#01C38D] w-[70%] rounded-md sm:w-[40%] font-medium text-sm sm:text-base 2xl:text-xl">
             Add Client
           </button>
         

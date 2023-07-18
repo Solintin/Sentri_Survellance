@@ -6,7 +6,7 @@ const ClientCameraWidget = ({image}) => {
         <img src={image} alt="" className="w-full h-full rounded-lg object-fill" />
         <div className="absolute text-white top-3 left-3">
              <div className="text-[13px] 2xl:text-xl sm:text-[15px]">Camera # 1</div>
-             <div className="text-[12px] 2xl:text-lg sm:text-sm">Back Yard</div>
+             <div className="text-[12px] 2xl:text-xl sm:text-sm">Back Yard</div>
         </div>
     </div>
     )

@@ -14,7 +14,7 @@ const Phase1 = ({setactive}) => {
         <div className="font-semibold text-lg 2xl:text-2xl text-[#132D46]">
           When would you like get your daily report?
         </div>
-        <div className="text-gray-500 text-[12px] 2xl:text-lg sm:text-sm">
+        <div className="text-gray-500 text-[12px] 2xl:text-xl sm:text-sm">
           We will send you a report of event that happened last night
         </div>
       </div>
@@ -53,7 +53,7 @@ const Phase1 = ({setactive}) => {
                     setTime(`${value}:00 AM`)
                     setshowTime(false)
                 }}
-                className="px-2 2xl:text-lg text-gray-500 2xl:py-2 py-1 hover:bg-green-200">{`${value}:00 AM`}</div>;
+                className="px-2 2xl:text-xl text-gray-500 2xl:py-2 py-1 hover:bg-green-200">{`${value}:00 AM`}</div>;
               })}
             </div>
           </div>

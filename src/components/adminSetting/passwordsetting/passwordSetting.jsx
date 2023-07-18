@@ -24,7 +24,7 @@ const PasswordSetting = () => {
                 <div className="text-sm sm:text-lg 2xl:text-2xl font-semibold text-[#132D46]">
                   Password Settings
                 </div>
-                <div className="text-gray-400 text-[11px] 2xl:text-lg sm:text-[13px]">
+                <div className="text-gray-400 text-[11px] 2xl:text-xl sm:text-[13px]">
                   To set a new password, please enter your current password
                 </div>
               </div>

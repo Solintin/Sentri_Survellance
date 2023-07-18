@@ -73,7 +73,7 @@ const AddClient = ({ onClose, header }) => {
         <div className="w-full mt-7 items-center flex justify-center">
           <button
          
-          className="text-white py-3 bg-[#132D46] w-[70%] rounded-md sm:w-[50%] font-medium text-sm sm:text-base 2xl:text-lg">
+          className="text-white py-3 bg-[#132D46] w-[70%] rounded-md sm:w-[50%] font-medium text-sm sm:text-base 2xl:text-xl">
             Save
           </button>
           </div>

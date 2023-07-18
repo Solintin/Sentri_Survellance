@@ -18,7 +18,7 @@ const ClientCameraControls = () => {
       <div className="flex justify-between items-center w-full px-3 py-2">
         <div>
             <div className="text-[#132D46] font-medium text-sm sm:text-[16px] 2xl:text-xl">Camera 1</div>
-            <div className="text-[11px] sm:text-[13px] text-gray-500 2xl:text-lg">Bedroom</div>
+            <div className="text-[11px] sm:text-[13px] text-gray-500 2xl:text-xl">Bedroom</div>
         </div>
 
         <div className="space-x-3 flex items-center">
@@ -31,14 +31,14 @@ const ClientCameraControls = () => {
           <div className="2xl:w-[18px] 2xl:h-[18px] w-[15px] h-[15px]">
             <img src={setting} alt="" className="w-full h-full"/>
           </div>
-          <button className="text-[10px] 2xl:text-lg text-zinc-600">Camera Setting</button>
+          <button className="text-[10px] 2xl:text-xl text-zinc-600">Camera Setting</button>
         </div>
         
         <div className="space-x-1 flex items-center">
           <div className="2xl:w-[18px] 2xl:h-[18px] w-[15px] h-[15px]">
             <img src={deletes} alt="" className="w-full h-full" />
           </div>
-          <button className="text-[10px] 2xl:text-lg text-zinc-600">Remove</button>
+          <button className="text-[10px] 2xl:text-xl text-zinc-600">Remove</button>
         </div>
         </div>
       </div>

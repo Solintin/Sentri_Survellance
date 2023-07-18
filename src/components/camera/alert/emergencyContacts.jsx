@@ -8,7 +8,7 @@ const EmergencyContact = ({ iscontact, setiscontact }) => {
     >
       <div
         className={
-          "relative 2xl:w-[350px] w-[280px] py-2 px-4 sm:px-6 sm:py-6 z-[300] h-fit flex flex-col text-[11px]  2xl:text-lg text-black font-semibold bg-white rounded-md shadow-md space-y-4"
+          "relative 2xl:w-[350px] w-[280px] py-2 px-4 sm:px-6 sm:py-6 z-[300] h-fit flex flex-col text-[11px]  2xl:text-xl text-black font-semibold bg-white rounded-md shadow-md space-y-4"
         }
       >
         <div

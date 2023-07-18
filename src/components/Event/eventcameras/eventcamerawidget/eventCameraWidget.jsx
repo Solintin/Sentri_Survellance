@@ -10,7 +10,7 @@ const EventCameraWidget = () => {
         <img src={two} alt="" className='w-full h-full rounded-lg'/>
         <div className='text-white 2xl:text-[22px] flex flex-col  justify-start absolute top-2 left-3'>
             <div>Camera 1</div>
-            <div className="text-[10px] sm:text-[12px] 2xl:text-lg ">Building Entrance</div>
+            <div className="text-[10px] sm:text-[12px] 2xl:text-xl ">Building Entrance</div>
 
         </div>
         <div 

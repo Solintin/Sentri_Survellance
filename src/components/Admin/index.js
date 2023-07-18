@@ -12,7 +12,7 @@ function Index() {
       <div className="w-full h-fit space-y-5 bg-gray-100 px-4 mb sm:px-4 py-[5rem] sm:pt-24">
         <h2 className="text-lg 2xl:text-[25px] font-bold">Overview</h2>
         <div className="grid xl:grid-cols-12 grid-cols-1 gap-y-6 xl:gap-6 items-start mt-3">
-          <div className="col-span-7 space-y-4 w-full h-full ">
+          <div className="col-span-7  w-full h-full ">
             <div className="dashboard-scroll-style w-full h-fit overflow-x-auto">
             <div className="min-w-[800px]">
             <div className=" w-full grid grid-cols-4 items-center mb-1  gap-6 bg-white p-4 rounded-md">
@@ -61,11 +61,11 @@ function Index() {
              
             </div>
 
-            <div className="dashboard-scroll-style w-full h-fit overflow-x-auto">
+            <div className="dashboard-scroll-style mt-8 w-full h-fit overflow-x-auto">
               <div className="min-w-[800px]">
-              <div className="flex justify-between">
-                <h2 className="text-base sm:text-lg 2xl:text-[25px] text-[#132D46] font-semibold sm:font-bold">Alerts</h2>
-                <h2 className="text-[13px] 2xl:text-lg n text-[#01C38D] font-semibold sm:font-bold">View all</h2>
+              <div className="flex w-full py-3 justify-between">
+                <h2 className="text-base sm:text-lg 2xl:text-[25px] text-[#132D46] font-semibold sm:font-bold">Events</h2>
+                <h2 className="text-[13px] 2xl:text-xl n text-[#01C38D] font-semibold sm:font-bold">View all</h2>
               </div>
               <div className="mt-1 grid grid-cols-5 bg-white 2xl:py-5 p-3 rounded-t-md text-sm  sm:text-base 2xl:text-[20px] text-[#132D46] font-semibold sm:font-bold">
                 <div className="flex space-x-2 items-center">
@@ -89,7 +89,7 @@ function Index() {
                 </div>
                 <div>
                   <h2 className="">
-                    Information
+                    Status
                   </h2>
                 </div>
               </div>
@@ -142,7 +142,7 @@ function Index() {
                     <h2 className="">Officer Banks</h2>
                   </div>
                   <div>
-                    <h2 className="">Assistant</h2>
+                    <h2 className="">Inprogress</h2>
                   </div>
                 </div>
               ))}
@@ -194,11 +194,11 @@ function Index() {
               <img src={clients} className="w-[30px] h-[30px] 2xl:w-[50px] 2xl:h-[50px]" alt="" />
               <div>
               <p className="text-[12px] 2xl:text-xl overflow-hidden text-ellipsis w-full whitespace-nowrap font-bold">Kelly Sikkkema</p>
-              <p className="text-[10px] 2xl:text-lg font-bold text-[#01C38D]">4 cameras</p>
+              <p className="text-[10px] 2xl:text-xl font-bold text-[#01C38D]">4 cameras</p>
               </div>
               <div>
               <p className="text-[12px] 2xl:text-xl font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">Kelly Sikkkema</p>
-              <p className="text-[10px] 2xl:text-lg font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
+              <p className="text-[10px] 2xl:text-xl font-bold text-[#01C38D] flex space-x-2"><span className="tracking-widest">MTWTFS</span><span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">7:00pm pdt 8:00am pdt</span></p>
               </div>
               
             </div>

@@ -20,7 +20,7 @@ const ForgotPassword = ({header, onClose}) => {
             <img src={close} alt="" />
           </button>
         </div>
-        <div className="mb-8 text-gray-400 text-[12px] 2xl:text-lg sm:text-sm">
+        <div className="mb-8 text-gray-400 text-[12px] 2xl:text-xl sm:text-sm">
           Pls choose how you want to reset your password
         </div>
 

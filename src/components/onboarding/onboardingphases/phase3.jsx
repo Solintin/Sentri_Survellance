@@ -20,7 +20,7 @@ const Phase3 = ({setactive}) => {
           <div className="font-semibold text-lg 2xl:text-2xl text-[#132D46]">
             Which camera brand do you have?
           </div>
-          <div className="text-gray-500 text-[12px] 2xl:text-lg sm:text-sm">
+          <div className="text-gray-500 text-[12px] 2xl:text-xl sm:text-sm">
             Choose your brand
           </div>
         </div>
