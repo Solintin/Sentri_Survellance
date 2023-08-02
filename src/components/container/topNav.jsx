@@ -58,7 +58,7 @@ const TopNav = ({isNav, setisNav}) => {
     <div
       className={`right min-[1024px]:float-right fixed bg-[#132D46] sm:bg-white shadow-md z-[22] px-4 py-4 sm:px-8  2xl:px-12 2xl:py-8 top-0 right-0 flex justify-between items-center`}
     >
-      <div className="flex items-center justify-between w-full">
+      <div className="flex items-center gap-6 justify-between w-full">
       <div className="flex space-x-3 items-center">
       <div
         onClick={() => {
@@ -78,16 +78,17 @@ const TopNav = ({isNav, setisNav}) => {
             <img className="w-full h-full" src={logo} alt="" />
         </div>
 
-          <div className="w-[80%] hidden h-11 relative">
-            <AiOutlineAudio className="text-[#132D46] text-[22px] absolute left-2 top-3" />
+        
+        </div>
+        <div className="w-1/2 hidden md:block 2xl:h-16 h-11 relative">
+            <AiOutlineAudio className="text-[#132D46] text-[22px] absolute left-2 2xl:top-5 top-3" />
             <input
               type="text"
               placeholder="Search for Camera"
               className="px-8 w-full h-full bg-gray-100 border border-gray-200 rounded-[4px]"
             />
-            <CiSearch className="text-[#132D46] text-[22px] absolute right-3 top-3" />
+            <CiSearch className="text-[#132D46] text-[22px] absolute right-3 2xl:top-5 top-3" />
           </div>
-        </div>
 
         <div className="space-x-4 flex items-center">
           <BsBellFill className="text-[25px] hidden sm:block text-white sm:text-gray-300" />

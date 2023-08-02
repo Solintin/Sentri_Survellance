@@ -16,7 +16,7 @@ const ClientList = () => {
         
           <div className="dashboard-scroll-style w-full h-fit overflow-x-auto">
             <div className="min-w-[800px]">
-              <div className="mt-2 items-center w-full grid grid-cols-7 gap-4 bg-white rounded-md text-black 2xl:py-5 py-4 px-4 2xl:px-5 text-sm  sm:text-base 2xl:text-xl font-semibold">
+              <div className="mt-2 items-center w-full grid grid-cols-10 gap-4 bg-white rounded-md text-black 2xl:py-5 py-4 px-4 2xl:px-5 text-sm  sm:text-base 2xl:text-xl font-semibold">
                 <div className="col-span-2 flex space-x-2 items-center">
                   <input type="checkbox" name="" id="" />
                   <h2 className="">Clients</h2>
@@ -26,11 +26,17 @@ const ClientList = () => {
                     Camera
                   </h2>
                 </div>
+                <div className="col-span-2">
+                  <h2 className="">Address</h2>
+                </div>
+                <div>
+                  <h2 className="">Service Days</h2>
+                </div>
                 <div>
                   <h2 className="">Date</h2>
                 </div>
                 <div>
-                  <h2 className="">Time</h2>
+                  <h2 className="">Service Time</h2>
                 </div>
                 <div>
                   <h2 className="">Event Type</h2>
