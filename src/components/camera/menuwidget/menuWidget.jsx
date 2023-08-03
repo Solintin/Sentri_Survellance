@@ -1,8 +1,10 @@
 import React from "react";
 import archive from "../../../assets/svg/archive.svg";
-import edit from "../../../assets/svg/edit.svg";
 import event from "../../../assets/svg/event.svg";
 import deletes from "../../../assets/svg/delete.svg";
+import report from "../../../assets/svg/report.svg";
+import camera from "../../../assets/svg/camera.svg";
+import setting from "../../../assets/svg/setting.svg"
 
 const MenusWidget = ({ismore, setismore}) => {
 
@@ -19,24 +21,38 @@ const MenusWidget = ({ismore, setismore}) => {
            ></div>
         <div className="w-full flex justify-start  space-x-2">
            <div className="w-[18px] h-[18px] 2xl:w-[24px] 2xl:h-[24px] ">
-               <img className="w-full h-full" src={edit} alt="" />
+               <img className="w-full h-full" src={setting} alt="" />
 
            </div>
-               <span>Edit</span>
+               <span>Camera Settings</span>
+           </div>
+           <div className="w-full flex justify-start  space-x-2">
+           <div className="w-[18px] h-[18px] 2xl:w-[24px] 2xl:h-[24px] ">
+               <img className="w-full h-full" src={report} alt="" />
+
+           </div>
+               <span>Create Report</span>
+           </div>
+           <div className="w-full flex justify-start  space-x-2">
+           <div className="w-[18px] h-[18px] 2xl:w-[24px] 2xl:h-[24px] ">
+               <img className="w-full h-full" src={camera} alt="" />
+
+           </div>
+               <span>Start Recording</span>
            </div>
            <div className="w-full flex justify-start space-x-2">
            <div className="w-[18px] h-[18px] 2xl:w-[24px] 2xl:h-[24px] ">
                <img className="w-full h-full" src={event} alt="" />
 
            </div>
-               <span>Events</span>
+               <span>Add to Events</span>
            </div>
            <div className="w-full flex justify-start space-x-2">
            <div className="w-[18px] h-[18px] 2xl:w-[24px] 2xl:h-[24px] ">
                <img className="w-full h-full" src={archive} alt="" />
 
            </div>
-               <span>Archive Events</span>
+               <span>Add to Archive</span>
            </div>
            <div className="w-full flex justify-start space-x-2">
            <div className="w-[18px] h-[18px] 2xl:w-[24px] 2xl:h-[24px] ">

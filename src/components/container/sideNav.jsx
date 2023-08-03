@@ -10,6 +10,7 @@ import client from "../../assets/svg/client.svg";
 import setting from "../../assets/svg/setting.svg";
 import logout from "../../assets/svg/logout.svg";
 import { Link, useLocation } from "react-router-dom";
+import {GiPoliceOfficerHead} from 'react-icons/gi'
 // import DashBoard from "../dashboard/dashBoard";
 import EventSettings from "../Composable/AddCamera";
 
@@ -159,7 +160,18 @@ const SideNav = ({ isNav, setisNav }) => {
           </Link>
         </div>
 
-        <div className="2xl:space-y-8 w-full items-start flex-col justify-start 2xl:text-[25px] text-[15px] text-white space-y-3 py-2 ">
+        <div className="2xl:space-y-8 w-full  items-start flex-col justify-start 2xl:text-[25px] text-[15px] text-white space-y-3 py-2 ">
+        
+      <div className="w-full px-2">
+      <button
+          
+          className="bg-[#01C38D] flex  justify-center whitespace-nowrap space-x-1 w-full sm:space-x-2 items-center 2xl:p-3 p-2 text-white rounded-lg "
+        >
+          <GiPoliceOfficerHead className="text-[22px] 2xl:text-[28px]" />
+          <span>Add Officers</span>
+        </button>
+      </div>
+        
           <Link to="/setting"
          
             className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${

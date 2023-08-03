@@ -93,9 +93,7 @@ function Index() {
                   <div>
                     <h2 className="">Status</h2>
                   </div>
-                  <div>
-                   
-                  </div>
+                  <div></div>
                 </div>
 
                 {[1, 2].map((item, i) => (
@@ -130,8 +128,10 @@ function Index() {
                       <h2 className="">Alarm</h2>
                     </div>
                     <div>
-                      <button className="text-red-500 bg-white rounded-md text-sm 2xl:text-xl p-2 2xl:p-3">View</button>
-                      </div>
+                      <button className="text-red-500 bg-white rounded-md text-sm 2xl:text-xl p-2 2xl:p-3">
+                        View
+                      </button>
+                    </div>
                   </div>
                 ))}
                 {[1, 2, 3].map((item, i) => (
@@ -160,7 +160,9 @@ function Index() {
                       <h2 className="">Entrance</h2>
                     </div>
                     <div className="col-span-2">
-                      <h2 className="w-full overflow-hidden text-ellipsis whitespace-nowrap">Officer Banks</h2>
+                      <h2 className="w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                        Officer Banks
+                      </h2>
                     </div>
                     <div>
                       <h2 className="">Inprogress</h2>
@@ -193,7 +195,9 @@ function Index() {
                       <h2 className="">Entrance</h2>
                     </div>
                     <div className="col-span-2">
-                    <h2 className="w-full overflow-hidden text-ellipsis whitespace-nowrap">Officer Banks</h2>
+                      <h2 className="w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                        Officer Banks
+                      </h2>
                     </div>
                     <div>
                       <h2 className="text-orange-400">Resolved</h2>
@@ -268,25 +272,41 @@ function Index() {
                         </p>
                       </div>
                       <div>
-                        <p className="text-[12px] 2xl:text-xl font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">
+                        <p className="text-[12px]  2xl:text-xl font-bold overflow-hidden text-ellipsis w-full whitespace-nowrap">
                           Kelly Sikkkema
                         </p>
                         <p className="text-[10px] 2xl:text-xl font-bold text-white flex space-x-2">
-                          <span className="flex space-x-1 items-center"><button className="p-1 2xl:p-2 rounded-md bg-[#01C38D]">M</button>
-                          <button className="p-1 2xl:p-2 rounded-md bg-[#01C38D]">T</button>
-                          <button className="p-1 2xl:p-2 rounded-md bg-[#01C38D]">W</button>
-                          <button className="p-1 2xl:p-2 rounded-md bg-[#132D46]">T</button>
-                          <button className="p-1 2xl:p-2 rounded-md bg-[#01C38D]">F</button>
-                          <button className="p-1 2xl:p-2 rounded-md bg-[#132D46]">S</button></span>
-                          <span className="uppercase overflow-hidden text-ellipsis w-full whitespace-nowrap">
-                            7:00pm pdt 8:00am pdt
+                          <span className="flex space-x-1 items-center">
+                            <button className=" w-[15px] 2xl:w-[30px] 2xl:p-1 rounded-md bg-[#01C38D]">
+                              M
+                            </button>
+                            <button className="w-[15px] 2xl:w-[30px] 2xl:p-1 rounded-md bg-[#01C38D]">
+                              T
+                            </button>
+                            <button className="w-[15px] 2xl:w-[30px] 2xl:p-1 rounded-md bg-[#01C38D]">
+                              W
+                            </button>
+                            <button className="w-[15px] 2xl:w-[30px] 2xl:p-1 rounded-md bg-[#132D46]">
+                              T
+                            </button>
+                            <button className="w-[15px] 2xl:w-[30px] 2xl:p-1 rounded-md bg-[#01C38D]">
+                              F
+                            </button>
+                            <button className="w-[15px] 2xl:w-[30px] 2xl:p-1 rounded-md bg-[#132D46]">
+                              S
+                            </button>
                           </span>
                         </p>
                       </div>
                     </div>
-                    <button className="w-fit px-2 py-1 text-[12px] 2xl:text-xl n rounded-md text-white bg-[#01C38D]">
-                      Open
-                    </button>
+                    <div className="w-full flex flex-col items-end justify-end">
+                      <span className="uppercase overflow-hidden text-[10px] font-medium 2xl:text-lg text-ellipsis text-end w-full whitespace-nowrap">
+                        7:00pm pdt 8:00am pdt
+                      </span>
+                      <button className="w-fit hidden lg:block px-4 py-1 text-[12px] 2xl:text-xl rounded-md text-white bg-[#01C38D]">
+                        Open
+                      </button>
+                    </div>
                   </Link>
                 );
               })}

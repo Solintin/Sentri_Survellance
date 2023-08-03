@@ -6,38 +6,60 @@ import speaker from "../../../assets/svg/speaker.svg";
 import two from "../../../assets/png/two.jpg";
 import clients from "../../../assets/svg/clients.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { BiTimeFive } from "react-icons/bi";
+import { AiTwotoneClockCircle,AiFillCamera } from "react-icons/ai";
 import Alert from "../alert/alert";
 import MenusWidget from "../menuwidget/menuWidget";
-import { BsCameraVideo } from "react-icons/bs";
+import {
+  IoPlaySkipForward,
+  IoPlaySkipBack,
+  IoPlayForward,
+  IoPlayBack,
+} from "react-icons/io5";
+import {
+  BsCameraVideo,
+  BsFillCalendarEventFill,
+  BsPlayFill,
+  BsPauseFill,
+  BsFillCloudDownloadFill,
+} from "react-icons/bs";
 import { useLocation } from "react-router-dom";
 const CameraDetail = () => {
   const { state } = useLocation();
   const { item } = state;
   const isalert = true;
   const [ismore, setismore] = useState(false);
+  const [isPlay, setPlay] = useState(false);
+
+  function handlePlay() {
+    setPlay(!isPlay);
+  }
   return (
     <Container>
-      <div className=" w-full h-fit grid grid-cols-1 sm:px-4 md:grid-cols-11 pb-[100px] pt-[83px] gap-y-10  md:gap-10">
+      <div className=" w-full h-fit grid grid-cols-1 sm:px-4 md:grid-cols-11 pb-[100px] 2xl:pt-[100px] pt-[83px] gap-y-10  md:gap-10">
         <div className="w-full md:col-span-7 space-y-3">
-          <div className="flex flex-col 2xl:w-[300px] w-[175px] overflow-hidden items-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-[22px] h-[22px] sm:w-[35px] sm:h-[35px] 2xl:h-[50px] 2xl:w-[50px]">
-                <img className="w-full h-full" src={camera} alt="" />
-              </div>
-              <div>
-                <div className="text-lg 2xl:text-2xl text-[#132D46] font-semibold">
-                  {item?.cam}
+          <div className="flex items-center justify-between w-full">
+            <h1 className="text-xl text-[#132D46] 2xl:text-3xl font-semibold">
+              Detection Screen
+            </h1>
+            <div className="flex flex-col 2xl:w-[300px] w-[175px] overflow-hidden items-center">
+              <div className="flex items-center space-x-2">
+                <div className="w-[22px] h-[22px] sm:w-[35px] sm:h-[35px] 2xl:h-[50px] 2xl:w-[50px]">
+                  <img className="w-full h-full" src={camera} alt="" />
+                </div>
+                <div>
+                  <div className="text-lg 2xl:text-2xl text-[#132D46] font-semibold">
+                    {item?.cam}
+                  </div>
+                </div>
+
+                <div className="flex space-x-1 w-fit px-1 rounded-md bg-[#132D46] items-center">
+                  <div className="rounded-full bg-[#01C38D] w-1 h-1"></div>
+                  <div className="text-white text-[10px] 2xl:text-lg">Live</div>
                 </div>
               </div>
-
-              <div className="flex space-x-1 w-fit px-1 rounded-md bg-[#132D46] items-center">
-                <div className="rounded-full bg-[#01C38D] w-1 h-1"></div>
-                <div className="text-white text-[10px] 2xl:text-lg">Live</div>
+              <div className="text-gray-500 font-semibold text-[12px] 2xl:text-xl align-middle">
+                {item?.name}
               </div>
-            </div>
-            <div className="text-gray-500 font-semibold text-[12px] 2xl:text-xl align-middle">
-              {item?.name}
             </div>
           </div>
 
@@ -68,33 +90,67 @@ const CameraDetail = () => {
                 <MenusWidget ismore={ismore} setismore={setismore} />
               </button>
               <div className="absolute bottom-1 text-gray-100 w-full inset-x-o p-3">
-                <div className="flex items-cente 2xl:text-lg  justify-start w-full text-[12px]">
-                  <div className="flex flex-col justify-start">
-                    <div>Thursday,1 june 2023</div>
-                    <div className="flex items-center space-x-1">
-                      <BiTimeFive className="text-[#01C38D] text-[15px] 2xl:text-xl" />
-                      <div>03:45:24 AM</div>
-                    </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-[24px]  2xl:w-[50px] 2xl:h-[50px] cursor-pointer flex items-center justify-center  sm:w-[30px] sm:h-[30px] h-[24px] p-[6px] rounded-full bg-gray-200  ">
+                    <img
+                      className="w-[24px] h-[24px]  sm:w-[30px] sm:h-[30px] 2xl:w-[50px] 2xl:h-[50px]"
+                      src={voice}
+                      alt=""
+                    />
+                  </div>
+
+                  <div className="w-[24px] 2xl:w-[50px] 2xl:h-[50px]  sm:w-[30px] sm:h-[30px] cursor-pointer flex items-center justify-center h-[24px] p-[6px] rounded-full bg-gray-200  ">
+                    <img
+                      className="w-[24px] h-[24px]  sm:w-[30px] sm:h-[30px] 2xl:w-[50px] 2xl:h-[50px]"
+                      src={speaker}
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
             </div>
+            <div className="w-full justify-between items-center flex">
+              <div className="flex items-center 2xl:text-lg space-x-3 bg-gray-200 justify-start w-fit rounded-lg p-2 text-[12px]">
+                <div className="flex items-center space-x-2">
+                  <BsFillCalendarEventFill className="text-[#01C38D] text-[15px] 2xl:text-xl" />
+                  <div>Thursday,1 june 2023</div>
+                </div>
 
-            <div className="flex items-center space-x-3">
-              <div className="w-[24px]  2xl:w-[50px] 2xl:h-[50px] cursor-pointer flex items-center justify-center  sm:w-[30px] sm:h-[30px] h-[24px] p-[6px] rounded-full bg-gray-200  ">
-                <img
-                  className="w-[24px] h-[24px]  sm:w-[30px] sm:h-[30px] 2xl:w-[50px] 2xl:h-[50px]"
-                  src={voice}
-                  alt=""
-                />
+                <div className="flex items-center space-x-2">
+                  <AiTwotoneClockCircle className="text-[#01C38D] text-[15px] 2xl:text-xl" />
+                  <div>03:45:24 AM</div>
+                </div>
+              </div>
+              <div className="space-x-2 2xl:space-x-3 flex items-center ">
+                <button>
+                  <IoPlayBack className="text-gray-300 2xl:text-3xl" />
+                </button>
+                <button>
+                  <IoPlaySkipBack className="text-gray-300 2xl:text-3xl" />
+                </button>
+                <button
+                  onClick={handlePlay}
+                  className="bg-gray-300 rounded-full p-2 items-center justify-center flex"
+                >
+                  {isPlay ? (
+                    <BsPauseFill className="text-[#132D46] 2xl:text-3xl" />
+                  ) : (
+                    <BsPlayFill className="text-[#132D46] 2xl:text-3xl" />
+                  )}
+                </button>
+                <button>
+                  <IoPlaySkipForward className="text-gray-300 2xl:text-3xl" />
+                </button>
+
+                <button>
+                  <IoPlayForward className="text-gray-300 2xl:text-3xl" />
+                </button>
               </div>
 
-              <div className="w-[24px] 2xl:w-[50px] 2xl:h-[50px]  sm:w-[30px] sm:h-[30px] cursor-pointer flex items-center justify-center h-[24px] p-[6px] rounded-full bg-gray-200  ">
-                <img
-                  className="w-[24px] h-[24px]  sm:w-[30px] sm:h-[30px] 2xl:w-[50px] 2xl:h-[50px]"
-                  src={speaker}
-                  alt=""
-                />
+              <div className="space-x-2 2xl:space-x-3 flex items-center ">
+                <AiFillCamera className="text-[#132D46] 2xl:text-3xl"/>
+                <BsFillCloudDownloadFill className="text-[#132D46] 2xl:text-3xl" />
+                
               </div>
             </div>
           </div>
@@ -120,7 +176,7 @@ const CameraDetail = () => {
                 className="w-full h-[30vh] bg-white rounded-md p-2"
               >
                 <div className="grid grid-cols-4 gap-2">
-                  <div className="col-span-2 rounded-md h-[28vh]">
+                  <div className="col-span-2 rounded-md h-[20vh]">
                     <img
                       className="w-full rounded-md  h-full"
                       src={two}
