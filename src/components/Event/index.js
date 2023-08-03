@@ -5,7 +5,6 @@ import empty from "../../assets/svg/empty.svg";
 import refresh from "../../assets/svg/refresh.svg";
 // import Card from "../Composable/card";
 import FilterModal from "../Composable/FilterModal";
-import CameraList from "../camera/cameralist/cameraList";
 import EventCamera from "./eventcameras/eventCamera";
 
 function Index() {
