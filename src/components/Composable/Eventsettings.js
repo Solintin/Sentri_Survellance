@@ -3,14 +3,15 @@ import close from "../../assets/svg/closes.svg";
 import Button from "./Button";
 import VideoSettings from "./Event/video";
 import MotionSettings from "./Event/motion";
-
+import motion from "../../assets/png/Motion.png"
+import intrusion from "../../assets/png/intrusion.jpg"
 function FilterModal({ header, onClose }) {
   const [tab, setTab] = useState("video");
 
   return (
     <div
       onClick={onClose}
-      className="fixed right-0 px-4 sm:px-0 top-0 z-[32] h-full right min-[1024px]:float-right bg-[#000]/50 grid place-content-center"
+      className="fixed right-0 px-4 sm:px-0 top-0 z-[350] h-full right min-[1024px]:float-right bg-[#000]/50 grid place-content-center"
     >
       <div
         onClick={(e) => {
@@ -25,7 +26,7 @@ function FilterModal({ header, onClose }) {
           </button>
         </div>
 
-        <h1 className="text-sm font-bold text-[#132D46]">Camera #3 Kitchen</h1>
+        <h1 className="text-sm xl:text-lg font-bold text-[#132D46]">Camera #3 Kitchen</h1>
 
         <div className="flex space-x-4 justify-center items-center">
           <Button
@@ -42,13 +43,21 @@ function FilterModal({ header, onClose }) {
               setTab("motion");
             }}
           />
+          <Button
+            text={"Intrusion Zone"}
+            isActive={tab === "zone" ? true : false}
+            onClick={() => {
+              setTab("zone");
+            }}
+          />
         </div>
 
         {tab === "video" && <VideoSettings />}
-        {tab === "motion" && <MotionSettings />}
+        {tab === "motion" && <MotionSettings image={motion}/>}
+        {tab === "zone" && <MotionSettings image={intrusion}/>}
 
         <div className="flex w-full flex-col space-y-2 sm:space-y-0 sm:flex-row justify-center items-center mt-10 sm:space-x-4">
-          <button className="w-[70%] sm:w-[30%] py-2 sm:py-3 bg-[#132D46] text-white rounded-md">
+          <button className="w-[70%] sm:w-[30%] py-2 sm:py-3 2xl:py-4 bg-[#132D46] text-white rounded-md">
             Apply filter
           </button>
         </div>

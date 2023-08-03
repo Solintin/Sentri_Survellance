@@ -20,8 +20,8 @@ const ClientCameraWidget = ({image}) => {
              <div className="text-[12px] 2xl:text-xl sm:text-sm">Back Yard</div>
              </div>
              <button
-        onClick={() => {
-          
+        onClick={(e) => {
+          e.stopPropagation()
           setismore(!ismore);
         }}
         className="absolute right-3 z-[20] top-3 p-1 bg-white bg-opacity-50 rounded-md "

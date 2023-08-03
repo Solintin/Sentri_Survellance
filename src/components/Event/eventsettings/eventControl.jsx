@@ -14,7 +14,11 @@ const EventController = () => {
     setSettings(!settings);
   }
   return (
-    <div className="w-full inset-x-0 h-fit bottom-[-2px] absolute bg-white rounded-b-xl">
+    <div
+    onClick={(e) => {
+      e.stopPropagation()
+    }}
+    className="w-full inset-x-0 h-fit bottom-[-2px] absolute bg-white rounded-b-xl">
       {settings && (
         <Eventsettings header={"Camera settings"} onClose={onClose} />
       )}

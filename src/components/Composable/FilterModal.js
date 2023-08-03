@@ -6,6 +6,7 @@ import Button from "./Button";
 import Camera from "./Filter/Camera";
 import Period from "./Filter/Period";
 import EventType from "./Filter/EventType";
+import Clients from "./Filter/clients";
 
 function FilterModal({ header, onClose }) {
   const [tab, setTab] = useState("cameras");
@@ -57,6 +58,13 @@ function FilterModal({ header, onClose }) {
               setTab("period");
             }}
           />
+            <Button
+            text={"Clients"}
+            isActive={tab === "clients" ? true : false}
+            onClick={() => {
+              setTab("clients");
+            }}
+          />
         </div>
 
         <div className="w-1/2">
@@ -80,14 +88,15 @@ function FilterModal({ header, onClose }) {
         {tab === "servers" && <EventType/>}
         {tab === "events" && <EventType/>}
         {tab === "period" && <Period/>}
+        {tab === "clients" && <Clients/>}
         
-        <div className="flex justify-between items-center mt-2">
+        {tab !== 'clients' && <div className="flex justify-between items-center mt-2">
         <div>Select: 0</div>
         <div className="flex space-x-2 items-center">
           {" "}
           <h2 className="text-[#01C38D]">Select all</h2> <h2>Deselect all</h2>{" "}
         </div>
-      </div>
+      </div>}
 
       <div className="flex w-full flex-col space-y-2 sm:space-y-0 sm:flex-row justify-center items-center mt-10 sm:space-x-4">
         <button className="w-[70%] sm:w-[30%] py-2 2xl:py-4  sm:py-3 border border-[#696E79] rounded-md">

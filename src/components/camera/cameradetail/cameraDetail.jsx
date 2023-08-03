@@ -20,14 +20,17 @@ import {
   BsFillCalendarEventFill,
   BsPlayFill,
   BsPauseFill,
+  BsArrowLeft,
   BsFillCloudDownloadFill,
 } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 const CameraDetail = () => {
  // const { state } = useLocation();
   //const { item } = state;
   const isalert = true;
   const [ismore, setismore] = useState(false);
   const [isPlay, setPlay] = useState(false);
+  const navigate = useNavigate()
 
   function handlePlay() {
     setPlay(!isPlay);
@@ -37,9 +40,18 @@ const CameraDetail = () => {
       <div className=" w-full h-fit grid grid-cols-1 sm:px-4 md:grid-cols-11 pb-[100px] 2xl:pt-[100px] pt-[83px] gap-y-10  md:gap-10">
         <div className="w-full md:col-span-7 space-y-3">
           <div className="flex items-center justify-between w-full">
-            <h1 className="text-xl text-[#132D46] 2xl:text-3xl font-semibold">
+           <div className="flex space-x-2 items-center">
+            <button onClick={() => {
+              navigate(-1)
+            }}>
+            <BsArrowLeft className="text-[#132D46] font-semibold text-[25px] 2xl:text-[30px]"/>
+
+            </button>
+           <h1 className="text-xl text-[#132D46] 2xl:text-3xl font-semibold">
               Detection Screen
             </h1>
+
+           </div>
             <div className="flex flex-col 2xl:w-[300px] w-[175px] overflow-hidden items-center">
               <div className="flex items-center space-x-2">
                 <div className="w-[22px] h-[22px] sm:w-[35px] sm:h-[35px] 2xl:h-[50px] 2xl:w-[50px]">
@@ -155,6 +167,7 @@ const CameraDetail = () => {
           </div>
         </div>
         <div className="md:col-span-4 border-l p-3 items-center justify-center md:w-full w-[350px] space-y-3">
+          <div className="space-y-3 2xl:space-y-7 flex flex-col">
           <div className="flex space-x-2 items-center">
             <div className="w-[30px] 2xl:w-[45px] 2xl:h-[45px] rounded-full h-[30px] ">
               <img
@@ -163,10 +176,35 @@ const CameraDetail = () => {
                 className="w-full rounded-full h-full "
               />
             </div>
-            <div className="font-medium text-[#132D46] 2xl:text-2xl text-[13px]">
+            <div className="font-semibold text-[#132D46] 2xl:text-2xl text-[13px]">
               John Doe
             </div>
+            </div>
+            <div className="flex 2xl:text-2xl text-[13px] font-semibold space-x-2 items-center">
+              <div>
+                Phone Number:
+              </div>
+              <div>
+                91 234 334 44
+              </div>
+            </div>
+            <div className="flex 2xl:text-2xl text-[13px] font-semibold space-x-2 items-center">
+              <div>
+                Email Address:
+              </div>
+              <div>
+                lucyann@gmail.com </div>
+            </div>
+            <div className="flex 2xl:text-2xl text-[13px] font-semibold space-x-2 items-center">
+              <div>
+                Address:
+              </div>
+              <div>
+                Maldevis layout, New York
+              </div>
+            </div>
           </div>
+          
 
           {[1,2,3,4].map(({ subcam, loc }, idx) => {
             return (
@@ -184,7 +222,7 @@ const CameraDetail = () => {
                   </div>
                   <div>
                     <div className="font-medium text-[#132D46] text-[15px] 2xl:text-xl whitespace-nowrap">
-                      {'Camera 3'}
+                      {`Camera ${idx+2}`}
                     </div>
                     <div className="text-gray-400 text-[10px] whitespace-nowrap 2xl:text-lg">
                       {'backyard'}

@@ -16,7 +16,7 @@ function Index() {
   }
   return (
     <Container>
-      <div className="w-full h-full bg-gray-100 min-h-screen  flex pt-[4rem]  sm:pt-[73px]">
+      <div className="w-full h-full bg-gray-100 min-h-screen  flex pt-[4rem] 2xl:pt-[100px] sm:pt-[73px]">
         {isEmpty && (
           <div className="w-full h-full px-4 py-4 space-y-8">
             <button
@@ -44,8 +44,11 @@ function Index() {
           </div>
         )}
 
+      
+
         {!isEmpty && (
-          <div className="hidden sm:block h-full fixed px-4 sm:px-4 py-4 border-r space-y-3 bg-white border-gray-400 shadow-sm w-[240px] sm:w-[250px] ">
+          <div className=" w-full h-full">
+            <div className="items-center flex justify-between bg-white z-[20] border-b right 2xl:px-14 px-4 sm:px-10 fixed  right-0 2xl:py-8  py-[16px] font-semibold shadow-sm text-center">
             <button
               onClick={() => setIsFilter(!isFilter)}
               className="rounded-md flex space-x-8 items-center 2xl:px-3 2xl:py-4 p-2 bg-secondary-100 text-white"
@@ -53,14 +56,8 @@ function Index() {
               <span>Add Filters</span>
               <img src={arrowright} alt="" />
             </button>
-            <CameraList />
-          </div>
-        )}
-
-        {!isEmpty && (
-          <div className="sm:pl-[250px] w-full h-full">
-            <div className="bg-white z-[20] border-b top-modal-fixed fixed  right-0 2xl:py-8  py-[16px] font-semibold shadow-sm text-center">
-              Thursday, june 29th
+              <span>Thursday, june 29th</span>
+              <span className="h-1 w-1"></span>
             </div>
 
             <EventCamera />

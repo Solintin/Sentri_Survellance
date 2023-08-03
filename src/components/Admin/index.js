@@ -9,7 +9,7 @@ function Index() {
   const navigate = useNavigate();
   return (
     <Container>
-      <div className="w-full h-fit space-y-5 bg-gray-100 px-4 mb sm:px-4 py-[5rem] sm:pt-24">
+      <div className="w-full h-fit space-y-5 bg-gray-100 px-4 mb sm:px-4 py-[5rem] 2xl:pt-[100px] pt-24">
         <h2 className="text-lg 2xl:text-[25px] font-bold">Overview</h2>
         <div className="grid xl:grid-cols-12 grid-cols-1 gap-y-6 xl:gap-6 items-start mt-3">
           <div className="col-span-7  w-full h-full ">
@@ -128,7 +128,9 @@ function Index() {
                       <h2 className="">Alarm</h2>
                     </div>
                     <div>
-                      <button className="text-red-500 bg-white rounded-md text-sm 2xl:text-xl p-2 2xl:p-3">
+                      <button onClick={() => {
+                        navigate("/camera/0")
+                      }} className="text-red-500 bg-white rounded-md text-sm 2xl:text-xl p-2 2xl:p-3">
                         View
                       </button>
                     </div>
