@@ -22,10 +22,9 @@ import {
   BsPauseFill,
   BsFillCloudDownloadFill,
 } from "react-icons/bs";
-import { useLocation } from "react-router-dom";
 const CameraDetail = () => {
-  const { state } = useLocation();
-  const { item } = state;
+ // const { state } = useLocation();
+  //const { item } = state;
   const isalert = true;
   const [ismore, setismore] = useState(false);
   const [isPlay, setPlay] = useState(false);
@@ -48,7 +47,7 @@ const CameraDetail = () => {
                 </div>
                 <div>
                   <div className="text-lg 2xl:text-2xl text-[#132D46] font-semibold">
-                    {item?.cam}
+                    {'Camera 1'}
                   </div>
                 </div>
 
@@ -58,7 +57,7 @@ const CameraDetail = () => {
                 </div>
               </div>
               <div className="text-gray-500 font-semibold text-[12px] 2xl:text-xl align-middle">
-                {item?.name}
+                {'Lucy Apartment'}
               </div>
             </div>
           </div>
@@ -169,7 +168,7 @@ const CameraDetail = () => {
             </div>
           </div>
 
-          {item?.sub.map(({ subcam, loc }, idx) => {
+          {[1,2,3,4].map(({ subcam, loc }, idx) => {
             return (
               <div
                 key={idx}
@@ -185,10 +184,10 @@ const CameraDetail = () => {
                   </div>
                   <div>
                     <div className="font-medium text-[#132D46] text-[15px] 2xl:text-xl whitespace-nowrap">
-                      {subcam}
+                      {'Camera 3'}
                     </div>
                     <div className="text-gray-400 text-[10px] whitespace-nowrap 2xl:text-lg">
-                      {loc}
+                      {'backyard'}
                     </div>
                   </div>
                 </div>

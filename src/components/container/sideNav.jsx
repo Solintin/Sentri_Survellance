@@ -13,9 +13,11 @@ import { Link, useLocation } from "react-router-dom";
 import {GiPoliceOfficerHead} from 'react-icons/gi'
 // import DashBoard from "../dashboard/dashBoard";
 import EventSettings from "../Composable/AddCamera";
+import AddOfficer from "../addofficer/addOfficer";
 
 const SideNav = ({ isNav, setisNav }) => {
   const [addCamera, setAddCamera] = useState(false);
+  const [addOfficer, setaddOfficer] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
     if (pathname === "/admin/dashboard") {
@@ -164,12 +166,22 @@ const SideNav = ({ isNav, setisNav }) => {
         
       <div className="w-full px-2">
       <button
-          
+          onClick={() => {
+            setaddOfficer(true)
+          }}
           className="bg-[#01C38D] flex  justify-center whitespace-nowrap space-x-1 w-full sm:space-x-2 items-center 2xl:p-3 p-2 text-white rounded-lg "
         >
           <GiPoliceOfficerHead className="text-[22px] 2xl:text-[28px]" />
           <span>Add Officers</span>
         </button>
+
+        
+        {addOfficer && (
+          <AddOfficer
+            header={"Add Officer"}
+            onClose={() => setaddOfficer(false)}
+          />
+        )}
       </div>
         
           <Link to="/setting"

@@ -58,7 +58,7 @@ const TopNav = ({isNav, setisNav}) => {
     <div
       className={`right min-[1024px]:float-right fixed bg-[#132D46] sm:bg-white shadow-md z-[22] px-4 py-4 sm:px-8  2xl:px-12 2xl:py-8 top-0 right-0 flex justify-between items-center`}
     >
-      <div className="flex items-center gap-6 justify-between w-full">
+      <div className="flex items-center justify-between w-full">
       <div className="flex space-x-3 items-center">
       <div
         onClick={() => {
@@ -80,7 +80,7 @@ const TopNav = ({isNav, setisNav}) => {
 
         
         </div>
-        <div className="w-1/2 hidden md:block 2xl:h-16 h-11 relative">
+        <div className="w-[200px] xl:w-[300px] 2xl:w-1/2 hidden md:block 2xl:h-16 h-11 relative">
             <AiOutlineAudio className="text-[#132D46] text-[22px] absolute left-2 2xl:top-5 top-3" />
             <input
               type="text"

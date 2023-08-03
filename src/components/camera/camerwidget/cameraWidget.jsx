@@ -6,10 +6,16 @@ import Alert from "../alert/alert";
 import { useState } from "react";
 import MenusWidget from "../menuwidget/menuWidget";
 import nosignal from "../../../assets/png/nosignal.jpg";
+import { useNavigate } from "react-router-dom";
 const CameraWidget = ({ image, isalert, issignal, record, resize }) => {
   const [ismore, setismore] = useState(false);
+  const navigate = useNavigate()
   return (
-    <div className={`w-full  h-[220px] sm:h-[40vh] relative rounded-lg ${resize === 4 ? '2xl:h-[32vh]' :''} ${resize > 1 || resize < 4  ? 'md:h-[38vh]':'2xl:h-[65vh]'}`}>
+    <div
+    onClick={() => {
+      navigate("/camera/0")
+    }}
+    className={`w-full  h-[220px] sm:h-[40vh] relative rounded-lg ${resize === 1 ? '2xl:h-[80vh]' :''} ${resize === 6 ? '2xl:h-[22vh]' :''} ${resize === 4 ? '2xl:h-[32vh]' :''} ${resize > 1 || resize < 4  ? 'md:h-[38vh]':'2xl:h-[65vh]'}`}>
       {record && (
         <div className="absolute  2xl:py-3 py-1 px-2 bg-[#01C38D] text-white rounded-md space-x-1 items-center flex w-fit left-4 top-6">
           <span className="w-2 h-2 2xl:w-4 2xl:h-4 rounded-full bg-red-500"></span>
@@ -22,7 +28,7 @@ const CameraWidget = ({ image, isalert, issignal, record, resize }) => {
           isalert ? "m-auto absolute inset-0  w-full  h-fit" : "hidden"
         }
       >
-        <Alert />
+        <Alert resize={resize}/>
       </div>
       {/**menu */}
       <button

@@ -14,7 +14,7 @@ const Camera = () => {
   const record = true;
   return (
     <Container>
-      <div className="w-full h-fit space-y-5 bg-gray-100 py-14 sm:px-4 sm:py-24">
+      <div className="w-full h-fit space-y-5 bg-gray-100 py-14 sm:px-4 sm:py-24 2xl:py-[120px]">
         <div className="hidden md:flex space-x-2 items-center w-full justify-end ">
           <div className="text-gray-500">View type:</div>
 
@@ -164,6 +164,79 @@ const Camera = () => {
               ></div>
             </div>
           </div>
+          {/**6 */}
+          <div
+            onClick={() => {
+              setresize(6);
+            }}
+            className="2xl:flex hidden flex-col  items-center gap-[2px]"
+          >
+            <div className="flex gap-[2px]">
+              <div
+                className={`w-2 h-[11px]  ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                } `}
+              ></div>
+              <div
+                className={`w-2 h-[11px] ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                }`}
+              ></div>
+              <div
+                className={`w-2 h-[11px]  ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                } `}
+              ></div>
+              <div
+                className={`w-2 h-[11px] ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                } `}
+              ></div>
+                   <div
+                className={`w-2 h-[11px] ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                } `}
+              ></div>
+                   <div
+                className={`w-2 h-[11px] ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                } `}
+              ></div>
+            </div>
+
+            <div className="flex gap-[2px]">
+            <div
+                className={`w-2 h-[11px] ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                } `}
+              ></div>
+                   <div
+                className={`w-2 h-[11px] ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                } `}
+              ></div>
+              <div
+                className={`w-2 h-[11px] ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                }`}
+              ></div>
+              <div
+                className={`w-2 h-[11px]  ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                } `}
+              ></div>
+              <div
+                className={`w-2 h-[11px] ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                } `}
+              ></div>
+              <div
+                className={`w-2 h-[11px] ${
+                  resize === 6 ? "bg-[#01C38D]" : "bg-zinc-600 "
+                }`}
+              ></div>
+            </div>
+          </div>
         </div>
 
         <CameraList />
@@ -174,6 +247,7 @@ const Camera = () => {
           } ${resize === 2 ? "md:grid-cols-2" : ""}
           ${resize === 3 ? "2xl:grid-cols-3" : ""}
           ${resize === 4 ? "2xl:grid-cols-4" : ""}
+          ${resize === 6 ? "2xl:grid-cols-6" : ""}
           `}
         >
           <CameraWidget
@@ -190,27 +264,32 @@ const Camera = () => {
             record={record}
             resize={resize}
           />
-          <CameraWidget
-            image={three}
-            isalert={!isalert}
-            issignal={issignal}
-            record={record}
-            resize={resize}
-          />
-          <CameraWidget
+          {[1,2,3].map((i,j) => {
+            return (
+              <CameraWidget
+              key={j}
+              image={three}
+              isalert={!isalert}
+              issignal={issignal}
+              record={record}
+              resize={resize}
+            />
+            )
+          })}
+         {[1,2,3,4].map((i,j) => {
+          return (
+            <CameraWidget
+            key={j}
             image={""}
             isalert={!isalert}
             issignal={!issignal}
             record={record}
             resize={resize}
           />
-          <CameraWidget
-            image={""}
-            isalert={!isalert}
-            issignal={!issignal}
-            record={record}
-            resize={resize}
-          />
+          )
+
+         })}
+          
         </div>
       </div>
     </Container>

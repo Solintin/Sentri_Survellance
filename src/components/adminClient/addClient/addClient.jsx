@@ -41,7 +41,7 @@ const AddClient = ({ onClose, header }) => {
           <div className="w-full space-y-5 mt-5">
             <h2 className="font-semibold text-base sm:text-lg  2xl:text-2xl">Account Type</h2>
 
-            <div className="flex flex-col space-y-5 text-black font-semibold justify-start items-start">
+            <div className="flex flex-col 2xl:space-y-10 space-y-5 text-black font-semibold justify-start items-start">
             {categories.map((type, index) => {
               return (
                 <label
