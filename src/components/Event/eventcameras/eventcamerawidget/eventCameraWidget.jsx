@@ -6,18 +6,24 @@ import {AiTwotoneSetting} from 'react-icons/ai';
 import { useNavigate } from "react-router-dom";
 import { FaPlay } from "react-icons/fa";
 const EventCameraWidget = ({resize}) => {
-    const [isSettings, showSettings] = useState(false)
+   // const [isSettings, showSettings] = useState(false)
     const navigate = useNavigate()
+    const [ismore, setismore] = useState(false)
+    console.log(resize)
     return (
+
         <div 
         onClick={() => {
         navigate("/camera/0")
         }}
-        className={`w-full  h-[220px] sm:h-[40vh] relative rounded-lg ${
-            resize === 1 ? "2xl:h-[80vh]" : ""
+        className={` h-[220px]  relative rounded-lg ${
+            resize === 1 ? "sm:h-[63vh] 2xl:h-[78vh]" : ""
           } ${resize === 6 ? "2xl:h-[22vh]" : ""} ${
             resize === 4 ? "2xl:h-[32vh]" : ""
-          } ${resize > 1 || resize < 4 ? "md:h-[42vh]" : "2xl:h-[68vh]"}`}>
+          }
+          ${resize === 3 ? "md:h-[42vh] 2xl:h-[40vh]" : ""}
+          ${resize === 2 ? "md:h-[42vh] 2xl:h-[42vh]" : ""}
+         `}>
         <img src={two} alt="" className='w-full h-full rounded-lg'/>
         <div className='text-white 2xl:text-[22px] flex flex-col  justify-start absolute top-2 left-3'>
             <div>Camera 1</div>
@@ -34,13 +40,16 @@ const EventCameraWidget = ({resize}) => {
         <div 
         onClick={(e) => {
             e.stopPropagation()
-            showSettings(!isSettings)
+            setismore(!ismore)
         }}
         className="absolute top-2 right-3 text-white w-fit h-fit bg-white p-1 rounded-lg bg-opacity-40 cursor-pointer">
             <AiTwotoneSetting className="text-[25px] 2xl:text-[30px]"/>
+
+            { <EventController ismore={ismore} setismore={setismore}/>}
+
         </div>
 
-        {isSettings && <EventController/>}
+       
     </div>
     )
 }

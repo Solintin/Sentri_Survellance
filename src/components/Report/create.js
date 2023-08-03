@@ -1,8 +1,10 @@
 import Input from "../Composable/input";
-import React from "react";
+import React, { useState } from "react";
 import Container from "../container/container";
+import UploadingImage from "./uploadImage";
 
 function Index() {
+  const [, setUploadedImage] = useState('')
   return (
     <Container>
       <div className="w-full h-full space-y-5 bg-gray-100 px-4 sm:px-4 py-[5rem] sm:py-24">
@@ -11,25 +13,35 @@ function Index() {
           <p className="text-[#132D46]  mb-4">Motion/Person Detected</p>
 
           <div className="md:w-3/4 w-full">
-            <Input
+          <Input
+              type={"text"}
+              label={"Issue Type"}
+              placeholder={"E.g Assault"}
+            />
+             <Input
               type={"text"}
               label={"Clients Name"}
               placeholder={"E.g John brown"}
             />
             <Input
+              type={"address"}
+              label={"Location Address"}
+              placeholder={"E.g NY City"}
+            />
+            <Input
               type={"text"}
               label={"Camera"}
-              placeholder={"E.g John brown"}
+              placeholder={"E.g "}
             />
             <div className="grid md:grid-cols-2 gap-4">
               <Input
                 type={"date"}
-                label={"Camera"}
-                placeholder={"E.g John brown"}
+                label={"Date"}
+                placeholder={"E.g 27/07/2023"}
               />
               <Input
                 type={"time"}
-                label={"Camera"}
+                label={"Time"}
                 placeholder={"E.g John brown"}
               />
             </div>
@@ -50,15 +62,25 @@ function Index() {
             <p className="text-[#132D46]  mb-4">Officer Responded to Alarm</p>
 
             <div className="grid md:grid-cols-2 gap-4 ">
+            <Input
+                type={"text"}
+                label={"Reporting Officer"}
+                placeholder={"E.g officer jack"}
+              />
+               <Input
+                type={"text"}
+                label={"Officer Unit/Location"}
+                placeholder={"E.g NY city"}
+              />
               <Input
                 type={"date"}
-                label={"Camera"}
-                placeholder={"E.g John brown"}
+                label={"Date"}
+                placeholder={"E.g 27/07/2023"}
               />
               <Input
                 type={"time"}
-                label={"Camera"}
-                placeholder={"E.g John brown"}
+                label={"Time"}
+                placeholder={"E.g 12:00AM"}
               />
             </div>
             <Input
@@ -74,15 +96,15 @@ function Index() {
               placeholder={"Enter name"}
             />
             <div className="grid md:grid-cols-2 gap-4 ">
-              <Input
+            <Input
                 type={"date"}
-                label={"Camera"}
-                placeholder={"E.g John brown"}
+                label={"Date"}
+                placeholder={"E.g 27/07/2023"}
               />
               <Input
                 type={"time"}
-                label={"Camera"}
-                placeholder={"E.g John brown"}
+                label={"Time"}
+                placeholder={"E.g 12:00AM"}
               />
             </div>
 
@@ -97,6 +119,8 @@ function Index() {
               placeholder="Enter narrative"
               className="resize-none outline-none 2xl:mt-4 mt-1 border-[#D0D0D0] w-full p-4 rounded-md border bg-[#F6F5F5]"
             ></textarea>
+
+            <UploadingImage setUploadedImage={setUploadedImage}/>
           </div>
 
           <p className="text-[#132D46]  mb-4 mt-10">

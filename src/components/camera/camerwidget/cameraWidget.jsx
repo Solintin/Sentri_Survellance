@@ -15,11 +15,11 @@ const CameraWidget = ({ image, isalert, issignal, record, resize }) => {
       onClick={() => {
         navigate("/camera/0");
       }}
-      className={`w-full  h-[220px] sm:h-[40vh] relative rounded-lg ${
-        resize === 1 ? "2xl:h-[80vh]" : ""
+      className={`w-full  h-[220px] relative rounded-lg ${
+        resize === 1 ? "sm:h-[60vh] 2xl:h-[80vh]" : ""
       } ${resize === 6 ? "2xl:h-[22vh]" : ""} ${
         resize === 4 ? "2xl:h-[32vh]" : ""
-      } ${resize > 1 || resize < 4 ? "md:h-[38vh]" : "2xl:h-[65vh]"}`}
+      } ${resize > 1 && resize < 4 ? "md:h-[38vh]" : "2xl:h-[65vh]"}`}
     >
       {record && (
         <div className="absolute  2xl:py-3 py-1 px-2 bg-[#01C38D] text-white rounded-md space-x-1 items-center flex w-fit left-4 top-6">

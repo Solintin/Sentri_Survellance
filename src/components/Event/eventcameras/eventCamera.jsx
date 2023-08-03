@@ -5,7 +5,7 @@ const EventCamera = () => {
     const [resize, setresize] = useState(2)
   
     return (
-        <div className='w-full h-fit 2xl:py-[140px] sm:py-24 px-2 sm:px-6 '>
+        <div className='w-full h-fit 2xl:py-[140px] py-16 sm:py-24 px-2 sm:px-6 '>
              <div className="hidden md:flex space-x-2 items-center w-full justify-end ">
           <div className="text-gray-500">View type:</div>
 

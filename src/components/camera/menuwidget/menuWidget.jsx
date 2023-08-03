@@ -37,7 +37,7 @@ const MenusWidget = ({ ismore, setismore }) => {
           e.stopPropagation();
         }}
         className={
-          "relative min-w-max 2xl:w-[250px] py-4 sm:py-6 cursor-pointer z-[300] h-fit flex flex-col 2xl:text-base text-[11px] text-black font-semibold bg-white rounded-md shadow-md 2xl:space-y-6 space-y-4"
+          "relative  w-[200px] 2xl:w-[250px] py-4 sm:py-6 cursor-pointer z-[300] h-fit flex flex-col 2xl:text-base text-[11px] text-black font-semibold bg-white rounded-md shadow-md 2xl:space-y-3 space-y-3"
         }
       >
         <div
