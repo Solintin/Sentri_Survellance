@@ -12,10 +12,10 @@ const ClientList = () => {
   }
   return (
     <Container>
-      <div className="w-full h-fit space-y-5 bg-gray-100 py-14 sm:px-4 sm:py-24">
+      <div className="w-full 2xl:py-32 h-fit space-y-5 bg-gray-100 py-14 sm:px-4 sm:py-24">
         
           <div className="dashboard-scroll-style w-full h-fit overflow-x-auto">
-            <div className="min-w-[800px]">
+            <div className="min-w-[1100px]">
               <div className="mt-2 items-center w-full grid grid-cols-10 gap-4 bg-white rounded-md text-black 2xl:py-5 py-4 px-4 2xl:px-5 text-sm  sm:text-base 2xl:text-xl font-semibold">
                 <div className="col-span-2 flex space-x-2 items-center">
                   <input type="checkbox" name="" id="" />

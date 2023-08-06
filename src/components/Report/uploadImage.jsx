@@ -51,9 +51,9 @@ const UploadingImage = ({ setUploadedImage }) => {
       >
         {!upload && (
           <div className="flex flex-col space-y-2 items-center justify-center w-fit h-fit">
-            <BsFillCloudFill className="text-[#01C38D] text-[25px] sm:text-[30px]" />
+            <BsFillCloudFill className="text-[#01C38D] text-[25px] sm:text-[30px] 2xl:text-[45px]" />
 
-            <div className="text-[#132D46] font-light text-sm">
+            <div className="text-[#132D46] font-light text-sm 2xl:text-xl">
               Click to upload an image
             </div>
             <div>PNG/JPG/JPEG</div>

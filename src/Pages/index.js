@@ -19,6 +19,8 @@ import GenralSetting from "../components/generalsetting/generalSetting";
 import AccountSetting from "../components/client/accountsetting/accountSetting";
 import AlertSetting from "../components/client/alertSetting/alertSetting";
 import ClientUsers from "../components/client/clientusers/clientUsers";
+import Officers from "../components/officers/officers";
+import OfficerDetail from "../components/officers/officerdetail/officerDetail";
 import PasswordSetting from "../components/adminSetting/passwordsetting/passwordSetting";
 import PhoneAuth from "../components/adminSetting/passwordsetting/phoneAuth";
 import ClientList from "../components/adminClient/clientList/clientList";
@@ -48,5 +50,7 @@ export {
   PhoneAuth,
   ClientList,
   GenralSetting,
-  NotificationEmail
+  NotificationEmail,
+  Officers,
+  OfficerDetail
 };

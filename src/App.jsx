@@ -29,6 +29,8 @@ import {
   ClientList,
   GenralSetting,
   NotificationEmail,
+  Officers,
+  OfficerDetail,
 
 } from "./Pages";
 
@@ -82,6 +84,8 @@ const App = () => {
           <Route exact path="/events" element={<Event />} />
           <Route exact path="/client/invites" element={<Invites />} />
           <Route exact path="/report" element={<Report />} />
+          <Route exact path="/admin/officer" element={<Officers />} />
+          <Route exact path="/admin/officer/detail" element={<OfficerDetail />} />
           <Route exact path="/admin/settings/notification" element={<NotificationEmail />} />
           <Route exact path="/onboarding" element={<Onboarding />} />
           <Route exact path="/archive" element={<ArchiveEvent />} />

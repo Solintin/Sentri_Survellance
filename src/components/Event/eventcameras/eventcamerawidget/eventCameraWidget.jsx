@@ -16,12 +16,14 @@ const EventCameraWidget = ({resize}) => {
         onClick={() => {
         navigate("/camera/0")
         }}
-        className={` h-[220px]  relative rounded-lg ${
+        className={` h-[220px] w-full relative rounded-lg ${
             resize === 1 ? "sm:h-[63vh] 2xl:h-[78vh]" : ""
           } ${resize === 6 ? "2xl:h-[22vh]" : ""} ${
             resize === 4 ? "2xl:h-[32vh]" : ""
           }
           ${resize === 3 ? "md:h-[42vh] 2xl:h-[40vh]" : ""}
+          ${resize === 7 ? "2xl:h-[350px] sm:h-[220px] h-[170px]" : ""}
+          ${resize === 8 ? "2xl:h-[350px] border-2 border-red-500 sm:h-[220px] h-[170px]" : ""}
           ${resize === 2 ? "md:h-[42vh] 2xl:h-[42vh]" : ""}
          `}>
         <img src={two} alt="" className='w-full h-full rounded-lg'/>

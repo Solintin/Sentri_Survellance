@@ -32,17 +32,18 @@ const SideNav = ({ isNav, setisNav }) => {
         e.stopPropagation();
         setisNav(!isNav);
       }}
-      className={`fixed z-[37] inset-y-0 left-0 h-full  ${
+      className={`fixed z-[37] inset-y-0 left-0 h-full overflow-hidden ${
         isNav
-          ? "w-full bg-black bg-opacity-50 min-[1024px]:w-[250px] 2xl:w-[300px]"
-          : "max-[1024px]:hidden w-[250px] "
+          ? "w-full bg-black bg-opacity-50 min-[1024px]:w-[250px] "
+          : "max-[1024px]:hidden w-[250px] 2xl:w-[300px]"
       }`}
     >
+     
       <div
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="py-4  flex flex-col items-center space-y-4 2xl:w-[300px]  h-full w-[200px] sm:w-[250px] cursor-pointer  bg-[#132D46] "
+        className="py-4  flex flex-col scrollbar-hide overflow-y-auto items-center space-y-4 2xl:w-[300px]  h-full w-[200px] sm:w-[250px] cursor-pointer  bg-[#132D46] "
       >
         <div className="  px-8 w-full flex flex-col items-center justify-center 2xl:space-y-5 space-y-3">
           <div className=" left-[50px] h-[35px] sm:h-[60px] enter  w-fit">
@@ -159,6 +160,18 @@ const SideNav = ({ isNav, setisNav }) => {
               <img className="w-full h-full" src={client} alt="" />
             </div>
             <div>Clients</div>
+          </Link>
+          
+          <Link
+            to="/admin/officer"
+            className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
+              pathname === "/admin/officer"
+                ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
+                : ""
+            }`}
+          >
+           <GiPoliceOfficerHead className="text-[22px] text-[#01C38D] 2xl:text-[28px]" />
+            <div>Officers</div>
           </Link>
         </div>
 

@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import close from "../../assets/svg/closes.svg";
 import Input from "../Composable/input";
+import UploadingImage from "../Report/uploadImage";
 const AddOfficer = ({ onClose, header }) => {
-  //const [others, setOthers] = useState();
+  const [, setUploadedImage] = useState();
 
   return (
     <div
@@ -24,6 +25,8 @@ const AddOfficer = ({ onClose, header }) => {
           </button>
         </div>
         <div className="mt-3 2xl:mt-5 w-full sm:w-[700px] 2xl:space-y-8 space-y-5">
+
+          <UploadingImage setUploadedImage={setUploadedImage}/>
           <Input
             label={"Officer Name"}
             placeholder={"John Doe"}
@@ -34,53 +37,13 @@ const AddOfficer = ({ onClose, header }) => {
             placeholder={"johndoe@gmail.com"}
             type={"email"}
           />
-          <Input label={"Password"} placeholder={"******"} type={"password"} />
+        
           <Input
-            label={"Confirm Password"}
-            placeholder={"******"}
-            type={"password"}
+            label={"Address"}
+            placeholder={"Malvedis Layout"}
+            type={"text"}
           />
 
-          <div className="w-full 2xl:space-y-8 space-y-5 mt-5">
-            <h2 className="font-semibold text-base text-[#132D46] sm:text-lg  2xl:text-3xl">
-              Assigned Client
-            </h2>
-            <Input
-              label={"Client Name"}
-              placeholder={"John Doe"}
-              type={"text"}
-            />
-            <Input
-              label={"Email Address"}
-              placeholder={"johndoe@gmail.com"}
-              type={"email"}
-            />
-            <Input
-              label={"Address"}
-              placeholder={"johndoe@gmail.com"}
-              type={"address"}
-            />
-            <Input
-              label={"Password"}
-              placeholder={"******"}
-              type={"password"}
-            />
-            <Input
-              label={"Confirm Password"}
-              placeholder={"******"}
-              type={"password"}
-            />
-            <Input
-              label={"Phone Number"}
-              placeholder={"(856) 348 283"}
-              type={"number"}
-            />
-            <Input
-              label={"Camera Code"}
-              placeholder={"000xx343"}
-              type={"number"}
-            />
-          </div>
         </div>
 
         <div className="w-full mt-7 items-center flex justify-center">
