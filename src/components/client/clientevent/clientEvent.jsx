@@ -1,21 +1,21 @@
-import { useState } from "react";
-import Container from "../container/container";
-import arrowright from "../../assets/svg/arrowright.svg";
-import empty from "../../assets/svg/empty.svg";
-import refresh from "../../assets/svg/refresh.svg";
+import React,{useState} from "react";
+import ClientContainer from "../../ClientContainer/clientContainer";
+import arrowright from "../../../assets/svg/arrowright.svg"
+import empty from "../../../assets/svg/empty.svg";
+import refresh from "../../../assets/svg/refresh.svg";
 // import Card from "../Composable/card";
-import FilterModal from "../Composable/FilterModal";
-import EventCamera from "./eventcameras/eventCamera";
+import FilterModal from "../../Composable/FilterModal";
+import EventCamera from "../../Event/eventcameras/eventCamera";
 
-function Index() {
-  const [isFilter, setIsFilter] = useState(false);
+const ClientEvent = () => {
+    const [isFilter, setIsFilter] = useState(false);
   const isEmpty = false;
   function onClose() {
     setIsFilter(!isFilter);
   }
-  return (
-    <Container>
-      <div className="w-full h-full bg-gray-100 min-h-screen  flex pt-[4rem] sm:py-24 2xl:py-[120px]">
+    return (
+       <ClientContainer>
+          <div className="w-full h-full bg-gray-100 min-h-screen  flex pt-[4rem] sm:py-24 2xl:py-[120px]">
         {isEmpty && (
           <div className="w-full h-full px-4 py-4 space-y-8">
             <button
@@ -64,8 +64,8 @@ function Index() {
         )}
       </div>
       {isFilter && <FilterModal header={"Filter"} onClose={onClose} />}
-    </Container>
-  );
+       </ClientContainer>
+    )
 }
 
-export default Index;
+export default ClientEvent

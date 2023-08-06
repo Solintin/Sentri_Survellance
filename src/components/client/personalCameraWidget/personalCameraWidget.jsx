@@ -8,10 +8,14 @@ const PersonalCameraWidget = ({ resize }) => {
   return (
     <div
     
-      className={`relative  h-[220px] sm:h-[35vh] rounded-xl overflow-hidden ${
-        resize === 4 ? "2xl:h-[30vh]" : ""
-      } ${resize > 1 || resize < 4 ? "md:h-[50vh]" : "2xl:h-[65vh]"}`}
-    >
+    className={` h-[220px] w-full relative rounded-lg ${
+      resize === 1 ? "sm:h-[63vh] 2xl:h-[78vh]" : ""
+    } ${resize === 6 ? "2xl:h-[22vh]" : ""} ${
+      resize === 4 ? "2xl:h-[32vh]" : ""
+    }
+    ${resize === 3 ? "md:h-[42vh] 2xl:h-[40vh]" : ""}
+    ${resize === 2 ? "md:h-[42vh] 2xl:h-[42vh]" : ""}
+   `}>
       <img src={two} alt="" className="w-full h-full rounded-lg" />
       <div className="text-white flex flex-col justify-start absolute top-2 left-3">
         <div className="text-[13px] 2xl:text-xl sm:text-[15px]">Camera 1</div>

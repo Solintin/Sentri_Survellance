@@ -25,6 +25,7 @@ import PasswordSetting from "../components/adminSetting/passwordsetting/password
 import PhoneAuth from "../components/adminSetting/passwordsetting/phoneAuth";
 import ClientList from "../components/adminClient/clientList/clientList";
 import NotificationEmail from "../components/generalsetting/notification";
+import ClientEvent from "../components/client/clientevent/clientEvent";
 export {
   Login,
   Auth,
@@ -52,5 +53,6 @@ export {
   GenralSetting,
   NotificationEmail,
   Officers,
-  OfficerDetail
+  OfficerDetail,
+  ClientEvent
 };

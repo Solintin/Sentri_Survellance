@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import lightcam from "../../assets/svg/lightcam.svg";
 import invites from "../../assets/svg/invites.svg";
+import event from "../../assets/svg/event.svg";
 import singleuser from "../../assets/svg/singleuser.svg";
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineNavigateNext } from "react-icons/md";
@@ -33,6 +34,10 @@ const ClientTopNav = ({ isNav, setisNav }) => {
     if (pathname.includes("users")) {
       setHeder("Users");
       setheaderImage(singleuser);
+    }
+    if (pathname.includes('event')) {
+      setHeder("Events");
+      setheaderImage(event);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

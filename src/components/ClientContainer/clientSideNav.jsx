@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/png/logo.png";
 //import { BsCameraVideo } from "react-icons/bs";
 import camera from "../../assets/svg/camera.svg";
-
+import event from "../../assets/svg/event.svg";
 import invites from "../../assets/svg/invites.svg";
 import privacy from "../../assets/svg/privacy.svg";
 import client from "../../assets/svg/client.svg";
@@ -82,7 +82,19 @@ const ClientSideNav = ({ isNav, setisNav }) => {
             </div>
             <div>Invites</div>
           </Link>
-
+          <Link
+            to="/client/events"
+            className={`flex space-x-2 justify-start items-center pl-10 py-2 w-full ${
+              pathname.includes("events")
+                ? "bg-[#01C38D] bg-opacity-10 border-r-[6px] border-[#01C38D]"
+                : ""
+            }`}
+          >
+            <div className="w-[25px] h-[25px] ">
+              <img className="w-full h-full" src={event} alt="" />
+            </div>
+            <div>Events</div>
+          </Link>
           <Link
             to="/client/camera"
             className={` space-x-2 hidden justify-start items-center pl-10 py-2 w-full ${
