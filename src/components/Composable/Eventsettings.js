@@ -5,6 +5,7 @@ import VideoSettings from "./Event/video";
 import MotionSettings from "./Event/motion";
 import motion from "../../assets/png/Motion.png"
 import intrusion from "../../assets/png/intrusion.jpg"
+import DetectionFilters from "./Event/detectionFilters";
 function FilterModal({ header, onClose }) {
   const [tab, setTab] = useState("video");
 
@@ -50,11 +51,19 @@ function FilterModal({ header, onClose }) {
               setTab("zone");
             }}
           />
+             <Button
+            text={"Others"}
+            isActive={tab === "detection" ? true : false}
+            onClick={() => {
+              setTab("detection");
+            }}
+          />
         </div>
 
         {tab === "video" && <VideoSettings />}
         {tab === "motion" && <MotionSettings image={motion}/>}
         {tab === "zone" && <MotionSettings image={intrusion}/>}
+        {tab === 'detection' && <DetectionFilters/>}
 
         <div className="flex w-full flex-col space-y-2 sm:space-y-0 sm:flex-row justify-center items-center mt-10 sm:space-x-4">
           <button className="w-[70%] sm:w-[30%] py-2 sm:py-3 2xl:py-4 bg-[#132D46] text-white rounded-md">
