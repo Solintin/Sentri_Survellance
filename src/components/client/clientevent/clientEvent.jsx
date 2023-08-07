@@ -15,7 +15,7 @@ const ClientEvent = () => {
   }
     return (
        <ClientContainer>
-          <div className="w-full h-full bg-gray-100 min-h-screen  flex pt-[4rem] sm:py-24 2xl:py-[120px]">
+          <div className="w-full h-full bg-gray-100 min-h-screen  flex pt-[4rem] sm:py-[4.3rem] 2xl:py-[64px]">
         {isEmpty && (
           <div className="w-full h-full px-4 py-4 space-y-8">
             <button
