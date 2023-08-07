@@ -213,7 +213,7 @@ function Index() {
           <div className="xl:col-span-5 grid grid-cols-1 sm:grid-cols-2 xl:gap-0 gap-y-6 sm:gap-x-6 w-full xl:block ">
             <div className=" 2xl:space-y-4 space-y-2">
               <h2 className="text-lg 2xl:text-[25px] text-[#132D46] font-bold">
-                Officers on duty
+                  Alerts
               </h2>
               {[1, 2,].map((val, index) => {
                 return (
@@ -221,7 +221,7 @@ function Index() {
                     <div className="flex items-center  space-x-3 ">
                       <img src={officer} alt="" />
                       <p className="text-xs 2xl:text-xl n font-bold">
-                        officer Jim foxx
+                        A camera is opened outside the schedule service time
                       </p>
                     </div>
                     <button
@@ -234,16 +234,39 @@ function Index() {
                   </div>
                 );
               })}
-              {[1, 2, 3].map((val, index) => {
+                 {[1, 2,].map((val, index) => {
+                return (
+                  <div className="flex justify-between 2xl:p-6 p-4 bg-red-500 text-white items-center mt-3 w-full">
+                    <div className="flex items-center  space-x-3 ">
+                      <img src={clients} alt="" />
+                      <p className="text-xs 2xl:text-xl n font-bold">
+                        A camera is closed within the schedule service time
+                      </p>
+                    </div>
+                    <button
+                    onClick={() => {
+                      navigate("/admin/client/detail")
+                    }}
+                    className="w-fit px-2 py-1 text-[12px] 2xl:text-xl n rounded-md text-red-500 bg-white">
+                      Open
+                    </button>
+                  </div>
+                );
+              })}
+              {[1, 2].map((val, index) => {
                 return (
                   <div className="flex justify-between 2xl:p-6 p-4 bg-white items-center mt-3 w-full">
                     <div className="flex items-center  space-x-3 ">
-                      <img src={officer} alt="" />
+                      <img src={clients} alt="" />
                       <p className="text-xs 2xl:text-xl n font-bold">
-                        officer Jim foxx
+                        Lane joe added a new camera
                       </p>
                     </div>
-                    <button className="w-fit px-2 py-1 text-[12px] 2xl:text-xl n rounded-md text-white bg-[#01C38D]">
+                    <button
+                    onClick={() => {
+                      navigate("/admin/client/detail")
+                    }}
+                    className="w-fit px-2 py-1 text-[12px] 2xl:text-xl n rounded-md text-white bg-[#01C38D]">
                       Open
                     </button>
                   </div>

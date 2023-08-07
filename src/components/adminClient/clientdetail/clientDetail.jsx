@@ -3,6 +3,7 @@ import clients from "../../../assets/svg/clients.svg";
 import {AiTwotoneEdit} from 'react-icons/ai'
 import { MdNavigateNext,MdOutlineNavigateNext } from "react-icons/md";
 import satelite from "../../../assets/png/satelite.png";
+import EmergencyContactList from "../../camera/alert/emergencyList";
 const ClientDetail = () => {
     const days = ["S", "M", "T", "W", "T", "F", "S"];
     return (
@@ -117,6 +118,7 @@ const ClientDetail = () => {
             </div>
 
           </div>
+          <EmergencyContactList/>
         </div>
       </div>
     )

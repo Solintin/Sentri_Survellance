@@ -6,7 +6,7 @@ const PersonalCamera = () => {
   const [resize, setresize] = useState(2);
   return (
     <ClientContainer>
-      <div className="w-full text-[#132D46] 0 h-fit py-[4rem] space-y-4 sm:space-y-5 sm:py-24 2xl:py-[120px]">
+      <div className="w-full text-[#132D46] 0 h-fit py-[4rem] space-y-4 sm:space-y-5 2xl:space-y-8 sm:py-24 2xl:py-[130px]">
         <div className="px-2 sm:px-6 text-lg font-semibold sm:text-2xl 2xl:text-3xl">
           Overview
         </div>
